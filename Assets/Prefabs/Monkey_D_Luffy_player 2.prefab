@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 1433505328155151442}
   - component: {fileID: 5827470727222097974}
   - component: {fileID: -1204547690375211241}
+  - component: {fileID: 5003981991407762257}
   m_Layer: 0
   m_Name: Monkey_D_Luffy_player 2
   m_TagString: Player
@@ -240,6 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a933024f4c4c141b0d843549423e53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   controller: {fileID: 836442417185632381}
   animator: {fileID: 6546482005730255426}
   runSpeed: 40
@@ -280,6 +283,35 @@ MonoBehaviour:
   visible: 0
   m_AssetId: c2fe55f79b4c99a4e970c6af3078933f
   hasSpawned: 0
+--- !u!114 &5003981991407762257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4559217071842210107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  sendInterval: 0.05
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 0
+  bufferTimeMultiplier: 1
+  bufferSizeLimit: 64
+  catchupThreshold: 4
+  catchupMultiplier: 0.1
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
 --- !u!1 &9111604492829658178
 GameObject:
   m_ObjectHideFlags: 0
