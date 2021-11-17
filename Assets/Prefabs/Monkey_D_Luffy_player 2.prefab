@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 5827470727222097974}
   - component: {fileID: -1204547690375211241}
   - component: {fileID: 5003981991407762257}
+  - component: {fileID: -1728959598436792494}
   m_Layer: 0
   m_Name: Monkey_D_Luffy_player 2
   m_TagString: Player
@@ -312,6 +313,22 @@ MonoBehaviour:
   showGizmos: 0
   showOverlay: 0
   overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+--- !u!114 &-1728959598436792494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4559217071842210107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6f3bf89aa97405989c802ba270f815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  animator: {fileID: 6546482005730255426}
 --- !u!1 &9111604492829658178
 GameObject:
   m_ObjectHideFlags: 0
