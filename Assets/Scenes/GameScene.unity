@@ -156,9 +156,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 497377668}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be1dc7ea86b4c504eae2882b8b357425, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f97b06c9057410479d0756affe4644c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  position: {fileID: 497377677}
+  luffyHitBoX: {fileID: 497377673}
 --- !u!114 &497377670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,7 +539,7 @@ MonoBehaviour:
   networkAddress: 
   maxConnections: 100
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 579503188855844275, guid: 6def46e25517b174fbe1cc8bf0620a02, type: 3}
+  playerPrefab: {fileID: 4559217071842210107, guid: c2fe55f79b4c99a4e970c6af3078933f, type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
   spawnPrefabs: []
