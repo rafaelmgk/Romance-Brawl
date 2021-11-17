@@ -5,18 +5,18 @@ using UnityEngine;
 public class Chopper : MonoBehaviour
 {
  
-   float speedX = 20f;
+   
    public Transform position;
-   public Rigidbody2D test;
+   public Rigidbody2D chopperHitBoX;
     // Update is called once per frame
     void Update()
     {
         
     }
  
-    public void testing()
+    public void TakeDamage(int dmgAndDirection)
     {
-       test.velocity = transform.right * speedX;
+       chopperHitBoX.velocity = transform.right * dmgAndDirection;
     }
 
     
