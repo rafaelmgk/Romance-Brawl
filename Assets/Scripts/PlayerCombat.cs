@@ -24,7 +24,7 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    void Attack() 
+    void Attack()
     {
         animator.SetTrigger("Attack");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
@@ -35,7 +35,7 @@ public class PlayerCombat : MonoBehaviour
                 enemy.GetComponent<Chopper>().TakeDamage(attackDamage);
                 break;
             }
-            
+
             if(enemy.GetComponent<Luffy>() != null)
             {
                 enemy.GetComponent<Luffy>().TakeDamage(attackDamage);
@@ -45,7 +45,7 @@ public class PlayerCombat : MonoBehaviour
 
     }
 
-    void OnDrawGizmosSelected() 
+    void OnDrawGizmosSelected()
     {
         if (attackPoint == null)
         return;
@@ -62,5 +62,5 @@ public class PlayerCombat : MonoBehaviour
        attackDamage = 20 * attackDirection;
     }
 
-   
+
 }
