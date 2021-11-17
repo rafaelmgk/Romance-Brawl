@@ -1,0 +1,1668 @@
+fileFormatVersion: 2
+guid: 2441474ab7afc354bb8f68d5372c38c2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6849425507727161097
+    second: KungFu Dugong Stage tranparent_0
+  - first:
+      213: 2762520605440450750
+    second: KungFu Dugong Stage tranparent_1
+  - first:
+      213: 240067646187560141
+    second: KungFu Dugong Stage tranparent_2
+  - first:
+      213: 5032380633715093600
+    second: KungFu Dugong Stage tranparent_3
+  - first:
+      213: -8918885723094984412
+    second: KungFu Dugong Stage tranparent_4
+  - first:
+      213: 426312048270422425
+    second: KungFu Dugong Stage tranparent_5
+  - first:
+      213: 2011073411874049518
+    second: KungFu Dugong Stage tranparent_6
+  - first:
+      213: -6172974703500611183
+    second: KungFu Dugong Stage tranparent_7
+  - first:
+      213: -5108214158349478402
+    second: KungFu Dugong Stage tranparent_8
+  - first:
+      213: -130380230134630900
+    second: KungFu Dugong Stage tranparent_9
+  - first:
+      213: -5459781310348535739
+    second: KungFu Dugong Stage tranparent_10
+  - first:
+      213: -4877479918993702700
+    second: KungFu Dugong Stage tranparent_11
+  - first:
+      213: -1556788137915363293
+    second: KungFu Dugong Stage tranparent_12
+  - first:
+      213: 4624404235513035404
+    second: KungFu Dugong Stage tranparent_13
+  - first:
+      213: 701173266339794397
+    second: KungFu Dugong Stage tranparent_14
+  - first:
+      213: -1005400552569982710
+    second: KungFu Dugong Stage tranparent_15
+  - first:
+      213: 8005485389006601427
+    second: KungFu Dugong Stage tranparent_16
+  - first:
+      213: -2165044657362136587
+    second: KungFu Dugong Stage tranparent_17
+  - first:
+      213: 670531941631195801
+    second: KungFu Dugong Stage tranparent_18
+  - first:
+      213: -7123648599493334265
+    second: KungFu Dugong Stage tranparent_19
+  - first:
+      213: -7009791470275674879
+    second: KungFu Dugong Stage tranparent_20
+  - first:
+      213: -3375141780126467537
+    second: KungFu Dugong Stage tranparent_21
+  - first:
+      213: 443206586582043522
+    second: KungFu Dugong Stage tranparent_22
+  - first:
+      213: 7403661903936783329
+    second: KungFu Dugong Stage tranparent_23
+  - first:
+      213: -1027361841682611252
+    second: KungFu Dugong Stage tranparent_24
+  - first:
+      213: -8958797410967424174
+    second: KungFu Dugong Stage tranparent_25
+  - first:
+      213: 562188175774457847
+    second: KungFu Dugong Stage tranparent_26
+  - first:
+      213: 40897407908012415
+    second: KungFu Dugong Stage tranparent_27
+  - first:
+      213: -1226672445459302889
+    second: KungFu Dugong Stage tranparent_28
+  - first:
+      213: 5710460604263266894
+    second: KungFu Dugong Stage tranparent_29
+  - first:
+      213: 5430200546959566858
+    second: KungFu Dugong Stage tranparent_30
+  - first:
+      213: 5220772200645942134
+    second: KungFu Dugong Stage tranparent_31
+  - first:
+      213: -8800693860820662447
+    second: KungFu Dugong Stage tranparent_32
+  - first:
+      213: -8753695740446817585
+    second: KungFu Dugong Stage tranparent_33
+  - first:
+      213: -6995795725109580361
+    second: KungFu Dugong Stage tranparent_34
+  - first:
+      213: 5739364339521287850
+    second: KungFu Dugong Stage tranparent_35
+  - first:
+      213: 2656632365997039654
+    second: KungFu Dugong Stage tranparent_36
+  - first:
+      213: 1918942687390674934
+    second: KungFu Dugong Stage tranparent_37
+  - first:
+      213: 1156104171709501052
+    second: KungFu Dugong Stage tranparent_38
+  - first:
+      213: 293814368340495784
+    second: KungFu Dugong Stage tranparent_39
+  - first:
+      213: -6884370373326922944
+    second: KungFu Dugong Stage tranparent_40
+  - first:
+      213: -3919217380138209430
+    second: KungFu Dugong Stage tranparent_41
+  - first:
+      213: 79778140775213028
+    second: KungFu Dugong Stage tranparent_42
+  - first:
+      213: 7249438132382125863
+    second: KungFu Dugong Stage tranparent_43
+  - first:
+      213: 6482998998797062175
+    second: KungFu Dugong Stage tranparent_44
+  - first:
+      213: 1125639288435194563
+    second: KungFu Dugong Stage tranparent_45
+  - first:
+      213: 2501719304055318847
+    second: KungFu Dugong Stage tranparent_46
+  - first:
+      213: 4725684964482820930
+    second: KungFu Dugong Stage tranparent_47
+  - first:
+      213: -813052636776528453
+    second: KungFu Dugong Stage tranparent_48
+  - first:
+      213: 2913268483188908463
+    second: KungFu Dugong Stage tranparent_49
+  - first:
+      213: -7710627513882534771
+    second: KungFu Dugong Stage tranparent_50
+  - first:
+      213: -6262048728643005384
+    second: KungFu Dugong Stage tranparent_51
+  - first:
+      213: -3250720434408547577
+    second: KungFu Dugong Stage tranparent_52
+  - first:
+      213: -6335665872728423799
+    second: KungFu Dugong Stage tranparent_53
+  - first:
+      213: 4190235389449274762
+    second: KungFu Dugong Stage tranparent_54
+  - first:
+      213: -1975998404958759984
+    second: KungFu Dugong Stage tranparent_55
+  - first:
+      213: -3771008274515342992
+    second: KungFu Dugong Stage tranparent_56
+  - first:
+      213: -6049918201177304351
+    second: KungFu Dugong Stage tranparent_57
+  - first:
+      213: -856993273395899631
+    second: KungFu Dugong Stage tranparent_58
+  - first:
+      213: 4641773804490527856
+    second: KungFu Dugong Stage tranparent_59
+  - first:
+      213: -6517478684008236923
+    second: KungFu Dugong Stage tranparent_60
+  - first:
+      213: 7868797297482214332
+    second: KungFu Dugong Stage tranparent_61
+  - first:
+      213: -1629471503070075224
+    second: KungFu Dugong Stage tranparent_62
+  - first:
+      213: 563270659004263396
+    second: KungFu Dugong Stage tranparent_63
+  - first:
+      213: -7903962370255317436
+    second: KungFu Dugong Stage tranparent_64
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1108
+        width: 297
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f84c606ac3f1f0a0800000000000000
+      internalID: -6849425507727161097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_1
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1108
+        width: 297
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0a9fbaad1765620800000000000000
+      internalID: 2762520605440450750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_2
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 1102
+        width: 297
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dccd2159044e45300800000000000000
+      internalID: 240067646187560141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_3
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 961
+        width: 297
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060b42f068b96d540800000000000000
+      internalID: 5032380633715093600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_4
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 964
+        width: 297
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429de9a60b0c93480800000000000000
+      internalID: -8918885723094984412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_5
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 961
+        width: 297
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 991b0a89c809ae500800000000000000
+      internalID: 426312048270422425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_6
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 833
+        width: 297
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed4cfbec94c8eb10800000000000000
+      internalID: 2011073411874049518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 833
+        width: 297
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191bf568630355aa0800000000000000
+      internalID: -6172974703500611183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_8
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 832
+        width: 297
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef555f6994afb19b0800000000000000
+      internalID: -5108214158349478402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_9
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 652
+        width: 297
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0677191fdbc03ef0800000000000000
+      internalID: -130380230134630900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_10
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 794
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548db5d43d5fa34b0800000000000000
+      internalID: -5459781310348535739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_11
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 794
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0874d0bd5bf4cb0800000000000000
+      internalID: -4877479918993702700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_12
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 794
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3205301df6d256ae0800000000000000
+      internalID: -1556788137915363293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_13
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 794
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8af09ba62f2d2040800000000000000
+      internalID: 4624404235513035404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_14
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 792
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd0f2aee511bb900800000000000000
+      internalID: 701173266339794397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_15
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 794
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01b51736891c02f0800000000000000
+      internalID: -1005400552569982710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_16
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 794
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc7152eb82391f60800000000000000
+      internalID: 8005485389006601427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_17
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 748
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f19213ea5734f1e0800000000000000
+      internalID: -2165044657362136587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_18
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 725
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99afa7f8f353e4900800000000000000
+      internalID: 670531941631195801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_19
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 725
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70bad7a6757b32d90800000000000000
+      internalID: -7123648599493334265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_20
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 711
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10db7a81cc738be90800000000000000
+      internalID: -7009791470275674879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_21
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 670
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a7bf8ee661921d0800000000000000
+      internalID: -3375141780126467537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_22
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 684
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b0653da06962600800000000000000
+      internalID: 443206586582043522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_23
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 633
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e38e3d76471fb660800000000000000
+      internalID: 7403661903936783329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_24
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 633
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc387b229d31eb1f0800000000000000
+      internalID: -1027361841682611252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_25
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 634
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 253f8907835fba380800000000000000
+      internalID: -8958797410967424174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_26
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 633
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff16f1da2b4dc700800000000000000
+      internalID: 562188175774457847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_27
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 639
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71679ec9fb419000800000000000000
+      internalID: 40897407908012415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_28
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 639
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71673a8f8ebf9fee0800000000000000
+      internalID: -1226672445459302889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_29
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 639
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a79fc0aa1af3f40800000000000000
+      internalID: 5710460604263266894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_30
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 413
+        width: 297
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0828a480a2fb5b40800000000000000
+      internalID: 5430200546959566858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_31
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 591
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b5cb8d7a8e37840800000000000000
+      internalID: 5220772200645942134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_32
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 598
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157c2d8cf87add580800000000000000
+      internalID: -8800693860820662447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_33
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 552
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc241d66a10a48680800000000000000
+      internalID: -8753695740446817585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_34
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 558
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bda5a37ad0f9ee90800000000000000
+      internalID: -6995795725109580361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_35
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 558
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6f5b5557156af40800000000000000
+      internalID: 5739364339521287850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_36
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 502
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6202f0abf014ed420800000000000000
+      internalID: 2656632365997039654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_37
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 501
+        width: 38
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff214a053471aa10800000000000000
+      internalID: 1918942687390674934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_38
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 502
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e871e6e9e4b0010800000000000000
+      internalID: 1156104171709501052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_39
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 519
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad47de7c96d31400800000000000000
+      internalID: 293814368340495784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_40
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 483
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b10a3de9dc570a0800000000000000
+      internalID: -6884370373326922944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_41
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 458
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f2353ce842c99c0800000000000000
+      internalID: -3919217380138209430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_42
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 410
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e76fbddbcd6b1100800000000000000
+      internalID: 79778140775213028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_43
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 410
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72fcecd729d2b9460800000000000000
+      internalID: 7249438132382125863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_44
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 410
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f101382bd3d38f950800000000000000
+      internalID: 6482998998797062175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_45
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 380
+        width: 89
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca376c08f21f9f00800000000000000
+      internalID: 1125639288435194563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_46
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 379
+        width: 96
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3964fdc374e7b220800000000000000
+      internalID: 2501719304055318847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_47
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 384
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b276cff61059140800000000000000
+      internalID: 4725684964482820930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_48
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 384
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb58d314fe477b4f0800000000000000
+      internalID: -813052636776528453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_49
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 272
+        width: 446
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1e0d310420e6820800000000000000
+      internalID: 2913268483188908463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_50
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 307
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c9da7f0295ef490800000000000000
+      internalID: -7710627513882534771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_51
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 306
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8341c0bebdbb819a0800000000000000
+      internalID: -6262048728643005384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_52
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 307
+        width: 40
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b99faecfe13e2d0800000000000000
+      internalID: -3250720434408547577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_53
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 234
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9820570e4713318a0800000000000000
+      internalID: -6335665872728423799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_54
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 234
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a850569c2e4b62a30800000000000000
+      internalID: 4190235389449274762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_55
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 234
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d3d1b38be7d394e0800000000000000
+      internalID: -1975998404958759984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_56
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 234
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079447834ffaaabc0800000000000000
+      internalID: -3771008274515342992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_57
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 232
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e218aa237f5a0ca0800000000000000
+      internalID: -6049918201177304351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_58
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 234
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 113965c88295b14f0800000000000000
+      internalID: -856993273395899631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_59
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 234
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0741f589ea4ea6040800000000000000
+      internalID: 4641773804490527856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_60
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 58
+        width: 224
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58832800ba34d85a0800000000000000
+      internalID: -6517478684008236923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_61
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 58
+        width: 224
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb2bfd8375933d60800000000000000
+      internalID: 7868797297482214332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_62
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 57
+        width: 224
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a6e2ef1d44f269e0800000000000000
+      internalID: -1629471503070075224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_63
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 57
+        width: 224
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb69561ea321d700800000000000000
+      internalID: 563270659004263396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KungFu Dugong Stage tranparent_64
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 7
+        width: 266
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44690eae91c7f4290800000000000000
+      internalID: -7903962370255317436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

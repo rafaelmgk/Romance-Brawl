@@ -1,0 +1,492 @@
+fileFormatVersion: 2
+guid: da820773a2f88fd4ebc5028bbc4a03c5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6775356991219657198
+    second: Monkey D Luffy Gomu Gomu no Pistol test_0
+  - first:
+      213: 582082930169997646
+    second: Monkey D Luffy Gomu Gomu no Pistol test_1
+  - first:
+      213: 6090729991280614226
+    second: Monkey D Luffy Gomu Gomu no Pistol test_2
+  - first:
+      213: 2454450116183224866
+    second: Monkey D Luffy Gomu Gomu no Pistol test_3
+  - first:
+      213: 2367319308588566275
+    second: Monkey D Luffy Gomu Gomu no Pistol test_4
+  - first:
+      213: 3567024110896325510
+    second: Monkey D Luffy Gomu Gomu no Pistol test_5
+  - first:
+      213: 8974880505580441540
+    second: Monkey D Luffy Gomu Gomu no Pistol test_6
+  - first:
+      213: 3791589962736195860
+    second: Monkey D Luffy Gomu Gomu no Pistol test_7
+  - first:
+      213: 2765312545596382061
+    second: Monkey D Luffy Gomu Gomu no Pistol test_8
+  - first:
+      213: -3469119373189859850
+    second: Monkey D Luffy Gomu Gomu no Pistol test_9
+  - first:
+      213: -4521538430820844103
+    second: Monkey D Luffy Gomu Gomu no Pistol test_10
+  - first:
+      213: 6644059072873412089
+    second: Monkey D Luffy Gomu Gomu no Pistol test_11
+  - first:
+      213: -6863390213256199742
+    second: Monkey D Luffy Gomu Gomu no Pistol test_12
+  - first:
+      213: 5008488058095358923
+    second: Monkey D Luffy Gomu Gomu no Pistol test_13
+  - first:
+      213: -2582125738675713238
+    second: Monkey D Luffy Gomu Gomu no Pistol test_14
+  - first:
+      213: -9057610412945675750
+    second: Monkey D Luffy Gomu Gomu no Pistol test_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Monkey D Luffy Gomu Gomu no Pistol test_0
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 103
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21694efb6b819f1a0800000000000000
+      internalID: -6775356991219657198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey D Luffy Gomu Gomu no Pistol test_1
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 103
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49e99a4759f31800800000000000000
+      internalID: 582082930169997646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey D Luffy Gomu Gomu no Pistol test_2
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 98
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b591138ae968450800000000000000
+      internalID: 6090729991280614226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey D Luffy Gomu Gomu no Pistol test_3
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 98
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 222740e5065ff0220800000000000000
+      internalID: 2454450116183224866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey D Luffy Gomu Gomu no Pistol test_4
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 26
+        width: 30
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 307485a5e586ad020800000000000000
+      internalID: 2367319308588566275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey D Luffy Gomu Gomu no Pistol test_5
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 26
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 683aa3ba78d908130800000000000000
+      internalID: 3567024110896325510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey D Luffy Gomu Gomu no Pistol test_6
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 26
+        width: 45
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf43b4d44e2d8c70800000000000000
+      internalID: 8974880505580441540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey D Luffy Gomu Gomu no Pistol test_7
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 26
+        width: 46
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 419d3de7bfe6e9430800000000000000
+      internalID: 3791589962736195860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey D Luffy Gomu Gomu no Pistol test_8
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 26
+        width: 109
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b1435eb1d506620800000000000000
+      internalID: 2765312545596382061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey D Luffy Gomu Gomu no Pistol test_9
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 26
+        width: 114
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5b79d6f463bdfc0800000000000000
+      internalID: -3469119373189859850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey D Luffy Gomu Gomu no Pistol test_10
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 26
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd75a8d0c44041c0800000000000000
+      internalID: -4521538430820844103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey D Luffy Gomu Gomu no Pistol test_11
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 55
+        width: 46
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5b4596680743c50800000000000000
+      internalID: 6644059072873412089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey D Luffy Gomu Gomu no Pistol test_12
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 26
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1c8fff6f650c0a0800000000000000
+      internalID: -6863390213256199742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey D Luffy Gomu Gomu no Pistol test_13
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 26
+        width: 41
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc35f8c4a59b18540800000000000000
+      internalID: 5008488058095358923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey D Luffy Gomu Gomu no Pistol test_14
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 26
+        width: 30
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b47d442527a2cd0800000000000000
+      internalID: -2582125738675713238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey D Luffy Gomu Gomu no Pistol test_15
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 26
+        width: 114
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a6e769157ec4280800000000000000
+      internalID: -9057610412945675750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

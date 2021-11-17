@@ -1,0 +1,6804 @@
+fileFormatVersion: 2
+guid: d8fff71b1872f594e93862c7e910f998
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4723360172431887799
+    second: Chopper transparent_0
+  - first:
+      213: -7540861435182720489
+    second: Chopper transparent_1
+  - first:
+      213: -4280986291688777147
+    second: Chopper transparent_2
+  - first:
+      213: -2427608880157282584
+    second: Chopper transparent_3
+  - first:
+      213: 5008178567947003455
+    second: Chopper transparent_4
+  - first:
+      213: 6641905806727985773
+    second: Chopper transparent_5
+  - first:
+      213: -2390956315670650844
+    second: Chopper transparent_6
+  - first:
+      213: 5617712863696849841
+    second: Chopper transparent_7
+  - first:
+      213: -7666511623466746510
+    second: Chopper transparent_8
+  - first:
+      213: 2888216704979294263
+    second: Chopper transparent_9
+  - first:
+      213: 8507686867808337589
+    second: Chopper transparent_10
+  - first:
+      213: -1660141432258761950
+    second: Chopper transparent_11
+  - first:
+      213: 1897623042043094629
+    second: Chopper transparent_12
+  - first:
+      213: 3584260335685564247
+    second: Chopper transparent_13
+  - first:
+      213: 6479351731587322502
+    second: Chopper transparent_14
+  - first:
+      213: 5766416593272433986
+    second: Chopper transparent_15
+  - first:
+      213: -4222266213838221802
+    second: Chopper transparent_16
+  - first:
+      213: -6821417735029801911
+    second: Chopper transparent_17
+  - first:
+      213: -1798360741505210166
+    second: Chopper transparent_18
+  - first:
+      213: 3312367402859039947
+    second: Chopper transparent_19
+  - first:
+      213: 5124009076850520669
+    second: Chopper transparent_20
+  - first:
+      213: 1369480982339173494
+    second: Chopper transparent_21
+  - first:
+      213: -3452809352094250205
+    second: Chopper transparent_22
+  - first:
+      213: 3913863312754360563
+    second: Chopper transparent_23
+  - first:
+      213: 8763151917131706153
+    second: Chopper transparent_24
+  - first:
+      213: 2703173013131500733
+    second: Chopper transparent_25
+  - first:
+      213: -562741034370988546
+    second: Chopper transparent_26
+  - first:
+      213: 8362247560885508812
+    second: Chopper transparent_27
+  - first:
+      213: 8475424073561942798
+    second: Chopper transparent_28
+  - first:
+      213: 3480201387374475655
+    second: Chopper transparent_29
+  - first:
+      213: -2188245156680160319
+    second: Chopper transparent_30
+  - first:
+      213: 3206080260740902078
+    second: Chopper transparent_31
+  - first:
+      213: -6523922660100184660
+    second: Chopper transparent_32
+  - first:
+      213: 3414361588341140632
+    second: Chopper transparent_33
+  - first:
+      213: 4046177372823760128
+    second: Chopper transparent_34
+  - first:
+      213: -1676821453156789891
+    second: Chopper transparent_35
+  - first:
+      213: -5079762147329881237
+    second: Chopper transparent_36
+  - first:
+      213: 3373439804120305189
+    second: Chopper transparent_37
+  - first:
+      213: -3160004807254980164
+    second: Chopper transparent_38
+  - first:
+      213: -4037693770086770679
+    second: Chopper transparent_39
+  - first:
+      213: 5350416457350232911
+    second: Chopper transparent_40
+  - first:
+      213: 3186665314025155258
+    second: Chopper transparent_41
+  - first:
+      213: 780588410094742440
+    second: Chopper transparent_42
+  - first:
+      213: -135656314144116809
+    second: Chopper transparent_43
+  - first:
+      213: 2313650474987839405
+    second: Chopper transparent_44
+  - first:
+      213: 1028027150957400486
+    second: Chopper transparent_45
+  - first:
+      213: 4143932236166371046
+    second: Chopper transparent_46
+  - first:
+      213: -1509854585455007384
+    second: Chopper transparent_47
+  - first:
+      213: 4001025758619401806
+    second: Chopper transparent_48
+  - first:
+      213: -8641207875660591385
+    second: Chopper transparent_49
+  - first:
+      213: -4537393700437835299
+    second: Chopper transparent_50
+  - first:
+      213: 874503109104345138
+    second: Chopper transparent_51
+  - first:
+      213: -2463960020707452440
+    second: Chopper transparent_52
+  - first:
+      213: -2327743898786278641
+    second: Chopper transparent_53
+  - first:
+      213: 3956366276831905041
+    second: Chopper transparent_54
+  - first:
+      213: -2732770085291371270
+    second: Chopper transparent_55
+  - first:
+      213: -4527194875074192844
+    second: Chopper transparent_56
+  - first:
+      213: 884753239705248873
+    second: Chopper transparent_57
+  - first:
+      213: -2720241982815621632
+    second: Chopper transparent_58
+  - first:
+      213: 2953752522278186715
+    second: Chopper transparent_59
+  - first:
+      213: -4696157164832183648
+    second: Chopper transparent_60
+  - first:
+      213: -2168429566693596010
+    second: Chopper transparent_61
+  - first:
+      213: 4669981794583533678
+    second: Chopper transparent_62
+  - first:
+      213: -5912481792342356829
+    second: Chopper transparent_63
+  - first:
+      213: 729651959421303559
+    second: Chopper transparent_64
+  - first:
+      213: -9164894215752922551
+    second: Chopper transparent_65
+  - first:
+      213: -1098669236883751851
+    second: Chopper transparent_66
+  - first:
+      213: 2970331398443010844
+    second: Chopper transparent_67
+  - first:
+      213: 1659696343577050768
+    second: Chopper transparent_68
+  - first:
+      213: 6308447390092371566
+    second: Chopper transparent_69
+  - first:
+      213: 980566414935133304
+    second: Chopper transparent_70
+  - first:
+      213: 330535644864706411
+    second: Chopper transparent_71
+  - first:
+      213: 5466784662843648821
+    second: Chopper transparent_72
+  - first:
+      213: -7885305742890766818
+    second: Chopper transparent_73
+  - first:
+      213: -1729594217087054840
+    second: Chopper transparent_74
+  - first:
+      213: 1978301891276887205
+    second: Chopper transparent_75
+  - first:
+      213: 1344842228951094514
+    second: Chopper transparent_76
+  - first:
+      213: 7689209543872014959
+    second: Chopper transparent_77
+  - first:
+      213: -265257723649908832
+    second: Chopper transparent_78
+  - first:
+      213: -6955341469134006584
+    second: Chopper transparent_79
+  - first:
+      213: 774591097031635600
+    second: Chopper transparent_80
+  - first:
+      213: -7646963301264429737
+    second: Chopper transparent_81
+  - first:
+      213: 1492893232346494382
+    second: Chopper transparent_82
+  - first:
+      213: 2237127035153837814
+    second: Chopper transparent_83
+  - first:
+      213: 80582205343892780
+    second: Chopper transparent_84
+  - first:
+      213: -7208874169064449535
+    second: Chopper transparent_85
+  - first:
+      213: -3131111083439851801
+    second: Chopper transparent_86
+  - first:
+      213: -5177016746630998766
+    second: Chopper transparent_87
+  - first:
+      213: -2960816101287556827
+    second: Chopper transparent_88
+  - first:
+      213: -339731664703940954
+    second: Chopper transparent_89
+  - first:
+      213: -4473634795661792357
+    second: Chopper transparent_90
+  - first:
+      213: 8103411233154420371
+    second: Chopper transparent_91
+  - first:
+      213: 8125191438927818512
+    second: Chopper transparent_92
+  - first:
+      213: -6697040783006326582
+    second: Chopper transparent_93
+  - first:
+      213: -8333124473114821883
+    second: Chopper transparent_94
+  - first:
+      213: -3107409775858940794
+    second: Chopper transparent_95
+  - first:
+      213: -1411262072143213249
+    second: Chopper transparent_96
+  - first:
+      213: 12491102184905298
+    second: Chopper transparent_97
+  - first:
+      213: 3243627452793677145
+    second: Chopper transparent_98
+  - first:
+      213: 5427879857469134730
+    second: Chopper transparent_99
+  - first:
+      213: 5060708167080331747
+    second: Chopper transparent_100
+  - first:
+      213: 3817716738150577696
+    second: Chopper transparent_101
+  - first:
+      213: -9039763797888073197
+    second: Chopper transparent_102
+  - first:
+      213: -7832236639438737106
+    second: Chopper transparent_103
+  - first:
+      213: -3285554076641516162
+    second: Chopper transparent_104
+  - first:
+      213: -5060739997499848759
+    second: Chopper transparent_105
+  - first:
+      213: -2406549799316061793
+    second: Chopper transparent_106
+  - first:
+      213: 5641302554984226837
+    second: Chopper transparent_107
+  - first:
+      213: -1678772540636147561
+    second: Chopper transparent_108
+  - first:
+      213: -3017786060070469651
+    second: Chopper transparent_109
+  - first:
+      213: -7293368849772278476
+    second: Chopper transparent_110
+  - first:
+      213: -4115271730867164345
+    second: Chopper transparent_111
+  - first:
+      213: 5029919063095228473
+    second: Chopper transparent_112
+  - first:
+      213: -738390122633943564
+    second: Chopper transparent_113
+  - first:
+      213: -9021397915331159376
+    second: Chopper transparent_114
+  - first:
+      213: 1756062023614413164
+    second: Chopper transparent_115
+  - first:
+      213: -7875775881637815886
+    second: Chopper transparent_116
+  - first:
+      213: 7841557752841832964
+    second: Chopper transparent_117
+  - first:
+      213: -8688941493048898310
+    second: Chopper transparent_118
+  - first:
+      213: 7794143275298060472
+    second: Chopper transparent_119
+  - first:
+      213: 3511072457648922126
+    second: Chopper transparent_120
+  - first:
+      213: -568630753774758523
+    second: Chopper transparent_121
+  - first:
+      213: -8861315396914195330
+    second: Chopper transparent_122
+  - first:
+      213: 2155211443253587389
+    second: Chopper transparent_123
+  - first:
+      213: -3606738130652501924
+    second: Chopper transparent_124
+  - first:
+      213: -4477858283155561344
+    second: Chopper transparent_125
+  - first:
+      213: -8785943212850661341
+    second: Chopper transparent_126
+  - first:
+      213: -2488004372540530924
+    second: Chopper transparent_127
+  - first:
+      213: 6449541258718611352
+    second: Chopper transparent_128
+  - first:
+      213: -4573563471364237124
+    second: Chopper transparent_129
+  - first:
+      213: 8110240516007900841
+    second: Chopper transparent_130
+  - first:
+      213: -4406717309279704333
+    second: Chopper transparent_131
+  - first:
+      213: -5789858365917399891
+    second: Chopper transparent_132
+  - first:
+      213: -5622160312278753683
+    second: Chopper transparent_133
+  - first:
+      213: 656126123744900953
+    second: Chopper transparent_134
+  - first:
+      213: -5297385018159784793
+    second: Chopper transparent_135
+  - first:
+      213: 7255875679016362052
+    second: Chopper transparent_136
+  - first:
+      213: 305324212739687173
+    second: Chopper transparent_137
+  - first:
+      213: 5305359296064291825
+    second: Chopper transparent_138
+  - first:
+      213: 5564017994651007578
+    second: Chopper transparent_139
+  - first:
+      213: -3533447390279739771
+    second: Chopper transparent_140
+  - first:
+      213: -4705836715561394484
+    second: Chopper transparent_141
+  - first:
+      213: -7946730113058900300
+    second: Chopper transparent_142
+  - first:
+      213: -854363542065255299
+    second: Chopper transparent_143
+  - first:
+      213: 1741311585784651383
+    second: Chopper transparent_144
+  - first:
+      213: -5630259460192872270
+    second: Chopper transparent_145
+  - first:
+      213: 8064422559447603742
+    second: Chopper transparent_146
+  - first:
+      213: -2959749460565018638
+    second: Chopper transparent_147
+  - first:
+      213: 1647073007132684799
+    second: Chopper transparent_148
+  - first:
+      213: 174189732852821523
+    second: Chopper transparent_149
+  - first:
+      213: 8636036060767726948
+    second: Chopper transparent_150
+  - first:
+      213: 1406770280739602044
+    second: Chopper transparent_151
+  - first:
+      213: -6952772085311827816
+    second: Chopper transparent_152
+  - first:
+      213: -489888707990628149
+    second: Chopper transparent_153
+  - first:
+      213: -8501885114656896424
+    second: Chopper transparent_154
+  - first:
+      213: -3437998224475527159
+    second: Chopper transparent_155
+  - first:
+      213: 6653693549518931115
+    second: Chopper transparent_156
+  - first:
+      213: 6293834797290669999
+    second: Chopper transparent_157
+  - first:
+      213: 2271552449364528966
+    second: Chopper transparent_158
+  - first:
+      213: -1439671459410110671
+    second: Chopper transparent_159
+  - first:
+      213: -8449168560633976757
+    second: Chopper transparent_160
+  - first:
+      213: -5382945458563461564
+    second: Chopper transparent_161
+  - first:
+      213: -4569694813154984201
+    second: Chopper transparent_162
+  - first:
+      213: 8519238873459559372
+    second: Chopper transparent_163
+  - first:
+      213: -5226474007637627638
+    second: Chopper transparent_164
+  - first:
+      213: 4873254978871062589
+    second: Chopper transparent_165
+  - first:
+      213: 6549248956216174713
+    second: Chopper transparent_166
+  - first:
+      213: -7905450557585346101
+    second: Chopper transparent_167
+  - first:
+      213: -535963548767241004
+    second: Chopper transparent_168
+  - first:
+      213: -4451547143131936365
+    second: Chopper transparent_169
+  - first:
+      213: 4009398810518983616
+    second: Chopper transparent_170
+  - first:
+      213: 3844224781470728306
+    second: Chopper transparent_171
+  - first:
+      213: 9113711792609241682
+    second: Chopper transparent_172
+  - first:
+      213: 6627118405840548731
+    second: Chopper transparent_173
+  - first:
+      213: 1307924577050361485
+    second: Chopper transparent_174
+  - first:
+      213: 283388833621520018
+    second: Chopper transparent_175
+  - first:
+      213: -170130798853802529
+    second: Chopper transparent_176
+  - first:
+      213: -2085353336151537464
+    second: Chopper transparent_177
+  - first:
+      213: 6422226820451278889
+    second: Chopper transparent_178
+  - first:
+      213: -7364005977113367487
+    second: Chopper transparent_179
+  - first:
+      213: -4599745169834973254
+    second: Chopper transparent_180
+  - first:
+      213: -923990328363621593
+    second: Chopper transparent_181
+  - first:
+      213: 3617760788748775514
+    second: Chopper transparent_182
+  - first:
+      213: -3137998736382487051
+    second: Chopper transparent_183
+  - first:
+      213: 1720555214393785177
+    second: Chopper transparent_184
+  - first:
+      213: -4271859339099296045
+    second: Chopper transparent_185
+  - first:
+      213: -3010492329786585342
+    second: Chopper transparent_186
+  - first:
+      213: 5400262789350676548
+    second: Chopper transparent_187
+  - first:
+      213: 104660180803822351
+    second: Chopper transparent_188
+  - first:
+      213: -2152467953909796979
+    second: Chopper transparent_189
+  - first:
+      213: 4457590661431393292
+    second: Chopper transparent_190
+  - first:
+      213: -7325602574750357303
+    second: Chopper transparent_191
+  - first:
+      213: 2043513352703244054
+    second: Chopper transparent_192
+  - first:
+      213: -3045753948771572156
+    second: Chopper transparent_193
+  - first:
+      213: -2069996597231949853
+    second: Chopper transparent_194
+  - first:
+      213: -1497254482982776326
+    second: Chopper transparent_195
+  - first:
+      213: -2478644537494495269
+    second: Chopper transparent_196
+  - first:
+      213: -8341017389732041984
+    second: Chopper transparent_197
+  - first:
+      213: 1695008073229714616
+    second: Chopper transparent_198
+  - first:
+      213: -261239248827239110
+    second: Chopper transparent_199
+  - first:
+      213: 2280380452793055668
+    second: Chopper transparent_200
+  - first:
+      213: -4312259339090096570
+    second: Chopper transparent_201
+  - first:
+      213: 5599459933347439166
+    second: Chopper transparent_202
+  - first:
+      213: -6050337852847744743
+    second: Chopper transparent_203
+  - first:
+      213: 8154366059842866618
+    second: Chopper transparent_204
+  - first:
+      213: -5869156917736761271
+    second: Chopper transparent_205
+  - first:
+      213: -61078417057459153
+    second: Chopper transparent_206
+  - first:
+      213: 3469969135959089877
+    second: Chopper transparent_207
+  - first:
+      213: -7371457122441299599
+    second: Chopper transparent_208
+  - first:
+      213: -1212675371261109904
+    second: Chopper transparent_209
+  - first:
+      213: 5972341303145151919
+    second: Chopper transparent_210
+  - first:
+      213: -7885655210955326356
+    second: Chopper transparent_211
+  - first:
+      213: 4934501855703705440
+    second: Chopper transparent_212
+  - first:
+      213: -6539347137884876233
+    second: Chopper transparent_213
+  - first:
+      213: -7807949678353252941
+    second: Chopper transparent_214
+  - first:
+      213: -234959014595234594
+    second: Chopper transparent_215
+  - first:
+      213: 154016726890003379
+    second: Chopper transparent_216
+  - first:
+      213: 1456649092000751267
+    second: Chopper transparent_217
+  - first:
+      213: 5675626444790288950
+    second: Chopper transparent_218
+  - first:
+      213: -1380214910300676866
+    second: Chopper transparent_219
+  - first:
+      213: 2023626822712440219
+    second: Chopper transparent_220
+  - first:
+      213: -3721870013641484817
+    second: Chopper transparent_221
+  - first:
+      213: 2857462539207076278
+    second: Chopper transparent_222
+  - first:
+      213: -3851225636762036527
+    second: Chopper transparent_223
+  - first:
+      213: -1524801400671406999
+    second: Chopper transparent_224
+  - first:
+      213: 3975278468501375377
+    second: Chopper transparent_225
+  - first:
+      213: 923773234518922855
+    second: Chopper transparent_226
+  - first:
+      213: 8565690023454493739
+    second: Chopper transparent_227
+  - first:
+      213: -9184793080497423536
+    second: Chopper transparent_228
+  - first:
+      213: 1842825957785264514
+    second: Chopper transparent_229
+  - first:
+      213: -167166403587360022
+    second: Chopper transparent_230
+  - first:
+      213: 9151481615995490963
+    second: Chopper transparent_231
+  - first:
+      213: 8962418566598618403
+    second: Chopper transparent_232
+  - first:
+      213: 4482339099715793267
+    second: Chopper transparent_233
+  - first:
+      213: -4444075436032842184
+    second: Chopper transparent_234
+  - first:
+      213: -4278746871853271295
+    second: Chopper transparent_235
+  - first:
+      213: -6886314679493372486
+    second: Chopper transparent_236
+  - first:
+      213: -6008799084705066326
+    second: Chopper transparent_237
+  - first:
+      213: -7639884772350020316
+    second: Chopper transparent_238
+  - first:
+      213: -7802690225621771864
+    second: Chopper transparent_239
+  - first:
+      213: 4781119303245884204
+    second: Chopper transparent_240
+  - first:
+      213: 8751153766755168066
+    second: Chopper transparent_241
+  - first:
+      213: -2525097913959899171
+    second: Chopper transparent_242
+  - first:
+      213: -7095616633351914200
+    second: Chopper transparent_243
+  - first:
+      213: -1644276577031203414
+    second: Chopper transparent_244
+  - first:
+      213: -8460457222474241859
+    second: Chopper transparent_245
+  - first:
+      213: -1616671754672108287
+    second: Chopper transparent_246
+  - first:
+      213: 7731874720721197726
+    second: Chopper transparent_247
+  - first:
+      213: 969908483042759802
+    second: Chopper transparent_248
+  - first:
+      213: -3672962731783489433
+    second: Chopper transparent_249
+  - first:
+      213: -2441635003073919381
+    second: Chopper transparent_250
+  - first:
+      213: -3488717871950453
+    second: Chopper transparent_251
+  - first:
+      213: 5261249361887197254
+    second: Chopper transparent_252
+  - first:
+      213: 8070174881798082286
+    second: Chopper transparent_253
+  - first:
+      213: -6281094874474267407
+    second: Chopper transparent_254
+  - first:
+      213: 1853053047732266455
+    second: Chopper transparent_255
+  - first:
+      213: 8190278862274894156
+    second: Chopper transparent_256
+  - first:
+      213: -3301944385764861249
+    second: Chopper transparent_257
+  - first:
+      213: 6036428545875344303
+    second: Chopper transparent_258
+  - first:
+      213: -6870423935045779426
+    second: Chopper transparent_259
+  - first:
+      213: 2378438231809834272
+    second: Chopper transparent_260
+  - first:
+      213: 7676252755556758785
+    second: Chopper transparent_261
+  - first:
+      213: -5671029365869710267
+    second: Chopper transparent_262
+  - first:
+      213: 3916670728874684543
+    second: Chopper transparent_263
+  - first:
+      213: -4490461273409321987
+    second: Chopper transparent_264
+  - first:
+      213: -4459166930310271158
+    second: Chopper transparent_265
+  - first:
+      213: 8233599185596078658
+    second: Chopper transparent_266
+  - first:
+      213: 6996263974825779286
+    second: Chopper transparent_267
+  - first:
+      213: 3302795463239610520
+    second: Chopper transparent_268
+  - first:
+      213: -2726763656776209793
+    second: Chopper transparent_269
+  - first:
+      213: -9199140355238559671
+    second: Chopper transparent_270
+  - first:
+      213: 6135949282946273535
+    second: Chopper transparent_271
+  - first:
+      213: -8791867617775535683
+    second: Chopper transparent_272
+  - first:
+      213: 156265323115209491
+    second: Chopper transparent_273
+  - first:
+      213: 3510409940169085781
+    second: Chopper transparent_274
+  - first:
+      213: -5753659075764489406
+    second: Chopper transparent_275
+  - first:
+      213: 408253632847292805
+    second: Chopper transparent_276
+  - first:
+      213: -2546579617124089419
+    second: Chopper transparent_277
+  - first:
+      213: 2736712352121824151
+    second: Chopper transparent_278
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Chopper transparent_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 7181
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bdc7082d0fbc8140800000000000000
+      internalID: 4723360172431887799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 7181
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71add775a7a795790800000000000000
+      internalID: -7540861435182720489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_2
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 7181
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ad29b36a1e694c0800000000000000
+      internalID: -4280986291688777147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_3
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 7107
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee24a4e5966f4ed0800000000000000
+      internalID: -2427608880157282584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_4
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 7107
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36a4328fdf908540800000000000000
+      internalID: 5008178567947003455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_5
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 7108
+        width: 60
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a30a1142acc2c50800000000000000
+      internalID: 6641905806727985773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_6
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 7108
+        width: 60
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42069f216ed91ded0800000000000000
+      internalID: -2390956315670650844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_7
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 7033
+        width: 64
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bb0bcae51026fd40800000000000000
+      internalID: 5617712863696849841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_8
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 7034
+        width: 64
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d7cd02c441b9590800000000000000
+      internalID: -7666511623466746510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_9
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 7034
+        width: 64
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738d3ae6ac1051820800000000000000
+      internalID: 2888216704979294263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 7033
+        width: 64
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5beb8ff6120611670800000000000000
+      internalID: 8507686867808337589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_11
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 7033
+        width: 64
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22bee45c92ef5f8e0800000000000000
+      internalID: -1660141432258761950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_12
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 7033
+        width: 64
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 566239a4a16b55a10800000000000000
+      internalID: 1897623042043094629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_13
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 7034
+        width: 65
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7577f0bf8c9ddb130800000000000000
+      internalID: 3584260335685564247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_14
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 7033
+        width: 64
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682131022184be950800000000000000
+      internalID: 6479351731587322502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_15
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 6963
+        width: 61
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24debecf65d660050800000000000000
+      internalID: 5766416593272433986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_16
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 6960
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e0a01cf3f7765c0800000000000000
+      internalID: -4222266213838221802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_17
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 6961
+        width: 64
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94cbffe16b47551a0800000000000000
+      internalID: -6821417735029801911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_18
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 6886
+        width: 60
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8e2980f60fa07e0800000000000000
+      internalID: -1798360741505210166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_19
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 6890
+        width: 60
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc0ffc6a94e7fd20800000000000000
+      internalID: 3312367402859039947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_20
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 6890
+        width: 62
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d527d837b132c1740800000000000000
+      internalID: 5124009076850520669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_21
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 6888
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67cbaf692bf510310800000000000000
+      internalID: 1369480982339173494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_22
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 6884
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b864320382510d0800000000000000
+      internalID: -3452809352094250205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_23
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 6887
+        width: 64
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f0482842f5d05630800000000000000
+      internalID: 3913863312754360563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_24
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 6891
+        width: 59
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f2b6d4d38fc9970800000000000000
+      internalID: 8763151917131706153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_25
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 6890
+        width: 59
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc102e8889938520800000000000000
+      internalID: 2703173013131500733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_26
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 6810
+        width: 63
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef508c1c20eb038f0800000000000000
+      internalID: -562741034370988546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_27
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 6810
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca157ef9dbac0470800000000000000
+      internalID: 8362247560885508812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_28
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 6811
+        width: 64
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b24794a41ce9570800000000000000
+      internalID: 8475424073561942798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_29
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 6742
+        width: 63
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 789f64119b82c4030800000000000000
+      internalID: 3480201387374475655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_30
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 6743
+        width: 62
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb2c92bf9ac1a1e0800000000000000
+      internalID: -2188245156680160319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_31
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 6743
+        width: 61
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc6ad6b2094e7c20800000000000000
+      internalID: 3206080260740902078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_32
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 6668
+        width: 64
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca56b96e7ee5675a0800000000000000
+      internalID: -6523922660100184660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_33
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 6669
+        width: 63
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89cefc746cf326f20800000000000000
+      internalID: 3414361588341140632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_34
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 6662
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d226d02e8e62830800000000000000
+      internalID: 4046177372823760128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_35
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 6595
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71d5d4c5cbbab8e0800000000000000
+      internalID: -1676821453156789891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_36
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 6590
+        width: 64
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b4de0ad3f0189b0800000000000000
+      internalID: -5079762147329881237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_37
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 6591
+        width: 64
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e01cbe0add0de20800000000000000
+      internalID: 3373439804120305189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_38
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 6595
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb94a07ce586524d0800000000000000
+      internalID: -3160004807254980164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_39
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 6590
+        width: 64
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9089b22a8ea37f7c0800000000000000
+      internalID: -4037693770086770679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_40
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 6591
+        width: 65
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4bb3c49b6f704a40800000000000000
+      internalID: 5350416457350232911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_41
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 6508
+        width: 60
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba278c283f493c20800000000000000
+      internalID: 3186665314025155258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_42
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 6513
+        width: 63
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8abeb73f50535da00800000000000000
+      internalID: 780588410094742440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_43
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 6512
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bfa6ef0d4d0e1ef0800000000000000
+      internalID: -135656314144116809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_44
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 6435
+        width: 63
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf501849dcbb1020800000000000000
+      internalID: 2313650474987839405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_45
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 6433
+        width: 62
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a1d5404f39444e00800000000000000
+      internalID: 1028027150957400486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_46
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 6438
+        width: 59
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e69cfdc964328930800000000000000
+      internalID: 4143932236166371046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_47
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 6437
+        width: 60
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 869a57b014beb0be0800000000000000
+      internalID: -1509854585455007384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_48
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 6350
+        width: 59
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e72b7aabf768730800000000000000
+      internalID: 4001025758619401806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_49
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 6355
+        width: 66
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee41fc5833441880800000000000000
+      internalID: -8641207875660591385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_50
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 6351
+        width: 64
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1ce473870f701c0800000000000000
+      internalID: -4537393700437835299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_51
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 6364
+        width: 16
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 230a325c1fbd22c00800000000000000
+      internalID: 874503109104345138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_52
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 6350
+        width: 67
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9d7f07a614ecdd0800000000000000
+      internalID: -2463960020707452440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_53
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 6133
+        width: 208
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03d2c8c14132bfd0800000000000000
+      internalID: -2327743898786278641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_54
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 6136
+        width: 167
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11586e3ca26d7e630800000000000000
+      internalID: 3956366276831905041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_55
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 6137
+        width: 133
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4d4651610431ad0800000000000000
+      internalID: -2732770085291371270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_56
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 6139
+        width: 191
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43adb3a4f3c2c21c0800000000000000
+      internalID: -4527194875074192844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_57
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 6139
+        width: 196
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964e1864266474c00800000000000000
+      internalID: 884753239705248873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_58
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 6137
+        width: 146
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00eab2f3452cf3ad0800000000000000
+      internalID: -2720241982815621632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_59
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 5948
+        width: 134
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde2ec4f446ddf820800000000000000
+      internalID: 2953752522278186715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_60
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 5952
+        width: 144
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aaa5cc90f5e3deb0800000000000000
+      internalID: -4696157164832183648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_61
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 5947
+        width: 165
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69426c44cc038e1e0800000000000000
+      internalID: -2168429566693596010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_62
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 5951
+        width: 145
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6851b513bb1fc040800000000000000
+      internalID: 4669981794583533678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_63
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 5948
+        width: 137
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac0872b225a2fda0800000000000000
+      internalID: -5912481792342356829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_64
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 5872
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b79fa579e302a00800000000000000
+      internalID: 729651959421303559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_65
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 5872
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ac30ab441cfc080800000000000000
+      internalID: -9164894215752922551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_66
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 5872
+        width: 60
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55cf4e9662eb0c0f0800000000000000
+      internalID: -1098669236883751851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_67
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 5879
+        width: 59
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b826d5bacb83920800000000000000
+      internalID: 2970331398443010844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_68
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 5895
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ebce1f70d680710800000000000000
+      internalID: 1659696343577050768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_69
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 5642
+        width: 176
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6622ba4a7b1c8750800000000000000
+      internalID: 6308447390092371566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_70
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 5638
+        width: 106
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c03e885fbab9d00800000000000000
+      internalID: 980566414935133304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_71
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 5642
+        width: 115
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67f3c1fa6c469400800000000000000
+      internalID: 330535644864706411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_72
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 5639
+        width: 164
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b6954cfabeddb40800000000000000
+      internalID: 5466784662843648821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_73
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 5639
+        width: 167
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ee5a97434c19290800000000000000
+      internalID: -7885305742890766818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_74
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 5644
+        width: 165
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80cc4fc293f3ff7e0800000000000000
+      internalID: -1729594217087054840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_75
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 5561
+        width: 64
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4da00b617547b10800000000000000
+      internalID: 1978301891276887205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_76
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 5556
+        width: 59
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f41397c1e6d9a210800000000000000
+      internalID: 1344842228951094514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_77
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 5559
+        width: 59
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ae80a475f85ba60800000000000000
+      internalID: 7689209543872014959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_78
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 5571
+        width: 21
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af1be7718d915cf0800000000000000
+      internalID: -265257723649908832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_79
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 5559
+        width: 60
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c659b8e8c9a97f90800000000000000
+      internalID: -6955341469134006584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_80
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 5566
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09230c0bf76efba00800000000000000
+      internalID: 774591097031635600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_81
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 5373
+        width: 207
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d6fa1946780e590800000000000000
+      internalID: -7646963301264429737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_82
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 5370
+        width: 201
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5f8913c72d7b410800000000000000
+      internalID: 1492893232346494382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_83
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 5374
+        width: 185
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe64c78f2fdb0f10800000000000000
+      internalID: 2237127035153837814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_84
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 5372
+        width: 185
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c258dbcb6194e1100800000000000000
+      internalID: 80582205343892780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_85
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 5370
+        width: 130
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a9c62332fe4fb90800000000000000
+      internalID: -7208874169064449535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_86
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 5173
+        width: 181
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e677471f0f0c84d0800000000000000
+      internalID: -3131111083439851801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_87
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 5168
+        width: 138
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2159fcca2ba8728b0800000000000000
+      internalID: -5177016746630998766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_88
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 5173
+        width: 164
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5298f75617119e6d0800000000000000
+      internalID: -2960816101287556827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_89
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 5172
+        width: 136
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a69e56d9d7094bf0800000000000000
+      internalID: -339731664703940954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_90
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 5175
+        width: 120
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b60cd0bd47ae1c0800000000000000
+      internalID: -4473634795661792357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_91
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 5014
+        width: 92
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e44153599157070800000000000000
+      internalID: 8103411233154420371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_92
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 5017
+        width: 139
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f6659809a72c070800000000000000
+      internalID: 8125191438927818512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_93
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 5017
+        width: 140
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac0aa9ae3e45f03a0800000000000000
+      internalID: -6697040783006326582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_94
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 5016
+        width: 113
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b70e6417bca5c80800000000000000
+      internalID: -8333124473114821883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_95
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 4853
+        width: 252
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6840a5ac54340e4d0800000000000000
+      internalID: -3107409775858940794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_96
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 4853
+        width: 218
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d0ce06f903a6ce0800000000000000
+      internalID: -1411262072143213249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_97
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 4853
+        width: 233
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a959c57906c2000800000000000000
+      internalID: 12491102184905298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_98
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 4857
+        width: 244
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955e87b9bfda30d20800000000000000
+      internalID: 3243627452793677145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_99
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 4858
+        width: 133
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8712f3e8f3b35b40800000000000000
+      internalID: 5427879857469134730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_100
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 4852
+        width: 152
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9cdb2e34f3b3640800000000000000
+      internalID: 5060708167080331747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_101
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 4686
+        width: 178
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026378e65214bf430800000000000000
+      internalID: 3817716738150577696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_102
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 4686
+        width: 176
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 312027578be4c8280800000000000000
+      internalID: -9039763797888073197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_103
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 4683
+        width: 161
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21747df54e4e4390800000000000000
+      internalID: -7832236639438737106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_104
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 4685
+        width: 252
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75227399fd5762d0800000000000000
+      internalID: -3285554076641516162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_105
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 4689
+        width: 173
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c7096409c3a4c9b0800000000000000
+      internalID: -5060739997499848759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_106
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4518
+        width: 128
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f918a7d35b73a9ed0800000000000000
+      internalID: -2406549799316061793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_107
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 4516
+        width: 122
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510a65ce8cee94e40800000000000000
+      internalID: 5641302554984226837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_108
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 4519
+        width: 128
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790d3b0d44dc3b8e0800000000000000
+      internalID: -1678772540636147561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_109
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 4513
+        width: 117
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: defbf59319bae16d0800000000000000
+      internalID: -3017786060070469651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_110
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 4517
+        width: 124
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d8c6d4cafb8ca90800000000000000
+      internalID: -7293368849772278476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_111
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 4513
+        width: 123
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ba4771a2e93e6c0800000000000000
+      internalID: -4115271730867164345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_112
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 4337
+        width: 144
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938b1ccfcbcddc540800000000000000
+      internalID: 5029919063095228473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_113
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 4334
+        width: 134
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f52fba7816b0c5f0800000000000000
+      internalID: -738390122633943564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_114
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 4339
+        width: 116
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba9c37b46e8dc280800000000000000
+      internalID: -9021397915331159376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_115
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 4335
+        width: 159
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6937114b19ce5810800000000000000
+      internalID: 1756062023614413164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_116
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 4335
+        width: 152
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b99364309f93b290800000000000000
+      internalID: -7875775881637815886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_117
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 4337
+        width: 128
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a09d7da3fc2dc60800000000000000
+      internalID: 7841557752841832964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_118
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 4148
+        width: 116
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc0ba08fbdaa6780800000000000000
+      internalID: -8688941493048898310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_119
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 4151
+        width: 97
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8f3a4830c5a2c60800000000000000
+      internalID: 7794143275298060472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_120
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 4151
+        width: 118
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e52da3cc5d9b030800000000000000
+      internalID: 3511072457648922126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_121
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 4151
+        width: 118
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58594e89751db18f0800000000000000
+      internalID: -568630753774758523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_122
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 4150
+        width: 107
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74da348898460580800000000000000
+      internalID: -8861315396914195330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_123
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 4151
+        width: 147
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbdacfa8369d8ed10800000000000000
+      internalID: 2155211443253587389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_124
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 3967
+        width: 121
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58e99c87ca42fdc0800000000000000
+      internalID: -3606738130652501924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_125
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 3968
+        width: 124
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 084e8fdbd937bd1c0800000000000000
+      internalID: -4477858283155561344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_126
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 3969
+        width: 123
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3283845a23f021680800000000000000
+      internalID: -8785943212850661341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_127
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 3962
+        width: 128
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f5a178435d87dd0800000000000000
+      internalID: -2488004372540530924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_128
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 3966
+        width: 136
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 897062a8a9f518950800000000000000
+      internalID: 6449541258718611352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_129
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 3790
+        width: 129
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8d1ab21407780c0800000000000000
+      internalID: -4573563471364237124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_130
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 3790
+        width: 153
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6b1a787cc5d8070800000000000000
+      internalID: 8110240516007900841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_131
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 3791
+        width: 162
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa61da74f138d2c0800000000000000
+      internalID: -4406717309279704333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_132
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 3788
+        width: 160
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da47baffd7a46afa0800000000000000
+      internalID: -5789858365917399891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_133
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 3785
+        width: 162
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e5354cbf21af1b0800000000000000
+      internalID: -5622160312278753683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_134
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 3786
+        width: 127
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9573ba5bb370b1900800000000000000
+      internalID: 656126123744900953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_135
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 3601
+        width: 134
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac1c1a8468eb76b0800000000000000
+      internalID: -5297385018159784793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_136
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 3602
+        width: 97
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 440aa2e9c7c02b460800000000000000
+      internalID: 7255875679016362052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_137
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 3603
+        width: 197
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 503cca9f0cabc3400800000000000000
+      internalID: 305324212739687173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_138
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 3602
+        width: 142
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f38ab7bb2c60a940800000000000000
+      internalID: 5305359296064291825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_139
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 3598
+        width: 164
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5afd0ff2ec573d40800000000000000
+      internalID: 5564017994651007578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_140
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 3605
+        width: 137
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58658ddc15ca6fec0800000000000000
+      internalID: -3533447390279739771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_141
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 3429
+        width: 138
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cced8f5907281beb0800000000000000
+      internalID: -4705836715561394484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_142
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 3423
+        width: 165
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b67935d01b87b190800000000000000
+      internalID: -7946730113058900300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_143
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 3424
+        width: 215
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ce72692e0b424f0800000000000000
+      internalID: -854363542065255299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_144
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 3424
+        width: 176
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e57f159a16a2810800000000000000
+      internalID: 1741311585784651383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_145
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 3415
+        width: 199
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8dbe1f9dc4dd1b0800000000000000
+      internalID: -5630259460192872270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_146
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 3418
+        width: 153
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a558637959aef60800000000000000
+      internalID: 8064422559447603742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_147
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3240
+        width: 127
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f73eda0c8bdce6d0800000000000000
+      internalID: -2959749460565018638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_148
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 3272
+        width: 135
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff137456c249bd610800000000000000
+      internalID: 1647073007132684799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_149
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 3294
+        width: 138
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e663e93a8da6200800000000000000
+      internalID: 174189732852821523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_150
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 3229
+        width: 126
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d2685aa0d59d770800000000000000
+      internalID: 8636036060767726948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_151
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 3235
+        width: 125
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e7f00fd1ad58310800000000000000
+      internalID: 1406770280739602044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_152
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 3246
+        width: 144
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8909cb230aac28f90800000000000000
+      internalID: -6952772085311827816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_153
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 3103
+        width: 138
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc85ebcc0d09339f0800000000000000
+      internalID: -489888707990628149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_154
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 3052
+        width: 116
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ac1bb788c330a80800000000000000
+      internalID: -8501885114656896424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_155
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 3094
+        width: 149
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90866b384d6c940d0800000000000000
+      internalID: -3437998224475527159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_156
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 3045
+        width: 170
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba4426fc70ba65c50800000000000000
+      internalID: 6653693549518931115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_157
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 3054
+        width: 174
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7c087e661385750800000000000000
+      internalID: 6293834797290669999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_158
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 3055
+        width: 159
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f8a01eaec268f10800000000000000
+      internalID: 2271552449364528966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_159
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 2794
+        width: 151
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13797947f62450ce0800000000000000
+      internalID: -1439671459410110671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_160
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 2808
+        width: 184
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b486300b5f58eba80800000000000000
+      internalID: -8449168560633976757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_161
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 2798
+        width: 218
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ec50120afeb45b0800000000000000
+      internalID: -5382945458563461564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_162
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 2793
+        width: 179
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7feb3f957ce2590c0800000000000000
+      internalID: -4569694813154984201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_163
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 2802
+        width: 235
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb81495e9a6a3670800000000000000
+      internalID: 8519238873459559372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_164
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 2797
+        width: 179
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d62f2c495d777b0800000000000000
+      internalID: -5226474007637627638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_165
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 2544
+        width: 151
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30738b659741a340800000000000000
+      internalID: 4873254978871062589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_166
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 2537
+        width: 246
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 978ecdce93b93ea50800000000000000
+      internalID: 6549248956216174713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_167
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 2540
+        width: 244
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc136bd4a923a4290800000000000000
+      internalID: -7905450557585346101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_168
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 2543
+        width: 189
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcbb27fdffdf88f0800000000000000
+      internalID: -535963548767241004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_169
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 2538
+        width: 258
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39947b8657de832c0800000000000000
+      internalID: -4451547143131936365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_170
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 2539
+        width: 283
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c39bd7b9fe34a730800000000000000
+      internalID: 4009398810518983616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_171
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2281
+        width: 259
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2700158321e695530800000000000000
+      internalID: 3844224781470728306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_172
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 2283
+        width: 216
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a23cfb6986a7e70800000000000000
+      internalID: 9113711792609241682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_173
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 2206
+        width: 59
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b733490041148fb50800000000000000
+      internalID: 6627118405840548731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_174
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 2205
+        width: 58
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ef610297ea62210800000000000000
+      internalID: 1307924577050361485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_175
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 2204
+        width: 58
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ea25984accee300800000000000000
+      internalID: 283388833621520018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_176
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 2206
+        width: 70
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd537f890f293adf0800000000000000
+      internalID: -170130798853802529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_177
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 2204
+        width: 70
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8038f70365f03e0800000000000000
+      internalID: -2085353336151537464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_178
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 2203
+        width: 66
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9202cfb4445502950800000000000000
+      internalID: 6422226820451278889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_179
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 2019
+        width: 139
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ced4a749bcdc990800000000000000
+      internalID: -7364005977113367487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_180
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 2067
+        width: 169
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7eaa6732c6a20c0800000000000000
+      internalID: -4599745169834973254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_181
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 2132
+        width: 101
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7236dfd11b35d23f0800000000000000
+      internalID: -923990328363621593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_182
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 2062
+        width: 120
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5035b7054ed43230800000000000000
+      internalID: 3617760788748775514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_183
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 1992
+        width: 115
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f51c4c66c69374d0800000000000000
+      internalID: -3137998736382487051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_184
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 1999
+        width: 129
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b33620ad3a0e710800000000000000
+      internalID: 1720555214393785177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_185
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 2173
+        width: 101
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de2d8a709e47b4c0800000000000000
+      internalID: -4271859339099296045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_186
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 2182
+        width: 39
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f48042d259836d0800000000000000
+      internalID: -3010492329786585342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_187
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1820
+        width: 129
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 448d105256691fa40800000000000000
+      internalID: 5400262789350676548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_188
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1827
+        width: 133
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03a0f241e3d37100800000000000000
+      internalID: 104660180803822351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_189
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 1808
+        width: 125
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f6bc8dcc5e022e0800000000000000
+      internalID: -2152467953909796979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_190
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1821
+        width: 120
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0c77b8d61b8cdd30800000000000000
+      internalID: 4457590661431393292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_191
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 1827
+        width: 119
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8615e554b365a90800000000000000
+      internalID: -7325602574750357303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_192
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1814
+        width: 125
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617f4a931940c5c10800000000000000
+      internalID: 2043513352703244054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_193
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 1842
+        width: 133
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4462a32bbee4bb5d0800000000000000
+      internalID: -3045753948771572156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_194
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 1810
+        width: 114
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7e8b7ef05e543e0800000000000000
+      internalID: -2069996597231949853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_195
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1729
+        width: 63
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af153730bfea83be0800000000000000
+      internalID: -1497254482982776326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_196
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1728
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf9d22fce51a9dd0800000000000000
+      internalID: -2478644537494495269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_197
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 1727
+        width: 75
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b6aab60e0ce3c80800000000000000
+      internalID: -8341017389732041984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_198
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 1725
+        width: 77
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b4c640bcd0e58710800000000000000
+      internalID: 1695008073229714616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_199
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1648
+        width: 60
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35334c8944ef5cf0800000000000000
+      internalID: -261239248827239110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_200
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1648
+        width: 60
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9797990f985af10800000000000000
+      internalID: 2280380452793055668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_201
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1649
+        width: 60
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e8c2a7af6c724c0800000000000000
+      internalID: -4312259339090096570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_202
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1649
+        width: 60
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32e435642745bd40800000000000000
+      internalID: 5599459933347439166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_203
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1575
+        width: 59
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91919e567c1e80ca0800000000000000
+      internalID: -6050337852847744743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_204
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1576
+        width: 59
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd8f6d4ab02a2170800000000000000
+      internalID: 8154366059842866618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_205
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1499
+        width: 59
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 948164321e09c8ea0800000000000000
+      internalID: -5869156917736761271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_206
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1497
+        width: 54
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f24d8d7d081072ff0800000000000000
+      internalID: -61078417057459153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_207
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1415
+        width: 61
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d229626b8ec72030800000000000000
+      internalID: 3469969135959089877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_208
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1414
+        width: 70
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179fcd38dc253b990800000000000000
+      internalID: -7371457122441299599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_209
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1423
+        width: 78
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079dd14cc26bb2fe0800000000000000
+      internalID: -1212675371261109904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_210
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1427
+        width: 74
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad3c5bb5c402e250800000000000000
+      internalID: 5972341303145151919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_211
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1331
+        width: 74
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6cbcc99d56809290800000000000000
+      internalID: -7885655210955326356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_212
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1337
+        width: 67
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067a9bc2b4fda7440800000000000000
+      internalID: 4934501855703705440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_213
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1258
+        width: 77
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 732976fcc629f35a0800000000000000
+      internalID: -6539347137884876233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_214
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 1266
+        width: 71
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bdf0a5c22794a390800000000000000
+      internalID: -7807949678353252941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_215
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1188
+        width: 60
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed4764665024dbcf0800000000000000
+      internalID: -234959014595234594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_216
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1185
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb3fb7a56d232200800000000000000
+      internalID: 154016726890003379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_217
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1193
+        width: 65
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae991ba1ae073410800000000000000
+      internalID: 1456649092000751267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_218
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1195
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632d9874e20e3ce40800000000000000
+      internalID: 5675626444790288950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_219
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1117
+        width: 58
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc94dd0add78dce0800000000000000
+      internalID: -1380214910300676866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_220
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1120
+        width: 55
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b953ab5afdd551c10800000000000000
+      internalID: 2023626822712440219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_221
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1050
+        width: 68
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe598b021f2495cc0800000000000000
+      internalID: -3721870013641484817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_222
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 1057
+        width: 65
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b96c683a0fb7a720800000000000000
+      internalID: 2857462539207076278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_223
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 989
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d6dbe220b2bd8ac0800000000000000
+      internalID: -3851225636762036527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_224
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 989
+        width: 74
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96476ff6431d6dae0800000000000000
+      internalID: -1524801400671406999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_225
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 979
+        width: 56
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 199884684b60b2730800000000000000
+      internalID: 3975278468501375377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_226
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 980
+        width: 57
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7669388ccd6e1dc00800000000000000
+      internalID: 923773234518922855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_227
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 903
+        width: 66
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ccc1081b17fd670800000000000000
+      internalID: 8565690023454493739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_228
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 905
+        width: 61
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b3c7d3b5f098080800000000000000
+      internalID: -9184793080497423536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_229
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 902
+        width: 60
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 281e8a4e178039910800000000000000
+      internalID: 1842825957785264514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_230
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 900
+        width: 60
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeabbc7aa0b1eadf0800000000000000
+      internalID: -167166403587360022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_231
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 840
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 392dde90b08900f70800000000000000
+      internalID: 9151481615995490963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_232
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 827
+        width: 61
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32de97e8338e06c70800000000000000
+      internalID: 8962418566598618403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_233
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 834
+        width: 65
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3717769a9a7743e30800000000000000
+      internalID: 4482339099715793267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_234
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 834
+        width: 74
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8362938cfe87352c0800000000000000
+      internalID: -4444075436032842184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_235
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 770
+        width: 72
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1073f5bc366de94c0800000000000000
+      internalID: -4278746871853271295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_236
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 762
+        width: 76
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab55d35c845ee60a0800000000000000
+      internalID: -6886314679493372486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_237
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 758
+        width: 69
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2567581157c9ca0800000000000000
+      internalID: -6008799084705066326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_238
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 761
+        width: 62
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4253923074da9f590800000000000000
+      internalID: -7639884772350020316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_239
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 763
+        width: 62
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a9d669849647b390800000000000000
+      internalID: -7802690225621771864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_240
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 761
+        width: 82
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2bebb2cca2f95240800000000000000
+      internalID: 4781119303245884204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_241
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 756
+        width: 60
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f634a3cf7527970800000000000000
+      internalID: 8751153766755168066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_242
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 675
+        width: 66
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf175763dc05fcd0800000000000000
+      internalID: -2525097913959899171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_243
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 675
+        width: 68
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82db4b2244e478d90800000000000000
+      internalID: -7095616633351914200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_244
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 675
+        width: 62
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa55f893a2b5e29e0800000000000000
+      internalID: -1644276577031203414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_245
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 675
+        width: 60
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8e8094bfa669a80800000000000000
+      internalID: -8460457222474241859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_246
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 676
+        width: 60
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d8c58ca9d6099e0800000000000000
+      internalID: -1616671754672108287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_247
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 599
+        width: 61
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ad860e7132d4b60800000000000000
+      internalID: 7731874720721197726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_248
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 605
+        width: 62
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74d66460aec57d00800000000000000
+      internalID: 969908483042759802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_249
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 605
+        width: 66
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 768fbca0bd3070dc0800000000000000
+      internalID: -3672962731783489433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_250
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 607
+        width: 67
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b668e9aa6e19d1ed0800000000000000
+      internalID: -2441635003073919381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_251
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 524
+        width: 66
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b855582970b93fff0800000000000000
+      internalID: -3488717871950453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_252
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 522
+        width: 64
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648790a5b66b30940800000000000000
+      internalID: 5261249361887197254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_253
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 568
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeecad02c450fff60800000000000000
+      internalID: 8070174881798082286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_254
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 522
+        width: 65
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc3f668d7115d8a0800000000000000
+      internalID: -6281094874474267407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_255
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 524
+        width: 58
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d56904dded57b910800000000000000
+      internalID: 1853053047732266455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_256
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 385
+        width: 140
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4919453b37b9a170800000000000000
+      internalID: 8190278862274894156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_257
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 372
+        width: 153
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbad36a53132d22d0800000000000000
+      internalID: -3301944385764861249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_258
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 108
+        width: 336
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab7de4b7c3b5c350800000000000000
+      internalID: 6036428545875344303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_259
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 174
+        width: 161
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10414705d957a0a0800000000000000
+      internalID: -6870423935045779426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_260
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 174
+        width: 162
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02dbb3768f8e10120800000000000000
+      internalID: 2378438231809834272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_261
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 108
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105f21de537878a60800000000000000
+      internalID: 7676252755556758785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_262
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 6
+        width: 194
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544f68096d47c41b0800000000000000
+      internalID: -5671029365869710267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_263
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 6
+        width: 256
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f70feb8c64fca5630800000000000000
+      internalID: 3916670728874684543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_264
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 52
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df30ac8634daea1c0800000000000000
+      internalID: -4490461273409321987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_265
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 48
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4fefa47d4bdd12c0800000000000000
+      internalID: -4459166930310271158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_266
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 52
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24a5668f5de934270800000000000000
+      internalID: 8233599185596078658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_267
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 48
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6506a5e6409b71160800000000000000
+      internalID: 6996263974825779286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_268
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 48
+        width: 76
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8903b2099f2e5dd20800000000000000
+      internalID: 3302795463239610520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_269
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 31
+        width: 36
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7aa863b6e6982ad0800000000000000
+      internalID: -2726763656776209793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_270
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 31
+        width: 49
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9408b070696165080800000000000000
+      internalID: -9199140355238559671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_271
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 38
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff053d9fc55472550800000000000000
+      internalID: 6135949282946273535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_272
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 31
+        width: 49
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db9ba32abf20df580800000000000000
+      internalID: -8791867617775535683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_273
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 31
+        width: 51
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3136ef2cb7a2b2200800000000000000
+      internalID: 156265323115209491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_274
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 31
+        width: 99
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55357cbdd3b77b030800000000000000
+      internalID: 3510409940169085781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_275
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 31
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243fa560e85e620b0800000000000000
+      internalID: -5753659075764489406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_276
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 6
+        width: 62
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 589202c14886aa500800000000000000
+      internalID: 408253632847292805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_277
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 6
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b18111a45bb8acd0800000000000000
+      internalID: -2546579617124089419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chopper transparent_278
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 6
+        width: 116
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79325a07261caf520800000000000000
+      internalID: 2736712352121824151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
