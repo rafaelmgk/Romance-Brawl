@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class player_movement : MonoBehaviour
+public class player_movement : NetworkBehaviour
 {
 
 public CharacterController2D controller ;
@@ -17,6 +18,7 @@ bool crouch = false;
     // Update is called once per frame
     void Update()
     {
+		if (!isLocalPlayer) return;
        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
@@ -47,7 +49,7 @@ bool crouch = false;
     void FixedUpdate()
     {
       controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
-      
-      
+
+
     }
 }

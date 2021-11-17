@@ -134,11 +134,8 @@ GameObject:
   - component: {fileID: 497377677}
   - component: {fileID: 497377676}
   - component: {fileID: 497377675}
-  - component: {fileID: 497377674}
   - component: {fileID: 497377673}
   - component: {fileID: 497377672}
-  - component: {fileID: 497377671}
-  - component: {fileID: 497377670}
   - component: {fileID: 497377669}
   m_Layer: 3
   m_Name: MonkeyDLuffy
@@ -161,41 +158,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {fileID: 497377677}
   luffyHitBoX: {fileID: 497377673}
---- !u!114 &497377670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497377668}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee8d1a86f26faa74283e4c43ec3251e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 497377675}
-  attackPoint: {fileID: 0}
-  attackRange: 0.5
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 8
-  attackDirection: -1
-  attackDamage: 20
---- !u!114 &497377671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497377668}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72a933024f4c4c141b0d843549423e53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 497377674}
-  animator: {fileID: 497377675}
-  runSpeed: 40
 --- !u!61 &497377672
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -243,46 +205,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &497377674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497377668}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57995d3b7da776e4491d60fb298ba9fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_JumpForce: 400
-  m_CrouchSpeed: 0.36
-  m_MovementSmoothing: 0.05
-  m_AirControl: 1
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_GroundCheck: {fileID: 1941711982}
-  m_CeilingCheck: {fileID: 1623481997}
-  m_CrouchDisableCollider: {fileID: 0}
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 497377671}
-        m_TargetAssemblyTypeName: player_movement, Assembly-CSharp
-        m_MethodName: OnLanding
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnCrouchEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!95 &497377675
 Animator:
   serializedVersion: 3
