@@ -593,7 +593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {fileID: 1355865353}
-  chopperHitBoX: {fileID: 0}
+  chopperHitBoX: {fileID: 1355865350}
 --- !u!61 &1355865349
 BoxCollider2D:
   m_ObjectHideFlags: 0
