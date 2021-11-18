@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1e62dbae3072cb45b70608f0a7c8ea1, type: 3}
+  m_Name: Luffy
+  m_EditorClassIdentifier: 
+  characterName: Luffy
+  characterObject: {fileID: 4559217071842210107, guid: 4279e2c4f7458c34ba9ba98b9708da4c, type: 3}
+  hitBoX: {fileID: 0}
+  health: 0

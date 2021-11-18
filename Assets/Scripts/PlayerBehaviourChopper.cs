@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class PlayerBehaviour : MonoBehaviour
+public class PlayerBehaviourChopper : MonoBehaviour
 {
 
   public CharacterController2D controller;
