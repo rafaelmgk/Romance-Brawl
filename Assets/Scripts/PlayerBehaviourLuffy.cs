@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class PlayerBehaviour : MonoBehaviour
+public class PlayerBehaviourLuffy : MonoBehaviour
 {
 
   public CharacterController2D controller;
@@ -74,11 +74,6 @@ public class PlayerBehaviour : MonoBehaviour
         break;
       }
 
-      if (enemy.GetComponent<Luffy>() != null)
-      {
-        enemy.GetComponent<Luffy>().TakeDamage(attackDamage, firstAtkPower);
-        break;
-      }
     }
   }
   public void AttackDamage()

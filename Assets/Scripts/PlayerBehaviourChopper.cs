@@ -68,17 +68,14 @@ public class PlayerBehaviourChopper : MonoBehaviour
     Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
     foreach (Collider2D enemy in hitEnemies)
     {
-      if (enemy.GetComponent<Chopper>() != null)
-      {
-        enemy.GetComponent<Chopper>().TakeDamage(attackDamage, firstAtkPower);
-        break;
-      }
 
       if (enemy.GetComponent<Luffy>() != null)
       {
         enemy.GetComponent<Luffy>().TakeDamage(attackDamage, firstAtkPower);
         break;
       }
+
+
     }
   }
   public void AttackDamage()

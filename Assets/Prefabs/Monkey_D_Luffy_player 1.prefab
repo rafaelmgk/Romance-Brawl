@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5218971734029842672}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CeilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,13 +42,14 @@ GameObject:
   - component: {fileID: 5411658225077610186}
   - component: {fileID: 6546482005730255426}
   - component: {fileID: 836442417185632381}
+  - component: {fileID: -1847806265666395066}
   - component: {fileID: 5409818749854775727}
   - component: {fileID: 4757451454353761281}
-  - component: {fileID: 1433505328155151442}
   - component: {fileID: -1204547690375211241}
   - component: {fileID: 5003981991407762257}
   - component: {fileID: -1728959598436792494}
-  m_Layer: 0
+  - component: {fileID: -6544668083134560665}
+  m_Layer: 3
   m_Name: Monkey_D_Luffy_player 1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -167,8 +168,8 @@ MonoBehaviour:
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1433505328155151442}
-        m_TargetAssemblyTypeName: PlayerBehaviour, Assembly-CSharp
+      - m_Target: {fileID: -1847806265666395066}
+        m_TargetAssemblyTypeName: PlayerBehaviourLuffy, Assembly-CSharp
         m_MethodName: OnLanding
         m_Mode: 1
         m_Arguments:
@@ -182,6 +183,29 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-1847806265666395066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4559217071842210107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a678644a470ad24d907f64334cbabfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 836442417185632381}
+  animator: {fileID: 6546482005730255426}
+  runSpeed: 40
+  attackPoint: {fileID: 8304542415087038332}
+  attackRange: 1000
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  attackDirection: 0
+  attackDamage: 0
+  firstAtkPower: 10
 --- !u!50 &5409818749854775727
 Rigidbody2D:
   serializedVersion: 4
@@ -229,29 +253,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.58349764}
   m_EdgeRadius: 0
---- !u!114 &1433505328155151442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4559217071842210107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a678644a470ad24d907f64334cbabfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 836442417185632381}
-  animator: {fileID: 6546482005730255426}
-  runSpeed: 40
-  attackPoint: {fileID: 8304542415087038332}
-  attackRange: 100
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 8
-  attackDirection: 0
-  attackDamage: 0
-  firstAtkPower: 10
 --- !u!114 &-1204547690375211241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,6 +315,21 @@ MonoBehaviour:
   syncInterval: 0.1
   clientAuthority: 1
   animator: {fileID: 6546482005730255426}
+--- !u!114 &-6544668083134560665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4559217071842210107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f97b06c9057410479d0756affe4644c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {fileID: 1720734485633453343}
+  luffyHitBoX: {fileID: 5409818749854775727}
+  health: 0
 --- !u!1 &9111604492829658178
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7074083855439903602}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8304542415087038332}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
