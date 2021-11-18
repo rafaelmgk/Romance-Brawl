@@ -693,7 +693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &897304855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -733,7 +733,7 @@ MonoBehaviour:
   connectedToRelay:
     m_PersistentCalls:
       m_Calls: []
-  useNATPunch: 0
+  useNATPunch: 1
   NATPunchtroughPort: 1
   useLoadBalancer: 0
   loadBalancerPort: 7070
