@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1847806265666395066, guid: 11d7f7268e955664aab74b7389eb0ee9, type: 3}
       propertyPath: attackRange
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1204547690375211241, guid: 11d7f7268e955664aab74b7389eb0ee9, type: 3}
       propertyPath: sceneId
@@ -806,11 +806,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1231497545564980283, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
       propertyPath: attackRange
-      value: 0.5
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -1231497545564980283, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
+      propertyPath: enemyLayers.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -1204547690375211241, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
       propertyPath: sceneId
       value: 662766030
+      objectReference: {fileID: 0}
+    - target: {fileID: 836442417185632381, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1720734485633453343, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
       propertyPath: m_RootOrder
@@ -826,11 +834,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1720734485633453343, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.632
+      value: -2.269
       objectReference: {fileID: 0}
     - target: {fileID: 1720734485633453343, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.017
+      value: -0.053
       objectReference: {fileID: 0}
     - target: {fileID: 1720734485633453343, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -867,6 +875,14 @@ PrefabInstance:
     - target: {fileID: 4559217071842210107, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
       propertyPath: m_Name
       value: TestChopper
+      objectReference: {fileID: 0}
+    - target: {fileID: 8304542415087038332, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.237
+      objectReference: {fileID: 0}
+    - target: {fileID: 8304542415087038332, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.115
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
