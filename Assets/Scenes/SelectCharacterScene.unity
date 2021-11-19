@@ -1485,6 +1485,7 @@ GameObject:
   - component: {fileID: 1828477293}
   - component: {fileID: 1828477292}
   - component: {fileID: 1828477294}
+  - component: {fileID: 1828477295}
   m_Layer: 5
   m_Name: CharacterPanel
   m_TagString: Untagged
@@ -1565,11 +1566,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bdf0e29c0f299b4c86b197c1f5f986a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   characters:
   - {fileID: 4559217071842210107, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
   - {fileID: 4559217071842210107, guid: 11d7f7268e955664aab74b7389eb0ee9, type: 3}
   characterSelectPanel: {fileID: 1828477290}
   choosenChar: {fileID: 423660601}
+--- !u!114 &1828477295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828477290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 1686997772
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1887583427
 GameObject:
   m_ObjectHideFlags: 0
