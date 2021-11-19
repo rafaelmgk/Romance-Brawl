@@ -18,8 +18,7 @@ public class Jinbei : MonoBehaviour
   public void TakeDamage(int dmgAndDirection, int power)
   {
     health += power;
-    jinbeiHitBoX.velocity = transform.right * (dmgAndDirection * health);
-
+    jinbeiHitBoX.velocity = new Vector3(dmgAndDirection * health, health / 5, 0);
   }
 
 

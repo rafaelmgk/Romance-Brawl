@@ -18,7 +18,7 @@ public class Chopper : MonoBehaviour
   public void TakeDamage(int dmgAndDirection, int power)
   {
     health += power;
-    chopperHitBoX.velocity = transform.right * (dmgAndDirection * health);
+    chopperHitBoX.velocity = new Vector3(dmgAndDirection * health, health / 5, 0);
 
   }
 

@@ -18,7 +18,7 @@ public class Robin : MonoBehaviour
   public void TakeDamage(int dmgAndDirection, int power)
   {
     health += power;
-    robinHitBoX.velocity = transform.right * (dmgAndDirection * health);
+    robinHitBoX.velocity = new Vector3(dmgAndDirection * health, health / 5, 0);
 
   }
 

@@ -18,7 +18,7 @@ public class Zoro : MonoBehaviour
   public void TakeDamage(int dmgAndDirection, int power)
   {
     health += power;
-    zoroHitBoX.velocity = transform.right * (dmgAndDirection * health);
+    zoroHitBoX.velocity = new Vector3(dmgAndDirection * health, health / 5, 0);
 
   }
 

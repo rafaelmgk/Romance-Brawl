@@ -18,8 +18,7 @@ public class Usopp : MonoBehaviour
   public void TakeDamage(int dmgAndDirection, int power)
   {
     health += power;
-    usoppHitBoX.velocity = transform.right * (dmgAndDirection * health);
-
+    usoppHitBoX.velocity = new Vector3(dmgAndDirection * health, health / 5, 0);
   }
 
 

@@ -18,7 +18,7 @@ public class Brook : MonoBehaviour
   public void TakeDamage(int dmgAndDirection, int power)
   {
     health += power;
-    brookHitBoX.velocity = transform.right * (dmgAndDirection * health);
+    brookHitBoX.velocity = new Vector3(dmgAndDirection * health, health / 5, 0);
 
   }
 

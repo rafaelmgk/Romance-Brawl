@@ -18,8 +18,7 @@ public class Sanji : MonoBehaviour
   public void TakeDamage(int dmgAndDirection, int power)
   {
     health += power;
-    sanjiHitBoX.velocity = transform.right * (dmgAndDirection * health);
-
+    sanjiHitBoX.velocity = new Vector3(dmgAndDirection * health, health / 5, 0);
   }
 
 

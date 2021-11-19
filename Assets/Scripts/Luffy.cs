@@ -18,7 +18,7 @@ public class Luffy : MonoBehaviour
   public void TakeDamage(int dmgAndDirection, int power)
   {
     health += power;
-    luffyHitBoX.velocity = transform.right * (dmgAndDirection * health);
+    luffyHitBoX.velocity = new Vector3(dmgAndDirection * health, health / 5, 0);
 
   }
 

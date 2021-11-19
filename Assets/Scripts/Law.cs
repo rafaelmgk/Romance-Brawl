@@ -18,8 +18,7 @@ public class Law : MonoBehaviour
   public void TakeDamage(int dmgAndDirection, int power)
   {
     health += power;
-    lawHitBoX.velocity = transform.right * (dmgAndDirection * health);
-
+    lawHitBoX.velocity = new Vector3(dmgAndDirection * health, health / 5, 0);
   }
 
 

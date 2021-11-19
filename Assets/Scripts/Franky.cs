@@ -18,7 +18,7 @@ public class Franky : MonoBehaviour
   public void TakeDamage(int dmgAndDirection, int power)
   {
     health += power;
-    frankyHitBoX.velocity = transform.right * (dmgAndDirection * health);
+    frankyHitBoX.velocity = new Vector3(dmgAndDirection * health, health / 5, 0);
 
   }
 
