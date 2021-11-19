@@ -5,11 +5,11 @@ using Mirror;
 public class NetworkRoomPlayerExt : NetworkRoomPlayer {
 	public override void OnStartClient() {
 		//Debug.Log($"OnStartClient {gameObject}");
-		if (isLocalPlayer) {
-			GameManager.Instance.localPlayerIndex = index;
-			if (!GameManager.Instance.currentPlayers.ContainsKey(index))
-				GameManager.Instance.currentPlayers.Add(index, 0);
-		}
+		// if (isLocalPlayer) {
+		// 	GameManager.Instance.localPlayerIndex = index;
+		// 	if (!GameManager.Instance.currentPlayers.ContainsKey(index))
+		// 		GameManager.Instance.currentPlayers.Add(index, 0);
+		// }
 	}
 
 	public override void OnClientEnterRoom() {
