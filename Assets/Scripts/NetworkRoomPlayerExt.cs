@@ -15,29 +15,29 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer {
 		//Debug.Log($"OnStartClient {gameObject}");
 		if (isLocalPlayer) {
 			characterSelection.SetActive(true);
-			CmdSendIndex(index);
+			// CmdSendIndex(index);
 			_playerIndex = index;
 		}
 	}
 
-	[Command]
-	private void CmdSendIndex(int index) {
-		if (GameManager.Instance == null) return;
-		if (!GameManager.Instance.currentPlayers.ContainsKey(index))
-			GameManager.Instance.currentPlayers.Add(index, 0);
-	}
+	// [Command]
+	// private void CmdSendIndex(int index) {
+	// 	if (GameManager.Instance == null) return;
+	// 	if (!GameManager.Instance.currentPlayers.ContainsKey(index))
+	// 		GameManager.Instance.currentPlayers.Add(index, 0);
+	// }
 
 	public void ChooseCharacter(int characterChoice) {
-		CmdChooseCharacter(characterChoice);
+		// CmdChooseCharacter(characterChoice);
 		choosenChar.text = characters[characterChoice].name;
 	}
 
-	[Command]
-	private void CmdChooseCharacter(int characterChoice) {
-		if (GameManager.Instance == null) return;
-		if (GameManager.Instance.currentPlayers.ContainsKey(_playerIndex))
-			GameManager.Instance.currentPlayers[_playerIndex] = characterChoice;
-	}
+	// [Command]
+	// private void CmdChooseCharacter(int characterChoice) {
+	// 	if (GameManager.Instance == null) return;
+	// 	if (GameManager.Instance.currentPlayers.ContainsKey(_playerIndex))
+	// 		GameManager.Instance.currentPlayers[_playerIndex] = characterChoice;
+	// }
 
 	public override void OnClientEnterRoom() {
 		//Debug.Log($"OnClientEnterRoom {SceneManager.GetActiveScene().path}");
