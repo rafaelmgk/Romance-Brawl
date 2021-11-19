@@ -5,8 +5,9 @@ using Mirror;
 
 public class CustomNetworkRoomManager : NetworkRoomManager {
 	public override GameObject OnRoomServerCreateRoomPlayer(NetworkConnection conn) {
-		// if (!currentPlayers.ContainsKey((int)conn.authenticationData))
-		// 	currentPlayers.Add((int)conn.authenticationData, 0);
+		// GameManager.Instance.id = conn.connectionId;
+		// if (!currentPlayers.ContainsKey(GameManager.Instance.id))
+		// 	currentPlayers.Add(GameManager.Instance.id, 0);
 
 		return base.OnRoomServerCreateRoomPlayer(conn);
 	}
@@ -17,8 +18,8 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 	// }
 
 	public override GameObject OnRoomServerCreateGamePlayer(NetworkConnection conn, GameObject roomPlayer) {
-		print("teste");
-		int index = GameManager.Instance.localChoosenCharacter;
+		print(clientIndex);
+		int index = GameManager.Instance.currentPlayers[conn.connectionId];
 
 		GameObject _temp = (GameObject)GameObject.Instantiate(spawnPrefabs[index],
 			startPositions[index].position,

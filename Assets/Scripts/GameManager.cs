@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : NetworkBehaviour {
 	public static GameManager Instance;
 
-	public Dictionary<int, int> currentPlayers;
-	public int localPlayerIndex;
-	public int localChoosenCharacter;
+	[SerializeField] public readonly SyncDictionary<int, int> currentPlayers = new SyncDictionary<int, int>();
 
 	private void Awake() {
 		if (Instance != null) {
@@ -18,4 +17,12 @@ public class GameManager : MonoBehaviour {
 		Instance = this;
 		DontDestroyOnLoad(gameObject);
 	}
+
+	// public override void OnStartClient() {
+	// 	currentPlayers.Callback += OnCurrentPlayersChanged;
+	// }
+
+	// void OnCurrentPlayersChanged(SyncDictionary<int, int>.Operation op, int key, int value) {
+	// 	currentPlayers.Add(key, value);
+	// }
 }
