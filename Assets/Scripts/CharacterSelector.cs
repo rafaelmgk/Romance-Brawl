@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Mirror;
 
 public class CharacterSelector : MonoBehaviour {
 	//public GameObject player;
@@ -11,7 +12,7 @@ public class CharacterSelector : MonoBehaviour {
 	public TMP_Text choosenChar;
 
 	public void ChooseCharacter(int characterChoice) {
-		GameManager.Instance.choosenCharacter = characters[characterChoice];
+		NetworkManager.singleton.playerPrefab = characters[characterChoice];
 		choosenChar.text = characters[characterChoice].name;
 	}
 }

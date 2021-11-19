@@ -36,9 +36,6 @@ public class ServerListLRM : MonoBehaviour {
 	}
 
 	private void ConnectToServer(string serverId) {
-		if (GameManager.Instance == null) return;
-
-		NetworkManager.singleton.playerPrefab = GameManager.Instance.choosenCharacter;
 		NetworkManager.singleton.networkAddress = serverId;
 		NetworkManager.singleton.StartClient();
 	}

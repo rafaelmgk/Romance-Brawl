@@ -1569,6 +1569,7 @@ MonoBehaviour:
   - {fileID: 4559217071842210107, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
   - {fileID: 4559217071842210107, guid: 11d7f7268e955664aab74b7389eb0ee9, type: 3}
   characterSelectPanel: {fileID: 1828477290}
+  choosenChar: {fileID: 423660601}
 --- !u!1 &1887583427
 GameObject:
   m_ObjectHideFlags: 0
