@@ -3,134 +3,114 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class PlayerBehaviourChopper : MonoBehaviour
-{
+public class PlayerBehaviourChopper : NetworkBehaviour {
 
-  public CharacterController2D controller;
-  public Animator animator;
+	public CharacterController2D controller;
+	public Animator animator;
 
-  public float runSpeed = 40f;
+	public float runSpeed = 40f;
 
-  float horizontalMove = 0f;
-  bool jump = false;
-  bool crouch = false;
+	float horizontalMove = 0f;
+	bool jump = false;
+	bool crouch = false;
 
-  public Transform attackPoint;
-  public float attackRange = 0.5f;
-  public LayerMask enemyLayers;
-  public int attackDirection;
-  public int attackDamage;
+	public Transform attackPoint;
+	public float attackRange = 0.5f;
+	public LayerMask enemyLayers;
+	public int attackDirection;
+	public int attackDamage;
 
-  public int firstAtkPower = 10;
+	public int firstAtkPower = 10;
 
-  // Update is called once per frame
-  void Update()
-  {
-    AttackDamage();
-    if (Input.GetKeyDown(KeyCode.Z))
-    {
-      Attack();
-    }
+	// Update is called once per frame
+	void Update() {
+		if (!isLocalPlayer) return;
 
-
-    //if (!isLocalPlayer) return;
+		AttackDamage();
+		if (Input.GetKeyDown(KeyCode.Z)) {
+			Attack();
+		}
 
 
-    horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-    animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-    if (Input.GetButtonDown("Jump"))
-    {
-      jump = true;
-      animator.SetBool("IsJumping", true);
-    }
-    if (Input.GetButtonDown("Crouch"))
-    {
-      crouch = true;
-      animator.SetBool("IsCrouching", true);
-    }
-    else if (Input.GetButtonUp("Crouch"))
-    {
-      crouch = false;
-      animator.SetBool("IsCrouching", false);
-    }
-  }
+		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-  public void OnLanding()
-  {
-    animator.SetBool("IsJumping", false);
-    jump = false;
-  }
-  void Attack()
-  {
-    animator.SetTrigger("Attack");
-    Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-    foreach (Collider2D enemy in hitEnemies)
-    {
-      if (enemy.GetComponent<Luffy>() != null)
-      {
-        enemy.GetComponent<Luffy>().TakeDamage(attackDamage, firstAtkPower);
-        break;
-      }
-      if (enemy.GetComponent<Nami>() != null)
-      {
-        enemy.GetComponent<Nami>().TakeDamage(attackDamage, firstAtkPower);
-        break;
-      }
-      if (enemy.GetComponent<Robin>() != null)
-      {
-        enemy.GetComponent<Robin>().TakeDamage(attackDamage, firstAtkPower);
-        break;
-      }
-      if (enemy.GetComponent<Usopp>() != null)
-      {
-        enemy.GetComponent<Usopp>().TakeDamage(attackDamage, firstAtkPower);
-        break;
-      }
-      if (enemy.GetComponent<Zoro>() != null)
-      {
-        enemy.GetComponent<Zoro>().TakeDamage(attackDamage, firstAtkPower);
-        break;
-      }
-      if (enemy.GetComponent<Law>() != null)
-      {
-        enemy.GetComponent<Law>().TakeDamage(attackDamage, firstAtkPower);
-        break;
-      }
-      if (enemy.GetComponent<Sanji>() != null)
-      {
-        enemy.GetComponent<Sanji>().TakeDamage(attackDamage, firstAtkPower);
-        break;
-      }
-      if (enemy.GetComponent<Franky>() != null)
-      {
-        enemy.GetComponent<Franky>().TakeDamage(attackDamage, firstAtkPower);
-        break;
-      }
-      if (enemy.GetComponent<Brook>() != null)
-      {
-        enemy.GetComponent<Brook>().TakeDamage(attackDamage, firstAtkPower);
-        break;
-      }
-      if (enemy.GetComponent<Jinbei>() != null)
-      {
-        enemy.GetComponent<Jinbei>().TakeDamage(attackDamage, firstAtkPower);
-        break;
-      }
-    }
-  }
-  public void AttackDamage()
-  {
-    if (Input.GetAxisRaw("Horizontal") != 0)
-    {
-      attackDirection = (int)Input.GetAxisRaw("Horizontal");
-    }
-    attackDamage = 1 * attackDirection;
-  }
-  void FixedUpdate()
-  {
-    //if (!isLocalPlayer) return;
-    controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
-  }
+		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
+		if (Input.GetButtonDown("Jump")) {
+			jump = true;
+			animator.SetBool("IsJumping", true);
+		}
+		if (Input.GetButtonDown("Crouch")) {
+			crouch = true;
+			animator.SetBool("IsCrouching", true);
+		} else if (Input.GetButtonUp("Crouch")) {
+			crouch = false;
+			animator.SetBool("IsCrouching", false);
+		}
+	}
+
+	public void OnLanding() {
+		animator.SetBool("IsJumping", false);
+		jump = false;
+	}
+
+	void Attack() {
+		animator.SetTrigger("Attack");
+		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+		foreach (Collider2D enemy in hitEnemies) {
+			if (enemy.GetComponent<Luffy>() != null) {
+				enemy.GetComponent<Luffy>().TakeDamage(attackDamage, firstAtkPower);
+				break;
+			}
+			if (enemy.GetComponent<Nami>() != null) {
+				enemy.GetComponent<Nami>().TakeDamage(attackDamage, firstAtkPower);
+				break;
+			}
+			if (enemy.GetComponent<Robin>() != null) {
+				enemy.GetComponent<Robin>().TakeDamage(attackDamage, firstAtkPower);
+				break;
+			}
+			if (enemy.GetComponent<Usopp>() != null) {
+				enemy.GetComponent<Usopp>().TakeDamage(attackDamage, firstAtkPower);
+				break;
+			}
+			if (enemy.GetComponent<Zoro>() != null) {
+				enemy.GetComponent<Zoro>().TakeDamage(attackDamage, firstAtkPower);
+				break;
+			}
+			if (enemy.GetComponent<Law>() != null) {
+				enemy.GetComponent<Law>().TakeDamage(attackDamage, firstAtkPower);
+				break;
+			}
+			if (enemy.GetComponent<Sanji>() != null) {
+				enemy.GetComponent<Sanji>().TakeDamage(attackDamage, firstAtkPower);
+				break;
+			}
+			if (enemy.GetComponent<Franky>() != null) {
+				enemy.GetComponent<Franky>().TakeDamage(attackDamage, firstAtkPower);
+				break;
+			}
+			if (enemy.GetComponent<Brook>() != null) {
+				enemy.GetComponent<Brook>().TakeDamage(attackDamage, firstAtkPower);
+				break;
+			}
+			if (enemy.GetComponent<Jinbei>() != null) {
+				enemy.GetComponent<Jinbei>().TakeDamage(attackDamage, firstAtkPower);
+				break;
+			}
+		}
+	}
+	public void AttackDamage() {
+		if (Input.GetAxisRaw("Horizontal") != 0) {
+			attackDirection = (int)Input.GetAxisRaw("Horizontal");
+		}
+		attackDamage = 1 * attackDirection;
+	}
+
+	void FixedUpdate() {
+		if (!isLocalPlayer) return;
+		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+	}
 }
