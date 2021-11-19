@@ -18,11 +18,14 @@ public class GameManager : NetworkBehaviour {
 		DontDestroyOnLoad(gameObject);
 	}
 
-	// public override void OnStartClient() {
-	// 	currentPlayers.Callback += OnCurrentPlayersChanged;
-	// }
+	public override void OnStartClient() {
+		currentPlayers.Callback += OnCurrentPlayersChanged;
+	}
 
-	// void OnCurrentPlayersChanged(SyncDictionary<int, int>.Operation op, int key, int value) {
-	// 	currentPlayers.Add(key, value);
-	// }
+	void OnCurrentPlayersChanged(SyncDictionary<int, int>.Operation op, int key, int value) {
+		// currentPlayers.Add(key, value);
+		print(op);
+		print(key);
+		print(value);
+	}
 }
