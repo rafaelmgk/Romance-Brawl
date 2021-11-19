@@ -18,9 +18,9 @@ public class Nami : MonoBehaviour
   public void TakeDamage(int dmgAndDirection, int power)
   {
     health += power;
-    namiHitBoX.velocity = transform.right * (dmgAndDirection * health);
+    namiHitBoX.velocity = new Vector3(dmgAndDirection * health, health / 5, 0);
+
 
   }
-
 
 }
