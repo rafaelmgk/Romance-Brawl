@@ -10,6 +10,6 @@ public class CharacterSelector : MonoBehaviour {
 	public GameObject characterSelectPanel;
 
 	public void ChooseCharacter(int characterChoice) {
-		NetworkManager.singleton.playerPrefab = characters[characterChoice];
+		GameManager.Instance.choosenCharacter = characters[characterChoice];
 	}
 }
