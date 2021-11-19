@@ -39,16 +39,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1720734485633453343}
-  - component: {fileID: 5411658225077610186}
-  - component: {fileID: 6546482005730255426}
   - component: {fileID: 836442417185632381}
   - component: {fileID: -1847806265666395066}
+  - component: {fileID: -6544668083134560665}
+  - component: {fileID: 5411658225077610186}
+  - component: {fileID: 6546482005730255426}
   - component: {fileID: 5409818749854775727}
   - component: {fileID: 4757451454353761281}
   - component: {fileID: -1204547690375211241}
   - component: {fileID: 5003981991407762257}
   - component: {fileID: -1728959598436792494}
-  - component: {fileID: -6544668083134560665}
   m_Layer: 3
   m_Name: TestLuffy
   m_TagString: Player
@@ -73,6 +73,84 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &836442417185632381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4559217071842210107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57995d3b7da776e4491d60fb298ba9fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_JumpForce: 400
+  m_CrouchSpeed: 0.36
+  m_MovementSmoothing: 0.05
+  m_AirControl: 1
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_GroundCheck: {fileID: 7074083855439903602}
+  m_CeilingCheck: {fileID: 5218971734029842672}
+  m_CrouchDisableCollider: {fileID: 0}
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -1847806265666395066}
+        m_TargetAssemblyTypeName: PlayerBehaviourLuffy, Assembly-CSharp
+        m_MethodName: OnLanding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnCrouchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &-1847806265666395066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4559217071842210107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a678644a470ad24d907f64334cbabfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 836442417185632381}
+  animator: {fileID: 6546482005730255426}
+  runSpeed: 40
+  attackPoint: {fileID: 8304542415087038332}
+  attackRange: 0.5
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  attackDirection: 0
+  attackDamage: 0
+  firstAtkPower: 10
+--- !u!114 &-6544668083134560665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4559217071842210107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f97b06c9057410479d0756affe4644c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {fileID: 1720734485633453343}
+  luffyHitBoX: {fileID: 5409818749854775727}
+  health: 0
 --- !u!212 &5411658225077610186
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -143,69 +221,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &836442417185632381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4559217071842210107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57995d3b7da776e4491d60fb298ba9fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_JumpForce: 400
-  m_CrouchSpeed: 0.36
-  m_MovementSmoothing: 0.05
-  m_AirControl: 1
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_GroundCheck: {fileID: 7074083855439903602}
-  m_CeilingCheck: {fileID: 5218971734029842672}
-  m_CrouchDisableCollider: {fileID: 0}
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -1847806265666395066}
-        m_TargetAssemblyTypeName: PlayerBehaviourLuffy, Assembly-CSharp
-        m_MethodName: OnLanding
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnCrouchEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &-1847806265666395066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4559217071842210107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a678644a470ad24d907f64334cbabfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 836442417185632381}
-  animator: {fileID: 6546482005730255426}
-  runSpeed: 40
-  attackPoint: {fileID: 8304542415087038332}
-  attackRange: 1000
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 8
-  attackDirection: 0
-  attackDamage: 0
-  firstAtkPower: 10
 --- !u!50 &5409818749854775727
 Rigidbody2D:
   serializedVersion: 4
@@ -315,21 +330,6 @@ MonoBehaviour:
   syncInterval: 0.1
   clientAuthority: 1
   animator: {fileID: 6546482005730255426}
---- !u!114 &-6544668083134560665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4559217071842210107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f97b06c9057410479d0756affe4644c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: {fileID: 1720734485633453343}
-  luffyHitBoX: {fileID: 5409818749854775727}
-  health: 0
 --- !u!1 &9111604492829658178
 GameObject:
   m_ObjectHideFlags: 0
