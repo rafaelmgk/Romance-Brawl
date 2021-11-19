@@ -12,14 +12,13 @@ public class CharacterSelector : NetworkBehaviour {
 	public TMP_Text choosenChar;
 
 	public void ChooseCharacter(int characterChoice) {
-		if (isServer) NetworkManager.singleton.playerPrefab = characters[characterChoice];
-		else if (isClient) CmdChooseCharacter(characters[characterChoice]);
+		CmdChooseCharacter(characterChoice);
 
 		choosenChar.text = characters[characterChoice].name;
 	}
 
 	[Command]
-	private void CmdChooseCharacter(GameObject prefab) {
-		NetworkManager.singleton.playerPrefab = prefab;
+	private void CmdChooseCharacter(int characterChoice) {
+		CustomNetworkRoomManager.SetPlayerTypeRoom(connectionToClient, characterChoice);
 	}
 }

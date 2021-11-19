@@ -4,20 +4,26 @@ using UnityEngine;
 using Mirror;
 
 public class CustomNetworkRoomManager : NetworkRoomManager {
-	Dictionary<int, int> currentPlayers;
+	public static Dictionary<int, int> currentPlayers;
+	private NetworkConnection _currentConnection;
+	private struct AuthData {
+		public int connectionId;
+	}
+
 	public override GameObject OnRoomServerCreateRoomPlayer(NetworkConnection conn) {
-		if (!currentPlayers.ContainsKey(conn.connectionId))
-			currentPlayers.Add(conn.connectionId, 0);
+		// if (!currentPlayers.ContainsKey((int)conn.authenticationData))
+		// 	currentPlayers.Add((int)conn.authenticationData, 0);
 
 		return base.OnRoomServerCreateRoomPlayer(conn);
 	}
 
-	public void SetPlayerTypeRoom(NetworkConnection conn, int _type) {
+	public static void SetPlayerTypeRoom(NetworkConnection conn, int _type) {
 		if (currentPlayers.ContainsKey(conn.connectionId))
 			currentPlayers[conn.connectionId] = _type;
 	}
 
 	public override GameObject OnRoomServerCreateGamePlayer(NetworkConnection conn, GameObject roomPlayer) {
+		print("teste");
 		int index = currentPlayers[conn.connectionId];
 
 		GameObject _temp = (GameObject)GameObject.Instantiate(spawnPrefabs[index],
