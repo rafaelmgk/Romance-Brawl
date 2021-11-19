@@ -73,6 +73,31 @@ public class PlayerBehaviourLuffy : MonoBehaviour
         enemy.GetComponent<Chopper>().TakeDamage(attackDamage, firstAtkPower);
         break;
       }
+      if (enemy.GetComponent<Nami>() != null)
+      {
+        enemy.GetComponent<Nami>().TakeDamage(attackDamage, firstAtkPower);
+        break;
+      }
+      if (enemy.GetComponent<Robin>() != null)
+      {
+        enemy.GetComponent<Robin>().TakeDamage(attackDamage, firstAtkPower);
+        break;
+      }
+      if (enemy.GetComponent<Usopp>() != null)
+      {
+        enemy.GetComponent<Usopp>().TakeDamage(attackDamage, firstAtkPower);
+        break;
+      }
+      if (enemy.GetComponent<Zoro>() != null)
+      {
+        enemy.GetComponent<Zoro>().TakeDamage(attackDamage, firstAtkPower);
+        break;
+      }
+      if (enemy.GetComponent<Law>() != null)
+      {
+        enemy.GetComponent<Law>().TakeDamage(attackDamage, firstAtkPower);
+        break;
+      }
 
     }
   }
