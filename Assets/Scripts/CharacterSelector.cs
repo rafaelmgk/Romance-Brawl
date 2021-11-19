@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using Mirror;
 
-public class CharacterSelector : MonoBehaviour {
+public class CharacterSelector : NetworkBehaviour {
 	//public GameObject player;
 
 	public GameObject[] characters;
@@ -12,7 +12,14 @@ public class CharacterSelector : MonoBehaviour {
 	public TMP_Text choosenChar;
 
 	public void ChooseCharacter(int characterChoice) {
-		NetworkManager.singleton.playerPrefab = characters[characterChoice];
+		if (isServer) NetworkManager.singleton.playerPrefab = characters[characterChoice];
+		else if (isClient) CmdChooseCharacter(characters[characterChoice]);
+
 		choosenChar.text = characters[characterChoice].name;
+	}
+
+	[Command]
+	private void CmdChooseCharacter(GameObject prefab) {
+		NetworkManager.singleton.playerPrefab = prefab;
 	}
 }
