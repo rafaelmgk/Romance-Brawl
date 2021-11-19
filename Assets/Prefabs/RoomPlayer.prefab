@@ -913,7 +913,6 @@ GameObject:
   - component: {fileID: 1828477291}
   - component: {fileID: 1828477293}
   - component: {fileID: 1828477292}
-  - component: {fileID: 1828477294}
   - component: {fileID: 1828477295}
   m_Layer: 5
   m_Name: CharacterPanel
@@ -983,20 +982,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1828477294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828477290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bdf0e29c0f299b4c86b197c1f5f986a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
 --- !u!114 &1828477295
 MonoBehaviour:
   m_ObjectHideFlags: 0
