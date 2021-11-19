@@ -388,19 +388,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 580654843}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114033720796874720}
-        m_TargetAssemblyTypeName: NetworkRoomPlayerExt, Assembly-CSharp
-        m_MethodName: ChooseCharacter
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1272340031
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,19 +609,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1474028451}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114033720796874720}
-        m_TargetAssemblyTypeName: NetworkRoomPlayerExt, Assembly-CSharp
-        m_MethodName: ChooseCharacter
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1626815933
 GameObject:
   m_ObjectHideFlags: 0

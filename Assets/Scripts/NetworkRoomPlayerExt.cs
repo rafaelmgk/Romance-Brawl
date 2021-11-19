@@ -13,12 +13,13 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer {
 
 	public override void OnStartClient() {
 		//Debug.Log($"OnStartClient {gameObject}");
-		if (isLocalPlayer) {
-			characterSelection.SetActive(true);
-			// CmdSendIndex(index);
-			_playerIndex = index;
-		}
 	}
+
+		// if (isLocalPlayer) {
+		// 	characterSelection.SetActive(true);
+		// 	// CmdSendIndex(index);
+		// 	_playerIndex = index;
+		// }
 
 	// [Command]
 	// private void CmdSendIndex(int index) {
@@ -27,10 +28,10 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer {
 	// 		GameManager.Instance.currentPlayers.Add(index, 0);
 	// }
 
-	public void ChooseCharacter(int characterChoice) {
-		// CmdChooseCharacter(characterChoice);
-		choosenChar.text = characters[characterChoice].name;
-	}
+	// public void ChooseCharacter(int characterChoice) {
+	// 	// CmdChooseCharacter(characterChoice);
+	// 	choosenChar.text = characters[characterChoice].name;
+	// }
 
 	// [Command]
 	// private void CmdChooseCharacter(int characterChoice) {
