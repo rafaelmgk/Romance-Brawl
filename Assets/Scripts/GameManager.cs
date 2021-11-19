@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class GameManager : NetworkBehaviour {
+public class GameManager : NetworkBehaviour{
 	public static GameManager Instance;
 
 	// [SerializeField] public readonly SyncDictionary<int, int> currentPlayers = new SyncDictionary<int, int>();
