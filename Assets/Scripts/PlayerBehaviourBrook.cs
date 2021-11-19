@@ -98,6 +98,26 @@ public class PlayerBehaviourBrook : MonoBehaviour
         enemy.GetComponent<Law>().TakeDamage(attackDamage, firstAtkPower);
         break;
       }
+      if (enemy.GetComponent<Sanji>() != null)
+      {
+        enemy.GetComponent<Sanji>().TakeDamage(attackDamage, firstAtkPower);
+        break;
+      }
+      if (enemy.GetComponent<Franky>() != null)
+      {
+        enemy.GetComponent<Franky>().TakeDamage(attackDamage, firstAtkPower);
+        break;
+      }
+      if (enemy.GetComponent<Jinbei>() != null)
+      {
+        enemy.GetComponent<Jinbei>().TakeDamage(attackDamage, firstAtkPower);
+        break;
+      }
+      if (enemy.GetComponent<Chopper>() != null)
+      {
+        enemy.GetComponent<Chopper>().TakeDamage(attackDamage, firstAtkPower);
+        break;
+      }
     }
   }
   public void AttackDamage()

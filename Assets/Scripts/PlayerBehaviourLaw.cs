@@ -99,6 +99,26 @@ public class PlayerBehaviourLaw : MonoBehaviour
         enemy.GetComponent<Zoro>().TakeDamage(attackDamage, firstAtkPower);
         break;
       }
+      if (enemy.GetComponent<Sanji>() != null)
+      {
+        enemy.GetComponent<Sanji>().TakeDamage(attackDamage, firstAtkPower);
+        break;
+      }
+      if (enemy.GetComponent<Franky>() != null)
+      {
+        enemy.GetComponent<Franky>().TakeDamage(attackDamage, firstAtkPower);
+        break;
+      }
+      if (enemy.GetComponent<Brook>() != null)
+      {
+        enemy.GetComponent<Brook>().TakeDamage(attackDamage, firstAtkPower);
+        break;
+      }
+      if (enemy.GetComponent<Jinbei>() != null)
+      {
+        enemy.GetComponent<Jinbei>().TakeDamage(attackDamage, firstAtkPower);
+        break;
+      }
     }
   }
   public void AttackDamage()
