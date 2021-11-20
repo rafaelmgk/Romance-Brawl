@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 1720734485633453343}
   - component: {fileID: 836442417185632381}
   - component: {fileID: -1847806265666395066}
-  - component: {fileID: -6544668083134560665}
   - component: {fileID: 5411658225077610186}
   - component: {fileID: 6546482005730255426}
   - component: {fileID: 5409818749854775727}
@@ -138,19 +137,6 @@ MonoBehaviour:
   attackDirection: 0
   attackDamage: 0
   firstAtkPower: 10
---- !u!114 &-6544668083134560665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4559217071842210107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f97b06c9057410479d0756affe4644c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: {fileID: 1720734485633453343}
   luffyHitBoX: {fileID: 5409818749854775727}
   health: 0
 --- !u!212 &5411658225077610186
