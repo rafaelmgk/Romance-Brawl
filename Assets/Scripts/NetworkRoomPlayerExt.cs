@@ -14,6 +14,10 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer {
 		//Debug.Log($"OnStartClient {gameObject}");
 	}
 
+	public void HandleSelectionPanelVisibility(bool visibility) {
+		characterSelection.SetActive(visibility);
+	}
+
 	private void SendIndex() {
 		characterSelection.SetActive(true);
 		CmdSendIndex(index);
@@ -59,6 +63,7 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer {
 
 	public override void ReadyStateChanged(bool oldReadyState, bool newReadyState) {
 		//Debug.Log($"ReadyStateChanged {newReadyState}");
+		if (isLocalPlayer) HandleSelectionPanelVisibility(!readyToBegin);
 	}
 
 	public override void OnGUI() {

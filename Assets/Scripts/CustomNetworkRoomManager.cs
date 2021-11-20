@@ -5,7 +5,6 @@ using Mirror;
 
 public class CustomNetworkRoomManager : NetworkRoomManager {
 	public override GameObject OnRoomServerCreateGamePlayer(NetworkConnection conn, GameObject roomPlayer) {
-		print(clientIndex);
 		int index = GameManager.Instance.currentPlayers[conn.connectionId];
 
 		GameObject _temp = (GameObject)GameObject.Instantiate(spawnPrefabs[index],
