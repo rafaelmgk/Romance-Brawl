@@ -8,7 +8,7 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 		int index = GameManager.Instance.currentPlayers[conn.connectionId];
 
 		GameObject _temp = (GameObject)GameObject.Instantiate(spawnPrefabs[index],
-			startPositions[index].position,
+			startPositions[conn.connectionId].position,
 			Quaternion.identity);
 
 		NetworkServer.AddPlayerForConnection(conn, _temp);
