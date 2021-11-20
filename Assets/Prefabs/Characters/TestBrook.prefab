@@ -40,7 +40,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1720734485633453343}
   - component: {fileID: 836442417185632381}
-  - component: {fileID: 9011605412444275780}
   - component: {fileID: 857553632617264205}
   - component: {fileID: 5411658225077610186}
   - component: {fileID: 6546482005730255426}
@@ -49,6 +48,7 @@ GameObject:
   - component: {fileID: -1204547690375211241}
   - component: {fileID: 5003981991407762257}
   - component: {fileID: -1728959598436792494}
+  - component: {fileID: 5806586969133861965}
   m_Layer: 3
   m_Name: TestBrook
   m_TagString: Player
@@ -98,8 +98,8 @@ MonoBehaviour:
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9011605412444275780}
-        m_TargetAssemblyTypeName: PlayerBehaviourBrook, Assembly-CSharp
+      - m_Target: {fileID: 857553632617264205}
+        m_TargetAssemblyTypeName: PlayerBehaviour, Assembly-CSharp
         m_MethodName: OnLanding
         m_Mode: 1
         m_Arguments:
@@ -113,29 +113,6 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &9011605412444275780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4559217071842210107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc08fffe4d682b4c981666dbf1d7459, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 836442417185632381}
-  animator: {fileID: 6546482005730255426}
-  runSpeed: 40
-  attackPoint: {fileID: 8304542415087038332}
-  attackRange: 0.5
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 8
-  attackDirection: 0
-  attackDamage: 0
-  firstAtkPower: 10
 --- !u!114 &857553632617264205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,8 +125,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea3cf29961095db478a11bdd39518233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {fileID: 1720734485633453343}
-  brookHitBoX: {fileID: 5409818749854775727}
+  syncMode: 0
+  syncInterval: 0.1
+  controller: {fileID: 836442417185632381}
+  animator: {fileID: 6546482005730255426}
+  runSpeed: 40
+  attackPoint: {fileID: 8304542415087038332}
+  attackRange: 0.5
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  attackDirection: 0
+  attackDamage: 0
+  firstAtkPower: 10
+  hitBox: {fileID: 5409818749854775727}
   health: 0
 --- !u!212 &5411658225077610186
 SpriteRenderer:
@@ -330,6 +319,28 @@ MonoBehaviour:
   syncInterval: 0.1
   clientAuthority: 1
   animator: {fileID: 6546482005730255426}
+--- !u!114 &5806586969133861965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4559217071842210107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2cbc52526ea384ba280d13cd1a57b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  target: {fileID: 5409818749854775727}
+  clientAuthority: 1
+  syncVelocity: 1
+  clearVelocity: 0
+  velocitySensitivity: 0.1
+  syncAngularVelocity: 1
+  clearAngularVelocity: 0
+  angularVelocitySensitivity: 0.1
 --- !u!1 &9111604492829658178
 GameObject:
   m_ObjectHideFlags: 0
