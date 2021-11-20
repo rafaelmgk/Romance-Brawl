@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1720734485633453343}
   - component: {fileID: 836442417185632381}
-  - component: {fileID: 7565836360436988506}
+  - component: {fileID: 9185417402272986487}
   - component: {fileID: 5411658225077610186}
   - component: {fileID: 6546482005730255426}
   - component: {fileID: 5409818749854775727}
@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 5003981991407762257}
   - component: {fileID: -1728959598436792494}
   m_Layer: 3
-  m_Name: TestSanji
+  m_Name: Zoro
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,8 +97,8 @@ MonoBehaviour:
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerBehaviourSanji, Assembly-CSharp
+      - m_Target: {fileID: 9185417402272986487}
+        m_TargetAssemblyTypeName: PlayerBehaviour, Assembly-CSharp
         m_MethodName: OnLanding
         m_Mode: 1
         m_Arguments:
@@ -112,7 +112,7 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7565836360436988506
+--- !u!114 &9185417402272986487
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4559217071842210107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21517de5ff750004d9dea390cfd853e3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6630493cf3ed3f64ab60109050310bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
@@ -179,7 +179,7 @@ SpriteRenderer:
   m_SortingLayerID: -1283847595
   m_SortingLayer: 2
   m_SortingOrder: 3
-  m_Sprite: {fileID: 451153324438160054, guid: edae1ca34d4c2cb4c8d927452a6dbfcb, type: 3}
+  m_Sprite: {fileID: 6485409164457214026, guid: 60195a20b83ddfa4d800fb4616f2f7b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -200,7 +200,7 @@ Animator:
   m_GameObject: {fileID: 4559217071842210107}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 76efdcdbc22a81a47982668e916c9346, type: 2}
+  m_Controller: {fileID: 22100000, guid: 1c0dcae05d81e654e8d1bc3034a21fba, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -247,7 +247,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.23, y: 0.62}
+    oldSize: {x: 0.37, y: 0.63}
     newSize: {x: 0.25, y: 0.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -271,7 +271,7 @@ MonoBehaviour:
   sceneId: 0
   serverOnly: 0
   visible: 0
-  m_AssetId: 786b1ba1f208c0e4d8e7233a458090b5
+  m_AssetId: 579b6af997213ae4a961626e326696d9
   hasSpawned: 0
 --- !u!114 &5003981991407762257
 MonoBehaviour:

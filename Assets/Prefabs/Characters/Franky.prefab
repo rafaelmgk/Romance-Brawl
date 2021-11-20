@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1720734485633453343}
   - component: {fileID: 836442417185632381}
-  - component: {fileID: 857553632617264205}
+  - component: {fileID: -7378308382211548779}
   - component: {fileID: 5411658225077610186}
   - component: {fileID: 6546482005730255426}
   - component: {fileID: 5409818749854775727}
@@ -48,9 +48,8 @@ GameObject:
   - component: {fileID: -1204547690375211241}
   - component: {fileID: 5003981991407762257}
   - component: {fileID: -1728959598436792494}
-  - component: {fileID: 5806586969133861965}
   m_Layer: 3
-  m_Name: TestBrook
+  m_Name: Franky
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +97,7 @@ MonoBehaviour:
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 857553632617264205}
+      - m_Target: {fileID: -7378308382211548779}
         m_TargetAssemblyTypeName: PlayerBehaviour, Assembly-CSharp
         m_MethodName: OnLanding
         m_Mode: 1
@@ -113,7 +112,7 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &857553632617264205
+--- !u!114 &-7378308382211548779
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,7 +121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4559217071842210107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea3cf29961095db478a11bdd39518233, type: 3}
+  m_Script: {fileID: 11500000, guid: bada3f92388a38245bfe65a488f00fed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
@@ -180,7 +179,7 @@ SpriteRenderer:
   m_SortingLayerID: -1283847595
   m_SortingLayer: 2
   m_SortingOrder: 3
-  m_Sprite: {fileID: 1681447666796528579, guid: 5bde7777f9e4e45418f2a2dee4614d73, type: 3}
+  m_Sprite: {fileID: 9121064334348265862, guid: 5445209ee1a41c44f91a02e7c8c84dfb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -201,7 +200,7 @@ Animator:
   m_GameObject: {fileID: 4559217071842210107}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: df0771319cd1d8f4ea0d8b04bc850cbb, type: 2}
+  m_Controller: {fileID: 22100000, guid: cc0898b616c61924d9f199dfc28be71a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -248,7 +247,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.43, y: 0.88}
+    oldSize: {x: 0.75, y: 0.8}
     newSize: {x: 0.25, y: 0.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -272,7 +271,7 @@ MonoBehaviour:
   sceneId: 0
   serverOnly: 0
   visible: 0
-  m_AssetId: 0cf5b4560b368fe418bdd7c27845d2fa
+  m_AssetId: b57c985a9ce63274ea0aaadd2a72a79f
   hasSpawned: 0
 --- !u!114 &5003981991407762257
 MonoBehaviour:
@@ -319,28 +318,6 @@ MonoBehaviour:
   syncInterval: 0.1
   clientAuthority: 1
   animator: {fileID: 6546482005730255426}
---- !u!114 &5806586969133861965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4559217071842210107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab2cbc52526ea384ba280d13cd1a57b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  target: {fileID: 5409818749854775727}
-  clientAuthority: 1
-  syncVelocity: 1
-  clearVelocity: 0
-  velocitySensitivity: 0.1
-  syncAngularVelocity: 1
-  clearAngularVelocity: 0
-  angularVelocitySensitivity: 0.1
 --- !u!1 &9111604492829658178
 GameObject:
   m_ObjectHideFlags: 0

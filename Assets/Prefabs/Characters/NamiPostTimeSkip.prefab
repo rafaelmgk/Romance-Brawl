@@ -39,8 +39,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1720734485633453343}
-  - component: {fileID: -2210239037724707819}
-  - component: {fileID: 2510378305728807669}
+  - component: {fileID: 836442417185632381}
+  - component: {fileID: 6485911000280158806}
   - component: {fileID: 5411658225077610186}
   - component: {fileID: 6546482005730255426}
   - component: {fileID: 5409818749854775727}
@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 5003981991407762257}
   - component: {fileID: -1728959598436792494}
   m_Layer: 3
-  m_Name: TestUsopp
+  m_Name: NamiPostTimeSkip
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2210239037724707819
+--- !u!114 &836442417185632381
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,8 +97,8 @@ MonoBehaviour:
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerBehaviourUsopp, Assembly-CSharp
+      - m_Target: {fileID: 6485911000280158806}
+        m_TargetAssemblyTypeName: PlayerBehaviour, Assembly-CSharp
         m_MethodName: OnLanding
         m_Mode: 1
         m_Arguments:
@@ -112,7 +112,7 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2510378305728807669
+--- !u!114 &6485911000280158806
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,12 +121,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4559217071842210107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d1a92a9c20271541b82a0075f3c5350, type: 3}
+  m_Script: {fileID: 11500000, guid: 7470cb4c3599d0746ab36c5d969374f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  controller: {fileID: -2210239037724707819}
+  controller: {fileID: 836442417185632381}
   animator: {fileID: 6546482005730255426}
   runSpeed: 40
   attackPoint: {fileID: 8304542415087038332}
@@ -179,7 +179,7 @@ SpriteRenderer:
   m_SortingLayerID: -1283847595
   m_SortingLayer: 2
   m_SortingOrder: 3
-  m_Sprite: {fileID: -335968875916650477, guid: eccb014be41448a46af3629d69ae0fc8, type: 3}
+  m_Sprite: {fileID: -3300315609274935643, guid: 03adab6bef3d01a4daab64aa9739357e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -200,7 +200,7 @@ Animator:
   m_GameObject: {fileID: 4559217071842210107}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 6f092d486e9290043a0730739e839fd6, type: 2}
+  m_Controller: {fileID: 22100000, guid: 415b8c5ef37a2c949aeaf2f4df71e69d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -247,7 +247,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.47, y: 0.64}
+    oldSize: {x: 0.31, y: 0.7}
     newSize: {x: 0.25, y: 0.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -271,7 +271,7 @@ MonoBehaviour:
   sceneId: 0
   serverOnly: 0
   visible: 0
-  m_AssetId: 76df1a9a90927a640a26839998786a6c
+  m_AssetId: c06a034a7de85904e89d4b6ec5851eda
   hasSpawned: 0
 --- !u!114 &5003981991407762257
 MonoBehaviour:

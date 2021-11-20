@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 5003981991407762257}
   - component: {fileID: -1728959598436792494}
   m_Layer: 3
-  m_Name: TestUsoppPostTimeSkip
+  m_Name: UsoppPostTimeSkip
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,8 +97,8 @@ MonoBehaviour:
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerBehaviourUsopp, Assembly-CSharp
+      - m_Target: {fileID: -5112999147908014359}
+        m_TargetAssemblyTypeName: PlayerBehaviour, Assembly-CSharp
         m_MethodName: OnLanding
         m_Mode: 1
         m_Arguments:
