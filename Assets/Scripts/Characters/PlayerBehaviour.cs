@@ -74,6 +74,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 
 	[Command(requiresAuthority = false)]
 	public void CmdTakeDamage(int dmgAndDirection, int power) {
+		print("teste");
 		health += power;
 		hitBox.velocity = new Vector2(dmgAndDirection * health, health / 5);
 	}
