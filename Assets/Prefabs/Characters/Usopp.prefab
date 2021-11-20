@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: -1204547690375211241}
   - component: {fileID: 5003981991407762257}
   - component: {fileID: -1728959598436792494}
+  - component: {fileID: -833797753379018676}
   m_Layer: 3
   m_Name: Usopp
   m_TagString: Player
@@ -84,6 +85,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57995d3b7da776e4491d60fb298ba9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   m_JumpForce: 400
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
@@ -287,7 +290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  clientAuthority: 1
+  clientAuthority: 0
   sendInterval: 0.05
   syncPosition: 1
   syncRotation: 1
@@ -318,6 +321,28 @@ MonoBehaviour:
   syncInterval: 0.1
   clientAuthority: 1
   animator: {fileID: 6546482005730255426}
+--- !u!114 &-833797753379018676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4559217071842210107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2cbc52526ea384ba280d13cd1a57b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  target: {fileID: 5409818749854775727}
+  clientAuthority: 0
+  syncVelocity: 1
+  clearVelocity: 0
+  velocitySensitivity: 0.1
+  syncAngularVelocity: 1
+  clearAngularVelocity: 0
+  angularVelocitySensitivity: 0.1
 --- !u!1 &9111604492829658178
 GameObject:
   m_ObjectHideFlags: 0
