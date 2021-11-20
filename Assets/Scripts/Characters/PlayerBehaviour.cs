@@ -60,13 +60,34 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 		Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 		foreach (Collider2D enemy in hitEnemies) {
 			if (enemy != gameObject.GetComponent<Collider2D>())
-				enemy.GetComponent<PlayerBehaviour>().TakeDamage(attackDamage, firstAtkPower);
+				StartCoroutine(HandleDamage(enemy.gameObject, attackDamage, firstAtkPower));
 		}
 	}
 
-	public void TakeDamage(int dmgAndDirection, int power) {
+	private IEnumerator HandleDamage(GameObject enemy, int attackDamage, int firstAtkPower) {
+		CmdRemoveAuthority(enemy);
+		yield return new WaitForSeconds(1f);
+		enemy.GetComponent<PlayerBehaviour>().CmdTakeDamage(attackDamage, firstAtkPower);
+		yield return new WaitForSeconds(1f);
+		CmdAssignAuthority(enemy);
+	}
+
+	[Command(requiresAuthority = false)]
+	public void CmdTakeDamage(int dmgAndDirection, int power) {
 		health += power;
-		hitBox.velocity = new Vector3(dmgAndDirection * health, health / 5, 0);
+		hitBox.velocity = new Vector2(dmgAndDirection * health, health / 5);
+	}
+
+	[Command]
+	public void CmdRemoveAuthority(GameObject target) {
+		target.GetComponent<NetworkTransform>().clientAuthority = false;
+		target.GetComponent<NetworkRigidbody2D>().clientAuthority = false;
+	}
+
+	[Command]
+	public void CmdAssignAuthority(GameObject target) {
+		target.GetComponent<NetworkTransform>().clientAuthority = true;
+		target.GetComponent<NetworkRigidbody2D>().clientAuthority = true;
 	}
 
 	public void AttackDamage() {
@@ -78,7 +99,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 
 	void FixedUpdate() {
 		if (!isLocalPlayer) return;
-		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+		if (Input.anyKey) controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
 	}
 
 	void OnDrawGizmosSelected() {

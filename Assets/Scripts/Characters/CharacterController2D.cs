@@ -131,7 +131,7 @@ public class CharacterController2D : NetworkBehaviour {
 	}
 
 
-	[Command]
+	[Command(requiresAuthority = false)]
 	public void CmdMove(float move) {
 		// Move the character by finding the target velocity
 		Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
@@ -139,12 +139,12 @@ public class CharacterController2D : NetworkBehaviour {
 		m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 	}
 
-	[Command]
+	[Command(requiresAuthority = false)]
 	public void CmdJump() {
 		m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 	}
 
-	[Command]
+	[Command(requiresAuthority = false)]
 	public void CmdFlip() {
 		// Switch the way the player is labelled as facing.
 		m_FacingRight = !m_FacingRight;

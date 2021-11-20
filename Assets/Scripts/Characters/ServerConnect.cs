@@ -27,4 +27,26 @@ public class ServerConnect : NetworkBehaviour{
 	public void CmdFlip() {
 		transform.Rotate(0f, 180f, 0f);
 	}
+
+
+	// [Command]
+	// public void CmdMove(float move) {
+	// 	// Move the character by finding the target velocity
+	// 	Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
+	// 	// And then smoothing it out and applying it to the character
+	// 	m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+	// }
+
+	// [Command]
+	// public void CmdJump() {
+	// 	m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+	// }
+
+	// [Command]
+	// public void CmdFlip() {
+	// 	// Switch the way the player is labelled as facing.
+	// 	m_FacingRight = !m_FacingRight;
+
+	// 	transform.Rotate(0f, 180f, 0f);
+	// }
 }

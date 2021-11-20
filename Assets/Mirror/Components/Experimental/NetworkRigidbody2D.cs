@@ -1,7 +1,6 @@
 using UnityEngine;
+using Mirror;
 
-namespace Mirror.Experimental
-{
     [AddComponentMenu("Network/Experimental/NetworkRigidbody2D")]
     public class NetworkRigidbody2D : NetworkBehaviour
     {
@@ -357,4 +356,3 @@ namespace Mirror.Experimental
             public float angularDrag;
         }
     }
-}
