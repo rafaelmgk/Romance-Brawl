@@ -85,6 +85,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57995d3b7da776e4491d60fb298ba9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   m_JumpForce: 400
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
@@ -288,7 +290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  clientAuthority: 1
+  clientAuthority: 0
   sendInterval: 0.05
   syncPosition: 1
   syncRotation: 1
@@ -334,7 +336,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   target: {fileID: 5409818749854775727}
-  clientAuthority: 1
+  clientAuthority: 0
   syncVelocity: 1
   clearVelocity: 0
   velocitySensitivity: 0.1
