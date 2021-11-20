@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 using Mirror;
 using TMPro;
 
@@ -9,36 +10,39 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer {
 	public GameObject[] characters;
 	public TMP_Text choosenChar;
 
-	private int _playerIndex;
-
 	public override void OnStartClient() {
 		//Debug.Log($"OnStartClient {gameObject}");
 	}
 
-		// if (isLocalPlayer) {
-		// 	characterSelection.SetActive(true);
-		// 	// CmdSendIndex(index);
-		// 	_playerIndex = index;
-		// }
+	private void SendIndex() {
+		characterSelection.SetActive(true);
+		CmdSendIndex(index);
+	}
 
-	// [Command]
-	// private void CmdSendIndex(int index) {
-	// 	if (GameManager.Instance == null) return;
-	// 	if (!GameManager.Instance.currentPlayers.ContainsKey(index))
-	// 		GameManager.Instance.currentPlayers.Add(index, 0);
-	// }
+	public override void OnStartAuthority() {
+		base.OnStartAuthority();
 
-	// public void ChooseCharacter(int characterChoice) {
-	// 	// CmdChooseCharacter(characterChoice);
-	// 	choosenChar.text = characters[characterChoice].name;
-	// }
+		if (GetComponent<NetworkIdentity>().hasAuthority && index == 0) SendIndex();
+	}
 
-	// [Command]
-	// private void CmdChooseCharacter(int characterChoice) {
-	// 	if (GameManager.Instance == null) return;
-	// 	if (GameManager.Instance.currentPlayers.ContainsKey(_playerIndex))
-	// 		GameManager.Instance.currentPlayers[_playerIndex] = characterChoice;
-	// }
+	[Command]
+	private void CmdSendIndex(int index) {
+		if (GameManager.Instance == null) return;
+		if (!GameManager.Instance.currentPlayers.ContainsKey(index))
+			GameManager.Instance.currentPlayers.Add(index, 0);
+	}
+
+	public void ChooseCharacter(int characterChoice) {
+		CmdChooseCharacter(characterChoice);
+		choosenChar.text = characters[characterChoice].name;
+	}
+
+	[Command]
+	private void CmdChooseCharacter(int characterChoice) {
+		if (GameManager.Instance == null) return;
+		if (GameManager.Instance.currentPlayers.ContainsKey(index))
+			GameManager.Instance.currentPlayers[index] = characterChoice;
+	}
 
 	public override void OnClientEnterRoom() {
 		//Debug.Log($"OnClientEnterRoom {SceneManager.GetActiveScene().path}");
@@ -50,6 +54,7 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer {
 
 	public override void IndexChanged(int oldIndex, int newIndex) {
 		//Debug.Log($"IndexChanged {newIndex}");
+		if (GetComponent<NetworkIdentity>().hasAuthority) SendIndex();
 	}
 
 	public override void ReadyStateChanged(bool oldReadyState, bool newReadyState) {
