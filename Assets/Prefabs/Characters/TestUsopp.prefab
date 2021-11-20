@@ -40,7 +40,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1720734485633453343}
   - component: {fileID: -2210239037724707819}
-  - component: {fileID: -7788134130032393301}
   - component: {fileID: 2510378305728807669}
   - component: {fileID: 5411658225077610186}
   - component: {fileID: 6546482005730255426}
@@ -98,7 +97,7 @@ MonoBehaviour:
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -7788134130032393301}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerBehaviourUsopp, Assembly-CSharp
         m_MethodName: OnLanding
         m_Mode: 1
@@ -113,29 +112,6 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &-7788134130032393301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4559217071842210107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bd484137c3586745afa53e7293658bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: -2210239037724707819}
-  animator: {fileID: 6546482005730255426}
-  runSpeed: 40
-  attackPoint: {fileID: 8304542415087038332}
-  attackRange: 0.5
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 8
-  attackDirection: 0
-  attackDamage: 0
-  firstAtkPower: 10
 --- !u!114 &2510378305728807669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,8 +124,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d1a92a9c20271541b82a0075f3c5350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {fileID: 1720734485633453343}
-  usoppHitBoX: {fileID: 5409818749854775727}
+  syncMode: 0
+  syncInterval: 0.1
+  controller: {fileID: -2210239037724707819}
+  animator: {fileID: 6546482005730255426}
+  runSpeed: 40
+  attackPoint: {fileID: 8304542415087038332}
+  attackRange: 0.5
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  attackDirection: 0
+  attackDamage: 0
+  firstAtkPower: 10
+  hitBox: {fileID: 5409818749854775727}
   health: 0
 --- !u!212 &5411658225077610186
 SpriteRenderer:
