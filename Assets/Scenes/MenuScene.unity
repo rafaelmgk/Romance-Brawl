@@ -1580,6 +1580,7 @@ MonoBehaviour:
   - {fileID: 4559217071842210107, guid: 76df1a9a90927a640a26839998786a6c, type: 3}
   - {fileID: 4559217071842210107, guid: 12031e1c878509a4788fca9dec4aae39, type: 3}
   - {fileID: 4559217071842210107, guid: 579b6af997213ae4a961626e326696d9, type: 3}
+  - {fileID: 3257809134108954146, guid: 01d12b7bd8c389a48a3b49148efae21a, type: 3}
   showRoomGUI: 1
   minPlayers: 1
   roomPlayerPrefab: {fileID: 114033720796874720, guid: 8194f37318301b44ba1f9cf1f4d9b0e0, type: 3}
@@ -1588,6 +1589,7 @@ MonoBehaviour:
   _allPlayersReady: 0
   roomSlots: []
   clientIndex: 0
+  dataManagerPrefab: {fileID: 3257809134108954146, guid: 01d12b7bd8c389a48a3b49148efae21a, type: 3}
 --- !u!1 &2062809697
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,9 +31,9 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer {
 
 	[Command]
 	private void CmdSendIndex(int index) {
-		if (SelectionManager.Instance == null) return;
-		if (!SelectionManager.Instance.playersByCharacters.ContainsKey(index))
-			SelectionManager.Instance.playersByCharacters.Add(index, 0);
+		if (GameObject.FindGameObjectWithTag("Data") == null) return;
+		if (!GameObject.FindGameObjectWithTag("Data").GetComponent<DataManager>().playersByCharacters.ContainsKey(index))
+			GameObject.FindGameObjectWithTag("Data").GetComponent<DataManager>().playersByCharacters.Add(index, 0);
 	}
 
 	public void ChooseCharacter(int characterChoice) {
@@ -43,9 +43,9 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer {
 
 	[Command]
 	private void CmdChooseCharacter(int characterChoice) {
-		if (SelectionManager.Instance == null) return;
-		if (SelectionManager.Instance.playersByCharacters.ContainsKey(index))
-			SelectionManager.Instance.playersByCharacters[index] = characterChoice;
+		if (GameObject.FindGameObjectWithTag("Data") == null) return;
+		if (GameObject.FindGameObjectWithTag("Data").GetComponent<DataManager>().playersByCharacters.ContainsKey(index))
+			GameObject.FindGameObjectWithTag("Data").GetComponent<DataManager>().playersByCharacters[index] = characterChoice;
 	}
 
 	public override void OnClientEnterRoom() {

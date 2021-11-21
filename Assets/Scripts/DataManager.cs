@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class SelectionManager : NetworkBehaviour {
-	public static SelectionManager Instance;
+public class DataManager : NetworkBehaviour {
+	public static DataManager Instance;
 
 	[SerializeField] public readonly SyncDictionary<int, int> playersByCharacters = new SyncDictionary<int, int>();
 	[SerializeField] public readonly SyncList<GameObject> currentPlayers = new SyncList<GameObject>();
@@ -25,9 +25,8 @@ public class SelectionManager : NetworkBehaviour {
 
 	private void HandleCurrentPlayers(SyncList<GameObject>.Operation op, int index, GameObject oldItem, GameObject newItem) {
 		if (SyncList<GameObject>.Operation.OP_ADD == op)
-			GameManager.Instance.AddNewPlayer(newItem);
-			// if (GameObject.Find("TargetGroup"))
-			// 	GameObject.Find("TargetGroup").GetComponent<DynamicTargetGroup>().AddMemberToTargetGroup(newItem);
+			if (GameObject.Find("TargetGroup"))
+				GameObject.Find("TargetGroup").GetComponent<DynamicTargetGroup>().AddMemberToTargetGroup(newItem);
 	}
 
 	[ClientRpc]
