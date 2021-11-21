@@ -31,9 +31,9 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer {
 
 	[Command]
 	private void CmdSendIndex(int index) {
-		if (GameManager.Instance == null) return;
-		if (!GameManager.Instance.currentPlayers.ContainsKey(index))
-			GameManager.Instance.currentPlayers.Add(index, 0);
+		if (SelectionManager.Instance == null) return;
+		if (!SelectionManager.Instance.playersByCharacters.ContainsKey(index))
+			SelectionManager.Instance.playersByCharacters.Add(index, 0);
 	}
 
 	public void ChooseCharacter(int characterChoice) {
@@ -43,9 +43,9 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer {
 
 	[Command]
 	private void CmdChooseCharacter(int characterChoice) {
-		if (GameManager.Instance == null) return;
-		if (GameManager.Instance.currentPlayers.ContainsKey(index))
-			GameManager.Instance.currentPlayers[index] = characterChoice;
+		if (SelectionManager.Instance == null) return;
+		if (SelectionManager.Instance.playersByCharacters.ContainsKey(index))
+			SelectionManager.Instance.playersByCharacters[index] = characterChoice;
 	}
 
 	public override void OnClientEnterRoom() {

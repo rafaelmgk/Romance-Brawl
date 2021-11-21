@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
 
-public class GameManager : NetworkBehaviour{
+public class GameManager : MonoBehaviour {
 	public static GameManager Instance;
 
-	[SerializeField] public readonly SyncDictionary<int, int> currentPlayers = new SyncDictionary<int, int>();
+	public List<GameObject> currentPlayers = new List<GameObject>();
 
 	private void Awake() {
 		if (Instance != null) {
@@ -15,5 +14,11 @@ public class GameManager : NetworkBehaviour{
 		}
 
 		Instance = this;
+		DontDestroyOnLoad(gameObject);
+	}
+
+	public void AddNewPlayer(GameObject player) {
+		print("teste");
+		currentPlayers.Add(player);
 	}
 }
