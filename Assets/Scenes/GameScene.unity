@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 191832479}
   - component: {fileID: 191832478}
   - component: {fileID: 191832477}
+  - component: {fileID: 191832480}
   m_Layer: 0
   m_Name: DestroyerRight
   m_TagString: Untagged
@@ -190,6 +191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce601ce39c2dd3d46920d957b5ab2902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!50 &191832479
 Rigidbody2D:
   serializedVersion: 4
@@ -211,6 +214,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &191832480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191832475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3815879758
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &347867016
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,6 +286,7 @@ GameObject:
   - component: {fileID: 408049412}
   - component: {fileID: 408049411}
   - component: {fileID: 408049410}
+  - component: {fileID: 408049413}
   m_Layer: 0
   m_Name: DestroyerLeft
   m_TagString: Untagged
@@ -321,6 +342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce601ce39c2dd3d46920d957b5ab2902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!50 &408049412
 Rigidbody2D:
   serializedVersion: 4
@@ -342,6 +365,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &408049413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408049408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2571748698
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &639781145
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,6 +437,7 @@ GameObject:
   - component: {fileID: 641740044}
   - component: {fileID: 641740043}
   - component: {fileID: 641740042}
+  - component: {fileID: 641740045}
   m_Layer: 0
   m_Name: DestroyerDown
   m_TagString: Untagged
@@ -452,6 +493,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce601ce39c2dd3d46920d957b5ab2902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!50 &641740044
 Rigidbody2D:
   serializedVersion: 4
@@ -473,6 +516,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &641740045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641740040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 682816154
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &679420394
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,6 +665,7 @@ GameObject:
   - component: {fileID: 1195834545}
   - component: {fileID: 1195834544}
   - component: {fileID: 1195834543}
+  - component: {fileID: 1195834546}
   m_Layer: 0
   m_Name: DestroyerUp
   m_TagString: Untagged
@@ -660,6 +721,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce601ce39c2dd3d46920d957b5ab2902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!50 &1195834545
 Rigidbody2D:
   serializedVersion: 4
@@ -681,6 +744,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1195834546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195834541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2917602054
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1409903981
 GameObject:
   m_ObjectHideFlags: 0
