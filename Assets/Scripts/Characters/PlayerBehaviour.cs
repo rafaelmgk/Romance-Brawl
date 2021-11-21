@@ -65,51 +65,70 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	}
 
 	private IEnumerator HandleDamage(GameObject enemy, int attackDamage, int firstAtkPower) {
-		if (isClientOnly) CmdRemoveAuthority(enemy);
-		if (isServer) CmdServerRemoveAuthority(enemy);
+		NetworkConnectionToClient isEnemyConnectedToClient = enemy.GetComponent<NetworkIdentity>().connectionToClient;
+		if (isEnemyConnectedToClient != null) {
+			CmdRemoveAuthority(enemy.GetComponent<NetworkIdentity>().connectionToClient, enemy);
+			enemy.GetComponent<PlayerBehaviour>().CmdTargetTakeDamage(
+				enemy.GetComponent<NetworkIdentity>().connectionToClient, attackDamage, firstAtkPower
+			);
+			CmdAssignAuthority(enemy.GetComponent<NetworkIdentity>().connectionToClient, enemy);
+		}
+		else {
+			CmdServerRemoveAuthority(enemy);
+			enemy.GetComponent<PlayerBehaviour>().CmdServerTakeDamage(attackDamage, firstAtkPower);
+			CmdServerAssignAuthority(enemy);
+		}
+		// if (isServer) CmdServerRemoveAuthority(enemy);
 		// yield return new WaitForSeconds(3f);
-		if (isClientOnly) enemy.GetComponent<PlayerBehaviour>().CmdTakeDamage(attackDamage, firstAtkPower);
-		if (isServer) enemy.GetComponent<PlayerBehaviour>().CmdServerTakeDamage(attackDamage, firstAtkPower);
+		// if (isClientOnly) enemy.GetComponent<PlayerBehaviour>().CmdTakeDamage(attackDamage, firstAtkPower);
+		// if (isServer) {
+		// 	enemy.GetComponent<PlayerBehaviour>().CmdServerTakeDamage(attackDamage, firstAtkPower);
+		// }
 		// yield return new WaitForSeconds(3f);
-		if (isClientOnly) CmdAssignAuthority(enemy);
-		if (isServer) CmdServerAssignAuthority(enemy);
+		// if (isServer) CmdServerAssignAuthority(enemy);
 		yield return null;
 	}
 
 	[Command(requiresAuthority = false)]
-	public void CmdTakeDamage(int dmgAndDirection, int power) {
-		health += power;
-		hitBox.velocity = new Vector2(dmgAndDirection * health, health / 5);
-	}
-
-	[ClientRpc]
 	public void CmdServerTakeDamage(int dmgAndDirection, int power) {
 		health += power;
 		hitBox.velocity = new Vector2(dmgAndDirection * health, health / 5);
 	}
 
-	[ClientRpc]
+	// [ClientRpc]
+	// public void CmdServerTakeDamage(int dmgAndDirection, int power) {
+	// 	health += power;
+	// 	hitBox.velocity = new Vector2(dmgAndDirection * health, health / 5);
+	// }
+
+	[Command]
 	public void CmdServerRemoveAuthority(GameObject target) {
 		target.GetComponent<NetworkTransform>().clientAuthority = false;
 		target.GetComponent<NetworkRigidbody2D>().clientAuthority = false;
 	}
 
-	[ClientRpc]
+	[Command]
 	public void CmdServerAssignAuthority(GameObject target) {
 		target.GetComponent<NetworkTransform>().clientAuthority = true;
 		target.GetComponent<NetworkRigidbody2D>().clientAuthority = true;
 	}
 
-	[Command]
-	public void CmdRemoveAuthority(GameObject target) {
-		target.GetComponent<NetworkTransform>().clientAuthority = false;
-		target.GetComponent<NetworkRigidbody2D>().clientAuthority = false;
+	[TargetRpc]
+	public void CmdRemoveAuthority(NetworkConnection target, GameObject targetObj) {
+		targetObj.GetComponent<NetworkTransform>().clientAuthority = false;
+		targetObj.GetComponent<NetworkRigidbody2D>().clientAuthority = false;
 	}
 
-	[Command]
-	public void CmdAssignAuthority(GameObject target) {
-		target.GetComponent<NetworkTransform>().clientAuthority = true;
-		target.GetComponent<NetworkRigidbody2D>().clientAuthority = true;
+	[TargetRpc]
+	public void CmdAssignAuthority(NetworkConnection target, GameObject targetObj) {
+		targetObj.GetComponent<NetworkTransform>().clientAuthority = true;
+		targetObj.GetComponent<NetworkRigidbody2D>().clientAuthority = true;
+	}
+
+	[TargetRpc]
+	public void CmdTargetTakeDamage(NetworkConnection target, int dmgAndDirection, int power) {
+		health += power;
+		hitBox.velocity = new Vector2(dmgAndDirection * health, health / 5);
 	}
 
 	public void AttackDamage() {
