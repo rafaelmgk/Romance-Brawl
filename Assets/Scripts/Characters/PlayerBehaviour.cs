@@ -24,6 +24,8 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	public Rigidbody2D hitBox;
 	public int health = 0;
 
+	public NetworkConnectionToClient enemyConnection;
+
 	void Update() {
 		if (!isLocalPlayer) return;
 
@@ -65,19 +67,21 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	}
 
 	private IEnumerator HandleDamage(GameObject enemy, int attackDamage, int firstAtkPower) {
-		NetworkConnectionToClient isEnemyConnectedToClient = enemy.GetComponent<NetworkIdentity>().connectionToClient;
-		if (isEnemyConnectedToClient != null) {
-			CmdRemoveAuthority(enemy.GetComponent<NetworkIdentity>().connectionToClient, enemy);
-			enemy.GetComponent<PlayerBehaviour>().CmdTargetTakeDamage(
-				enemy.GetComponent<NetworkIdentity>().connectionToClient, attackDamage, firstAtkPower
-			);
-			CmdAssignAuthority(enemy.GetComponent<NetworkIdentity>().connectionToClient, enemy);
-		}
-		else {
+		// NetworkConnectionToClient isEnemyConnectedToClient = enemy.GetComponent<NetworkIdentity>().connectionToClient;
+		// print(isEnemyConnectedToClient);
+		// if (isEnemyConnectedToClient != null) {
+		// 	CmdRemoveAuthority(enemy.GetComponent<NetworkIdentity>().connectionToClient, enemy);
+		// 	enemy.GetComponent<PlayerBehaviour>().CmdTargetTakeDamage(
+		// 		enemy.GetComponent<NetworkIdentity>().connectionToClient, attackDamage, firstAtkPower
+		// 	);
+		// 	CmdAssignAuthority(enemy.GetComponent<NetworkIdentity>().connectionToClient, enemy);
+		// }
+		// else {
 			CmdServerRemoveAuthority(enemy);
-			enemy.GetComponent<PlayerBehaviour>().CmdServerTakeDamage(attackDamage, firstAtkPower);
+			enemy.GetComponent<PlayerBehaviour>().CmdServerTakeDamage(enemy, attackDamage, firstAtkPower);
 			CmdServerAssignAuthority(enemy);
-		}
+		// }
+
 		// if (isServer) CmdServerRemoveAuthority(enemy);
 		// yield return new WaitForSeconds(3f);
 		// if (isClientOnly) enemy.GetComponent<PlayerBehaviour>().CmdTakeDamage(attackDamage, firstAtkPower);
@@ -90,9 +94,13 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	}
 
 	[Command(requiresAuthority = false)]
-	public void CmdServerTakeDamage(int dmgAndDirection, int power) {
+	public void CmdServerTakeDamage(GameObject enemy, int dmgAndDirection, int power) {
 		health += power;
 		hitBox.velocity = new Vector2(dmgAndDirection * health, health / 5);
+
+		enemy.GetComponent<PlayerBehaviour>().CmdTargetTakeDamage(
+			enemy.GetComponent<NetworkIdentity>().connectionToClient, dmgAndDirection, power
+		);
 	}
 
 	// [ClientRpc]
@@ -105,12 +113,20 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	public void CmdServerRemoveAuthority(GameObject target) {
 		target.GetComponent<NetworkTransform>().clientAuthority = false;
 		target.GetComponent<NetworkRigidbody2D>().clientAuthority = false;
+
+		target.GetComponent<PlayerBehaviour>().CmdRemoveAuthority(
+			target.GetComponent<NetworkIdentity>().connectionToClient, target
+		);
 	}
 
 	[Command]
 	public void CmdServerAssignAuthority(GameObject target) {
 		target.GetComponent<NetworkTransform>().clientAuthority = true;
 		target.GetComponent<NetworkRigidbody2D>().clientAuthority = true;
+
+		target.GetComponent<PlayerBehaviour>().CmdAssignAuthority(
+			target.GetComponent<NetworkIdentity>().connectionToClient, target
+		);
 	}
 
 	[TargetRpc]
