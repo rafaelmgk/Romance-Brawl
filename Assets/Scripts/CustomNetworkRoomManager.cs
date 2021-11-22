@@ -21,8 +21,7 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 			startPositions[conn.connectionId].position,
 			Quaternion.identity);
 
-		NetworkServer.AddPlayerForConnection(conn, _temp);
-		// NetworkServer.AddConnection((NetworkConnectionToClient)conn);
+		NetworkServer.AddConnection((NetworkConnectionToClient)conn);
 
 		return _temp;
 	}
