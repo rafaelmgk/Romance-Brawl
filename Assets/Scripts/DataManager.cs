@@ -6,8 +6,7 @@ using Mirror;
 public class DataManager : NetworkBehaviour {
 	public static DataManager Instance;
 
-	[SerializeField] public readonly SyncDictionary<int, int> playersByCharacters = new SyncDictionary<int, int>();
-	[SerializeField] public readonly SyncList<GameObject> currentPlayers = new SyncList<GameObject>();
+	[SerializeField] public readonly SyncDictionary<int, int> charactersByPlayer = new SyncDictionary<int, int>();
 
 	private void Awake() {
 		if (Instance != null) {
@@ -17,20 +16,5 @@ public class DataManager : NetworkBehaviour {
 
 		Instance = this;
 		DontDestroyOnLoad(gameObject);
-	}
-
-	private void Start() {
-		currentPlayers.Callback += HandleCurrentPlayers;
-	}
-
-	private void HandleCurrentPlayers(SyncList<GameObject>.Operation op, int index, GameObject oldItem, GameObject newItem) {
-		if (SyncList<GameObject>.Operation.OP_ADD == op)
-			if (GameObject.Find("TargetGroup"))
-				GameObject.Find("TargetGroup").GetComponent<DynamicTargetGroup>().AddMemberToTargetGroup(newItem);
-	}
-
-	[ClientRpc]
-	private void CmdAddNewPlayer(GameObject player) {
-		GameManager.Instance.AddNewPlayer(player);
 	}
 }

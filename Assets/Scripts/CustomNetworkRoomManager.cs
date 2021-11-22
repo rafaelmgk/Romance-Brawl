@@ -10,19 +10,17 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 	public override void OnStartHost() {
 		base.OnStartHost();
 
-		print("teste");
 		GameObject dataManagerClone = Instantiate(dataManagerPrefab, Vector3.zero, Quaternion.identity);
 		NetworkServer.Spawn(dataManagerClone);
 	}
 
 	public override GameObject OnRoomServerCreateGamePlayer(NetworkConnection conn, GameObject roomPlayer) {
-		int index = GameObject.FindGameObjectWithTag("Data").GetComponent<DataManager>().playersByCharacters[conn.connectionId];
+		int index = GameObject.FindGameObjectWithTag("Data").GetComponent<DataManager>().charactersByPlayer[conn.connectionId];
 
 		GameObject _temp = (GameObject)GameObject.Instantiate(spawnPrefabs[index],
 			startPositions[conn.connectionId].position,
 			Quaternion.identity);
 
-		GameObject.FindGameObjectWithTag("Data").GetComponent<DataManager>().currentPlayers.Add(_temp);
 		NetworkServer.AddConnection((NetworkConnectionToClient)conn);
 
 		return _temp;
