@@ -122,6 +122,25 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	void FixedUpdate() {
 		if (!isLocalPlayer) return;
 		if (Input.anyKey) controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+
+		CheckWorldBoundaries();
+	}
+
+	private void CheckWorldBoundaries() {
+		DataManager dataManager = GameObject.FindGameObjectWithTag("Data").GetComponent<DataManager>();
+		DataManager.WorldBounds worldBounds = dataManager.worldBounds;
+
+		if (transform.position.x < worldBounds.leftBound || transform.position.x > worldBounds.rightBound)
+			StartCoroutine(WaitAndRespawn(gameObject));
+		if (transform.position.y < worldBounds.downBound || transform.position.y > worldBounds.upBound)
+			StartCoroutine(WaitAndRespawn(gameObject));
+	}
+
+	private IEnumerator WaitAndRespawn(GameObject player) {
+		player.transform.position = new Vector3(0, 2, 0);
+
+		yield return new WaitForSeconds(1f);
+		// player.SetActive(true);
 	}
 
 	void OnDrawGizmosSelected() {
