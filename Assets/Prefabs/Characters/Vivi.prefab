@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1720734485633453343}
   - component: {fileID: 836442417185632381}
-  - component: {fileID: 8268150498841311959}
+  - component: {fileID: -407343353106940804}
   - component: {fileID: 5411658225077610186}
   - component: {fileID: 6546482005730255426}
   - component: {fileID: 5409818749854775727}
@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: -1728959598436792494}
   - component: {fileID: 5806586969133861965}
   m_Layer: 3
-  m_Name: Kuma
+  m_Name: Vivi
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8268150498841311959}
+      - m_Target: {fileID: -407343353106940804}
         m_TargetAssemblyTypeName: PlayerBehaviour, Assembly-CSharp
         m_MethodName: OnLanding
         m_Mode: 1
@@ -115,7 +115,7 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8268150498841311959
+--- !u!114 &-407343353106940804
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4559217071842210107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bc708c0ffbc568409b04a3eb832525c, type: 3}
+  m_Script: {fileID: 11500000, guid: a7db673c6701b8841b70ebdd84f05cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   animator: {fileID: 6546482005730255426}
   runSpeed: 40
   attackPoint: {fileID: 8304542415087038332}
-  attackRange: {x: 0.55, y: 0.9}
+  attackRange: {x: 0.8, y: 0.5}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 8
@@ -182,7 +182,7 @@ SpriteRenderer:
   m_SortingLayerID: -1283847595
   m_SortingLayer: 2
   m_SortingOrder: 3
-  m_Sprite: {fileID: -4708556519487207455, guid: f059bc5a30e170e4c881af23e3c2ef1f, type: 3}
+  m_Sprite: {fileID: -3092940391027490208, guid: f00b68d428a7b7f499615c0e03c43013, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -203,7 +203,7 @@ Animator:
   m_GameObject: {fileID: 4559217071842210107}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: b11038b14ad2ba64fb1512425f2ea9ba, type: 2}
+  m_Controller: {fileID: 22100000, guid: 0f8ae36b11e50574fba291b01428bebd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -246,18 +246,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007192746, y: 0.00028154254}
+  m_Offset: {x: 0.017755799, y: -0.005953446}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.45, y: 0.9}
+    oldSize: {x: 0.29, y: 0.63}
     newSize: {x: 0.25, y: 0.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.43839207, y: 0.89828235}
+  m_Size: {x: 0.19673266, y: 0.6119069}
   m_EdgeRadius: 0
 --- !u!114 &-1204547690375211241
 MonoBehaviour:
@@ -274,7 +274,7 @@ MonoBehaviour:
   sceneId: 0
   serverOnly: 0
   visible: 0
-  m_AssetId: 642efb020365f1242976b828eaf812b7
+  m_AssetId: 1f0fbdfd89567794897ab1bad54bdc1f
   hasSpawned: 0
 --- !u!114 &5003981991407762257
 MonoBehaviour:
@@ -397,7 +397,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9116835121149735977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.459, y: 0.004, z: 0}
+  m_LocalPosition: {x: 0.374, y: 0.027, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1720734485633453343}
