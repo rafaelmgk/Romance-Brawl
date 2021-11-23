@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WhitebeardOverrideController
+  m_Controller: {fileID: 9100000, guid: 1e3948824ccb6e84f9cf13aa9e9f174d, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 488e20440a62a9c4f8ceca06a129dc40, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: dd50988114148b94caee3e7121e1e239, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 117c52d93b75852409c22b0c064b2981, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 67458fb036957584bb8b0b23dccf14cb, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2f6a08266aaa5f940b18b194e4952d79, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e77db4cf6b29d7a4bbea27e08341d456, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 25d5302324858a644b35ab73e6a0633e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 44783558b35f6ca4f9aba3e49b942c22, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1cf633fdb8f363942b02fb9d484bfd2e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 34616915bf0a8c0489b37eb6b3143993, type: 2}
