@@ -15,7 +15,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   bool crouch = false;
 
   public Transform attackPoint;
-  public float attackRange = 0.5f;
+  public Vector2 attackRange = new Vector2(0.0f, 0.0f);
   public LayerMask enemyLayers;
   public int attackDirection;
   public int attackDamage;
@@ -70,7 +70,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   void Attack()
   {
     animator.SetTrigger("Attack");
-    Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+    Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, attackRange, 0, enemyLayers);
     foreach (Collider2D enemy in hitEnemies)
     {
       if (enemy != gameObject.GetComponent<Collider2D>())
@@ -175,6 +175,6 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   {
     if (attackPoint == null) return;
 
-    Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    Gizmos.DrawWireCube(attackPoint.position, attackRange);
   }
 }
