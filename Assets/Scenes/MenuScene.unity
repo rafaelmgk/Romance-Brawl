@@ -1585,7 +1585,7 @@ MonoBehaviour:
   minPlayers: 1
   roomPlayerPrefab: {fileID: 114033720796874720, guid: 8194f37318301b44ba1f9cf1f4d9b0e0, type: 3}
   RoomScene: Assets/Scenes/SelectCharacterScene.unity
-  GameplayScene: Assets/Scenes/GameScene.unity
+  GameplayScene: Assets/Scenes/WhiskeyPeakMap.unity
   _allPlayersReady: 0
   roomSlots: []
   clientIndex: 0
