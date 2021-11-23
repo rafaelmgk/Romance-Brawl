@@ -1,7 +1,58 @@
 fileFormatVersion: 2
 guid: 37e672ffcf8cc934b850983846b8c375
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6011023925743203324
+    second: Whiskey Peak_0
+  - first:
+      213: -8471177730712597697
+    second: Whiskey Peak_1
+  - first:
+      213: -6631364699864889629
+    second: Whiskey Peak_2
+  - first:
+      213: -1025191436971762733
+    second: Whiskey Peak_3
+  - first:
+      213: -5607064274970297950
+    second: Whiskey Peak_4
+  - first:
+      213: -3736982961026026051
+    second: Whiskey Peak_5
+  - first:
+      213: 8816116400721968982
+    second: Whiskey Peak_6
+  - first:
+      213: -46982302268820867
+    second: Whiskey Peak_7
+  - first:
+      213: 8609603944813887988
+    second: Whiskey Peak_8
+  - first:
+      213: -1520868280845640515
+    second: Whiskey Peak_9
+  - first:
+      213: -5138392104228106006
+    second: Whiskey Peak_10
+  - first:
+      213: 3120214586131969875
+    second: Whiskey Peak_11
+  - first:
+      213: 3409203088170447254
+    second: Whiskey Peak_12
+  - first:
+      213: -3478413990047756684
+    second: Whiskey Peak_13
+  - first:
+      213: 5456632010868496142
+    second: Whiskey Peak_14
+  - first:
+      213: 5717094101369336310
+    second: Whiskey Peak_15
+  - first:
+      213: 5036821524250746050
+    second: Whiskey Peak_16
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +92,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -65,10 +116,22 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +140,364 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Whiskey Peak_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 304
+        width: 412
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40cc3b9569d849ca0800000000000000
+      internalID: -6011023925743203324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whiskey Peak_1
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 562
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b0da37cb4507a80800000000000000
+      internalID: -8471177730712597697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whiskey Peak_2
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 562
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e60d70a0f8a8f3a0800000000000000
+      internalID: -6631364699864889629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whiskey Peak_3
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 562
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3db968cd1d9c5c1f0800000000000000
+      internalID: -1025191436971762733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whiskey Peak_4
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 562
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a9bc99dfb4bf22b0800000000000000
+      internalID: -5607064274970297950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whiskey Peak_5
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 559
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db53b5cdbc1932cc0800000000000000
+      internalID: -3736982961026026051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whiskey Peak_6
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 562
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f378b1823295a70800000000000000
+      internalID: 8816116400721968982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whiskey Peak_7
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 415
+        width: 307
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d72798258d5195ff0800000000000000
+      internalID: -46982302268820867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whiskey Peak_8
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 414
+        width: 224
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f10f631c257b7770800000000000000
+      internalID: 8609603944813887988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whiskey Peak_9
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 98
+        width: 152
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc59024b5ac4eae0800000000000000
+      internalID: -1520868280845640515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whiskey Peak_10
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 196
+        width: 199
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae0dfc60b93c0b8b0800000000000000
+      internalID: -5138392104228106006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whiskey Peak_11
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 195
+        width: 455
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357736d62aa3d4b20800000000000000
+      internalID: 3120214586131969875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whiskey Peak_12
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 60
+        width: 288
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691709d552cef4f20800000000000000
+      internalID: 3409203088170447254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whiskey Peak_13
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 82
+        width: 63
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e447dc7e03abfc0800000000000000
+      internalID: -3478413990047756684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whiskey Peak_14
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 100
+        width: 224
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0797d547e9d9bb40800000000000000
+      internalID: 5456632010868496142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whiskey Peak_15
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 9
+        width: 448
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f1b9937bc2375f40800000000000000
+      internalID: 5717094101369336310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whiskey Peak_16
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 12
+        width: 395
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ccd1067d7266e540800000000000000
+      internalID: 5036821524250746050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
