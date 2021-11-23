@@ -133,7 +133,7 @@ MonoBehaviour:
   animator: {fileID: 6546482005730255426}
   runSpeed: 40
   attackPoint: {fileID: 8304542415087038332}
-  attackRange: 0.5
+  attackRange: {x: 0.1, y: 0.4}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 8
