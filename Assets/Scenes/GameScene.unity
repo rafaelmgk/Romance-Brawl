@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ConfineMode: 1
+  m_ConfineMode: 0
   m_BoundingVolume: {fileID: 15411655}
   m_BoundingShape2D: {fileID: 2041304008}
   m_ConfineScreenEdges: 1
@@ -738,7 +738,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1409903981}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.22, y: 4.9, z: 0.5}
+  m_LocalPosition: {x: 5.303035, y: 4.8998704, z: 0.5000801}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 501600986}
