@@ -164,7 +164,8 @@ public abstract class PlayerBehaviour : NetworkBehaviour
 
     player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     player.GetComponent<PlayerBehaviour>().health = 0;
-    player.transform.position = new Vector3(0, 2, 0);
+	GameObject map = GameObject.FindWithTag("Map");
+    player.transform.position = (map != null ? map.GetComponent<Renderer>().bounds.center : Vector3.zero);
 
     yield return new WaitForSeconds(1f);
     // player.SetActive(true);
