@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 145547188}
   - component: {fileID: 145547187}
   - component: {fileID: 145547190}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Open Sprite Shape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -503,5 +503,61 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chopper (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 836442417185632381, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
+    - {fileID: 5151701444049041906, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
+    - {fileID: 5003981991407762257, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
+    - {fileID: -1728959598436792494, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
+    - {fileID: -6786959779028171167, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
+    - {fileID: -1204547690375211241, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
+--- !u!1 &1372583324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4559217071842210107, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
+  m_PrefabInstance: {fileID: 1372583323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1372583325 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7074083855439903602, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
+  m_PrefabInstance: {fileID: 1372583323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1372583326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372583324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f419604fde45541a5fc84235ded9ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  speed: 10
+  jumpForce: 10
+  moveInput: 0
+  groundCheck: {fileID: 1372583325}
+  checkRadius: 0.5
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 128
+  extraJumps: 1
+--- !u!114 &1372583327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372583324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 1282575746
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 1deba61cb50e2754aa527bea9615bcb4
+  hasSpawned: 0
