@@ -11,4 +11,5 @@ public class Character : ScriptableObject
   public GameObject characterObject;
   public Rigidbody2D hitBoX;
   public int health = 0;
+  //test
 }
