@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WorldData : MonoBehaviour {
+
+	// TODO: remove this when refactoring
+	#pragma warning disable 0649
+
 	public struct WorldBounds {
 		public float leftBound;
 		public float rightBound;
