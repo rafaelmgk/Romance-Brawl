@@ -9,6 +9,7 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 
 	private int _playerCounter = 1;
 
+
 	public override void OnStartHost() {
 		base.OnStartHost();
 
