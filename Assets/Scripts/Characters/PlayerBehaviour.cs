@@ -27,6 +27,21 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 
 	private bool _canCheckForBounds = true;
 
+	[SyncVar] public int playerNumber;
+
+	private bool _AmIOutOfLimit {
+		get {
+			return _amIOutOfLimit;
+		}
+		set {
+			if (_amIOutOfLimit != value) {
+				_amIOutOfLimit = value;
+				OnAmIOutOfLimitsChanged();
+			}
+		}
+	}
+	private bool _amIOutOfLimit = false;
+
 	void Update() {
 		if (!isLocalPlayer) return;
 
@@ -34,7 +49,6 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 		if (Input.GetKeyDown(KeyCode.Z)) {
 			Attack();
 		}
-
 
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
@@ -121,14 +135,15 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 		if (Input.anyKey) controller.Move(horizontalMove * Time.fixedDeltaTime, crouch);
 
 		if (_canCheckForBounds) CheckWorldBoundaries();
+		CheckCameraLimits();
 	}
 
 	private void CheckWorldBoundaries() {
-		DataManager dataManager = GameObject.FindGameObjectWithTag("Data").GetComponent<DataManager>();
-		DataManager.WorldBounds worldBounds = dataManager.worldBounds;
+		WorldData worldData = GameObject.FindGameObjectWithTag("Map").GetComponent<WorldData>();
+		WorldData.WorldBounds worldBounds = worldData.GenerateWorldBounds();
 
 		if (transform.position.x < worldBounds.leftBound || transform.position.x > worldBounds.rightBound ||
-		  transform.position.y < worldBounds.downBound || transform.position.y > worldBounds.upBound)
+			transform.position.y < worldBounds.downBound || transform.position.y > worldBounds.upBound)
 			StartCoroutine(WaitAndRespawn(gameObject));
 	}
 
@@ -137,14 +152,69 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 
 		player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		player.GetComponent<PlayerBehaviour>().health = 0;
-		player.transform.position = new Vector3(0, 2, 0);
+		GameObject map = GameObject.FindWithTag("Map");
+		player.transform.position = (map != null ? map.GetComponent<Renderer>().bounds.center : Vector3.zero);
 
 		yield return new WaitForSeconds(1f);
 		// player.SetActive(true);
 		_canCheckForBounds = true;
 	}
 
-	void OnDrawGizmosSelected() {
+	private void CheckCameraLimits() {
+		WorldData worldData = GameObject.FindGameObjectWithTag("Map").GetComponent<WorldData>();
+		WorldData.CameraLimits cameraLimits = worldData.GenerateCameraLimits();
+
+		if (transform.position.x < cameraLimits.leftLimit || transform.position.x > cameraLimits.rightLimit ||
+			transform.position.y < cameraLimits.downLimit || transform.position.y > cameraLimits.upLimit) {
+			_AmIOutOfLimit = true;
+		}
+		else {
+			_AmIOutOfLimit = false;
+		}
+	}
+
+	private void OnAmIOutOfLimitsChanged() {
+		CmdHandleDataManagerOutOfLimitsDictionary(_AmIOutOfLimit);
+	}
+
+	[Command(requiresAuthority = false)]
+	private void CmdHandleDataManagerOutOfLimitsDictionary(bool boolean) {
+		DataManager dataManager = GameObject.FindWithTag("Data").GetComponent<DataManager>();
+
+		if (isServer) {
+			if (dataManager.arePlayersOutOfLimits.ContainsKey(playerNumber))
+				ModifyDataManagerOutOfLimitsDictionary(dataManager, boolean);
+			else
+				AddToDataManagerOutOfLimitsDictionary(dataManager, boolean);
+
+			return;
+		}
+
+		if (dataManager.arePlayersOutOfLimits.ContainsKey(playerNumber))
+			CmdModifyDataManagerOutOfLimitsDictionary(dataManager, boolean);
+		else
+			CmdAddToDataManagerOutOfLimitsDictionary(dataManager, boolean);
+	}
+
+	private void AddToDataManagerOutOfLimitsDictionary(DataManager dataManager, bool boolean) {
+		dataManager.arePlayersOutOfLimits.Add(playerNumber, boolean);
+	}
+
+	private void ModifyDataManagerOutOfLimitsDictionary(DataManager dataManager, bool boolean) {
+		dataManager.arePlayersOutOfLimits[playerNumber] = boolean;
+	}
+
+	[Command(requiresAuthority = false)]
+	private void CmdAddToDataManagerOutOfLimitsDictionary(DataManager dataManager, bool boolean) {
+		dataManager.arePlayersOutOfLimits.Add(playerNumber, boolean);
+	}
+
+	[Command(requiresAuthority = false)]
+	private void CmdModifyDataManagerOutOfLimitsDictionary(DataManager dataManager, bool boolean) {
+		dataManager.arePlayersOutOfLimits[playerNumber] = boolean;
+	}
+
+	private void OnDrawGizmosSelected() {
 		if (attackPoint == null) return;
 
 		Gizmos.DrawWireCube(attackPoint.position, attackRange);
