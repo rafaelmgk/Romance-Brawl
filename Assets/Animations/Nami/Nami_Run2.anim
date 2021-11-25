@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Nami_Run
+  m_Name: Nami_Run2
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -29,6 +29,12 @@ AnimationClip:
       value: {fileID: 1893201131312722596, guid: be5646c64998fa846b22bcb16bdd9fcd, type: 3}
     - time: 0.33333334
       value: {fileID: -6074299123794373504, guid: be5646c64998fa846b22bcb16bdd9fcd, type: 3}
+    - time: 0.41666666
+      value: {fileID: 3707645824286601857, guid: be5646c64998fa846b22bcb16bdd9fcd, type: 3}
+    - time: 0.5
+      value: {fileID: 3028384708409167264, guid: be5646c64998fa846b22bcb16bdd9fcd, type: 3}
+    - time: 0.5833333
+      value: {fileID: 1334656872150016415, guid: be5646c64998fa846b22bcb16bdd9fcd, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -53,12 +59,15 @@ AnimationClip:
     - {fileID: -6705972817046614731, guid: be5646c64998fa846b22bcb16bdd9fcd, type: 3}
     - {fileID: 1893201131312722596, guid: be5646c64998fa846b22bcb16bdd9fcd, type: 3}
     - {fileID: -6074299123794373504, guid: be5646c64998fa846b22bcb16bdd9fcd, type: 3}
+    - {fileID: 3707645824286601857, guid: be5646c64998fa846b22bcb16bdd9fcd, type: 3}
+    - {fileID: 3028384708409167264, guid: be5646c64998fa846b22bcb16bdd9fcd, type: 3}
+    - {fileID: 1334656872150016415, guid: be5646c64998fa846b22bcb16bdd9fcd, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.41666666
+    m_StopTime: 0.6666666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
