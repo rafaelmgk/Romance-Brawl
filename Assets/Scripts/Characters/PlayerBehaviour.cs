@@ -11,7 +11,18 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   public float runSpeed = 40f;
 
   float horizontalMove = 0f;
-  bool crouch = false;
+  [SyncVar(hook = nameof(CrouchHook))] bool crouch = false;
+  void CrouchHook(bool oldvalue, bool newvalue)
+  {
+    oldvalue = crouch;
+    if (oldvalue == true)
+      print("teste");
+    newvalue = true;
+    if (oldvalue == false)
+      print("teste");
+    newvalue = false;
+  }
+
 
   public Transform attackPoint;
   public Vector2 attackRange = new Vector2(0.0f, 0.0f);
@@ -93,12 +104,16 @@ public abstract class PlayerBehaviour : NetworkBehaviour
       Physics2D.IgnoreLayerCollision(3, 8, true);
       crouch = true;
       animator.SetBool("IsCrouching", true);
+      if (isClientOnly) CmdSyncCrouchState();
+      if (isServer) RpcSyncCrouchState();
     }
     else if (Input.GetButtonUp("Crouch"))
     {
       Physics2D.IgnoreLayerCollision(3, 8, false);
       crouch = false;
       animator.SetBool("IsCrouching", false);
+      if (isClientOnly) CmdSyncCrouchState();
+      if (isServer) RpcSyncCrouchState();
     }
   }
 
@@ -172,6 +187,16 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   {
     targetObj.GetComponent<NetworkTransform>().clientAuthority = true;
     targetObj.GetComponent<NetworkRigidbody2D>().clientAuthority = true;
+  }
+  [Command(requiresAuthority = false)]
+  public void CmdSyncCrouchState()
+  {
+    this.crouch = crouch;
+  }
+  [ClientRpc]
+  public void RpcSyncCrouchState()
+  {
+    this.crouch = crouch;
   }
 
   public void AttackDamage()
