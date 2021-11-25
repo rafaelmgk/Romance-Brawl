@@ -126,10 +126,12 @@ MonoBehaviour:
     m_Bits: 8
   attackDirection: 0
   attackDamage: 0
-  firstAtkPower: 10
+  firstAtkPower: 3
   hitBox: {fileID: 5409818749854775727}
   health: 0
   playerNumber: 0
+  timer: 1
+  time: 1
 --- !u!212 &5411658225077610186
 SpriteRenderer:
   m_ObjectHideFlags: 0
