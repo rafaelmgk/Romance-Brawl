@@ -131,6 +131,7 @@ public class CharacterController2D : NetworkBehaviour
     if (extraJumps > 0)
     {
       extraJumps--;
+      if (isClientOnly) m_Rigidbody2D.velocity = Vector2.up * 0;
       if (isClientOnly) m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
       CmdJump();
     }
@@ -157,6 +158,7 @@ public class CharacterController2D : NetworkBehaviour
   [Command(requiresAuthority = false)]
   public void CmdJump()
   {
+    m_Rigidbody2D.velocity = Vector2.up * 0;
     m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
   }
 
