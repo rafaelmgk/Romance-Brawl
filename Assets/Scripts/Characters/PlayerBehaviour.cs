@@ -50,7 +50,6 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   private bool _amIOutOfLimit = false;
   IEnumerator WaitForAtacckAgain()
   {
-    print("tarodando");
     yield return new WaitForSeconds(0.5f);
     timer = 1;
   }
@@ -66,7 +65,6 @@ public abstract class PlayerBehaviour : NetworkBehaviour
     {
       if (Input.GetKeyDown(KeyCode.Z))
       {
-        print("tarodando2");
         Attack();
         timer = 0;
         StartCoroutine(WaitForAtacckAgain());
