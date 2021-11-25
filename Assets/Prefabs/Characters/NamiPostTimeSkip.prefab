@@ -93,7 +93,7 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 384
   m_GroundCheck: {fileID: 7074083855439903602}
   m_CeilingCheck: {fileID: 5218971734029842672}
   m_CrouchDisableCollider: {fileID: 0}
@@ -129,6 +129,7 @@ MonoBehaviour:
   firstAtkPower: 10
   hitBox: {fileID: 5409818749854775727}
   health: 0
+  playerNumber: 0
 --- !u!212 &5411658225077610186
 SpriteRenderer:
   m_ObjectHideFlags: 0
