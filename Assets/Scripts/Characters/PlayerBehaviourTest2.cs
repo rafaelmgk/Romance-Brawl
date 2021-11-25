@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public abstract class PlayerBehaviour : NetworkBehaviour
+public abstract class PlayerBehaviourTest2 : NetworkBehaviour
 {
-  public CharacterController2D controller;
+  public CharacterController2DTest controller;
   public Animator animator;
 
   public float runSpeed = 40f;
@@ -157,7 +157,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour
     _canCheckForBounds = false;
 
     player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-    player.GetComponent<PlayerBehaviour>().health = 0;
+    player.GetComponent<PlayerBehaviourTest2>().health = 0;
     player.transform.position = new Vector3(0, 2, 0);
 
     yield return new WaitForSeconds(1f);

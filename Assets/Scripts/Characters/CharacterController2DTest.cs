@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Mirror;
 
-public class CharacterController2D : NetworkBehaviour
+public class CharacterController2DTest : NetworkBehaviour
 {
   [SerializeField] private float m_JumpForce = 400f;                          // Amount of force added when the player jumps.
   [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;          // Amount of maxSpeed applied to crouching movement. 1 = 100%
@@ -20,7 +20,7 @@ public class CharacterController2D : NetworkBehaviour
   private bool m_FacingRight = true;  // For determining which way the player is currently facing.
   private Vector3 m_Velocity = Vector3.zero;
   [SyncVar] public int extraJumps;
-  public PlayerBehaviour player;
+  public PlayerBehaviourTest2 player;
 
 
 

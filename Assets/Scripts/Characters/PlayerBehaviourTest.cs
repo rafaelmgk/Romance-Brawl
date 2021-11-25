@@ -3,16 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public abstract class PlayerBehaviour : NetworkBehaviour
+public abstract class PlayerBehaviourTest : NetworkBehaviour
 {
-  public CharacterController2D controller;
   public Animator animator;
-
-  public float runSpeed = 40f;
-
-  float horizontalMove = 0f;
-  bool crouch = false;
-
   public Transform attackPoint;
   public Vector2 attackRange = new Vector2(0.0f, 0.0f);
   public LayerMask enemyLayers;
@@ -27,7 +20,21 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   public NetworkConnectionToClient enemyConnection;
 
   private bool _canCheckForBounds = true;
+  public float speed;
+  public float jumpForce;
+  public float moveInput;
+  private Rigidbody2D m_Rigidbody2D;
+  private bool facingRinght = true;
+  private bool isGrounded;
+  public Transform groundCheck;
+  public float checkRadius;
+  public LayerMask whatIsGround;
+  public int extraJumps;
 
+  private void Awake()
+  {
+    m_Rigidbody2D = GetComponent<Rigidbody2D>();
+  }
   void Update()
   {
     if (!isLocalPlayer) return;
@@ -37,29 +44,30 @@ public abstract class PlayerBehaviour : NetworkBehaviour
     {
       Attack();
     }
-
-
-    horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
-    animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-
-    if (Input.GetButtonDown("Jump"))
+    if (isGrounded == true)
     {
-      controller.Jump();
-      animator.SetBool("IsJumping", true);
+      extraJumps = 1;
+      animator.SetBool("IsJumping", false);
+    }
+    if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
+    {
+      m_Rigidbody2D.velocity = Vector2.up * jumpForce;
+      extraJumps--;
+    }
+    else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded == true)
+    {
+      m_Rigidbody2D.velocity = Vector2.up * jumpForce;
     }
     if (Input.GetButtonDown("Crouch"))
     {
-      crouch = true;
       animator.SetBool("IsCrouching", true);
     }
     else if (Input.GetButtonUp("Crouch"))
     {
-      crouch = false;
       animator.SetBool("IsCrouching", false);
     }
-  }
 
+  }
 
   void Attack()
   {
@@ -137,7 +145,25 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   void FixedUpdate()
   {
     if (!isLocalPlayer) return;
-    if (Input.anyKey) controller.Move(horizontalMove * Time.fixedDeltaTime, crouch);
+    isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+    moveInput = Input.GetAxisRaw("Horizontal") * speed;
+    m_Rigidbody2D.velocity = new Vector2(moveInput * Time.fixedDeltaTime, m_Rigidbody2D.velocity.y);
+    if (facingRinght == false && moveInput > 0)
+    {
+      Flip();
+    }
+    else if (facingRinght == true && moveInput < 0)
+    {
+      Flip();
+    }
+
+    animator.SetFloat("Speed", Mathf.Abs(moveInput));
+
+    if (Input.GetButtonDown("Jump"))
+    {
+      animator.SetBool("IsJumping", true);
+    }
+
 
     if (_canCheckForBounds) CheckWorldBoundaries();
   }
@@ -170,5 +196,12 @@ public abstract class PlayerBehaviour : NetworkBehaviour
     if (attackPoint == null) return;
 
     Gizmos.DrawWireCube(attackPoint.position, attackRange);
+  }
+  void Flip()
+  {
+    facingRinght = !facingRinght;
+    Vector3 Scaler = transform.localScale;
+    Scaler.x *= -1;
+    transform.localScale = Scaler;
   }
 }
