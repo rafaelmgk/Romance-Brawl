@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Jinbei_Crouch
+  m_Name: Jinbe_Crouch
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -824049554509996165, guid: 26dbce1e8bc6b324391a58d94b9fd55d, type: 3}
+      value: {fileID: -3370068555749008300, guid: 26dbce1e8bc6b324391a58d94b9fd55d, type: 3}
     - time: 0.083333336
-      value: {fileID: -6041282964842241288, guid: 26dbce1e8bc6b324391a58d94b9fd55d, type: 3}
+      value: {fileID: 2692436123807826998, guid: 26dbce1e8bc6b324391a58d94b9fd55d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -42,8 +42,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -824049554509996165, guid: 26dbce1e8bc6b324391a58d94b9fd55d, type: 3}
-    - {fileID: -6041282964842241288, guid: 26dbce1e8bc6b324391a58d94b9fd55d, type: 3}
+    - {fileID: -3370068555749008300, guid: 26dbce1e8bc6b324391a58d94b9fd55d, type: 3}
+    - {fileID: 2692436123807826998, guid: 26dbce1e8bc6b324391a58d94b9fd55d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
