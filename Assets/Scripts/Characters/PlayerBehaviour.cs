@@ -29,6 +29,8 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   private bool _canCheckForBounds = true;
 
   [SyncVar] public int playerNumber;
+  public int timer = 1;
+  public int time = 1;
 
   private bool _AmIOutOfLimit
   {
@@ -46,16 +48,33 @@ public abstract class PlayerBehaviour : NetworkBehaviour
     }
   }
   private bool _amIOutOfLimit = false;
+  IEnumerator WaitForAtacckAgain()
+  {
+    print("tarodando");
+    yield return new WaitForSeconds(0.5f);
+    timer = 1;
+  }
+
 
   void Update()
   {
     if (!isLocalPlayer) return;
-
     AttackDamage();
-    if (Input.GetKeyDown(KeyCode.Z))
+
+
+    if (timer == time)
     {
-      Attack();
+      if (Input.GetKeyDown(KeyCode.Z))
+      {
+        print("tarodando2");
+        Attack();
+        timer = 0;
+        StartCoroutine(WaitForAtacckAgain());
+      }
     }
+
+
+
 
     horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
@@ -162,6 +181,9 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   void FixedUpdate()
   {
     if (!isLocalPlayer) return;
+
+
+
     if (Input.anyKey) controller.Move(horizontalMove * Time.fixedDeltaTime, crouch);
 
     if (_canCheckForBounds) CheckWorldBoundaries();
