@@ -110,7 +110,14 @@ public abstract class PlayerBehaviour : NetworkBehaviour
     foreach (Collider2D enemy in hitEnemies)
     {
       if (enemy != gameObject.GetComponent<Collider2D>())
-        StartCoroutine(HandleDamage(enemy.gameObject, attackDamage, firstAtkPower));
+        if (enemy.GetComponent<PlayerBehaviour>().crouch == true)
+        {
+          StartCoroutine(HandleDamage(enemy.gameObject, attackDamage, firstAtkPower / 2));
+        }
+        else
+        {
+          StartCoroutine(HandleDamage(enemy.gameObject, attackDamage, firstAtkPower));
+        }
     }
   }
 
