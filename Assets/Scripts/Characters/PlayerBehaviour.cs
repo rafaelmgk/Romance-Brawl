@@ -63,8 +63,13 @@ public abstract class PlayerBehaviour : NetworkBehaviour
 
     if (Input.GetButtonDown("Jump"))
     {
+      Physics2D.IgnoreLayerCollision(3, 8, true);
       controller.Jump();
       animator.SetBool("IsJumping", true);
+    }
+    if (Input.GetButtonUp("Jump"))
+    {
+      Physics2D.IgnoreLayerCollision(3, 8, false);
     }
     if (Input.GetButtonDown("Crouch"))
     {
