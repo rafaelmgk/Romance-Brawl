@@ -104,28 +104,22 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 
 	[Command(requiresAuthority = false)]
 	public void CmdServerTakeDamage(GameObject enemy, int dmgAndDirection, int power) {
-		int atkPower = power;
-		int crouchMultiplier = 1;
-		if (enemy.GetComponent<PlayerBehaviour>().crouch == true) {
-			atkPower = 0;
-			crouchMultiplier = 0;
-		}
-		print(crouchMultiplier + " 1");
-		print(power + " 1");
-
 		enemy.GetComponent<PlayerBehaviour>().CmdTargetTakeDamage(
-		  enemy.GetComponent<NetworkIdentity>().connectionToClient,
-		  dmgAndDirection,
-		  atkPower,
-		  crouchMultiplier
+		  enemy.GetComponent<NetworkIdentity>().connectionToClient, dmgAndDirection, power
 		);
 	}
 
 	[TargetRpc]
-	public void CmdTargetTakeDamage(NetworkConnection target, int dmgAndDirection, int power, int crouchMultiplier) {
-		print(crouchMultiplier);
-		print(power);
-		health += power;
+	public void CmdTargetTakeDamage(NetworkConnection target, int dmgAndDirection, int power) {
+		int atkPower = power;
+		int crouchMultiplier = 1;
+		if (crouch) {
+			crouchMultiplier = 0;
+			atkPower = 0;
+		}
+
+		health += atkPower;
+
 		hitBox.velocity = new Vector2(crouchMultiplier * dmgAndDirection * health, crouchMultiplier * health / 2);
 	}
 
