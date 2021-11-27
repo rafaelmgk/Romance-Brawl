@@ -182,6 +182,8 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	}
 
 	private bool AreAnyGamepadButtonsPressed() {
+		if (Gamepad.current == null) return false;
+
 		for (int i = 0; i < Gamepad.current.allControls.Count; i++) {
 			if (Gamepad.current.allControls[i].IsPressed()) return true;
 		}
