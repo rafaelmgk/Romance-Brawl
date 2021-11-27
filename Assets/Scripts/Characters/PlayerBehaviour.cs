@@ -81,7 +81,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 		if (!isLocalPlayer) return;
 		_movementVector = context.ReadValue<Vector2>();
 
-		if (context.started && _movementVector.y == -1) {
+		if ((context.started || context.performed) && _movementVector.y == -1) {
 			Physics2D.IgnoreLayerCollision(3, 8, true);
 			crouch = true;
 			animator.SetBool("IsCrouching", true);
