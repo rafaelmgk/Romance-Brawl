@@ -81,7 +81,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 		if (!isLocalPlayer) return;
 		_movementVector = context.ReadValue<Vector2>();
 
-		if ((context.started || context.performed) && _movementVector.y == -1) {
+		if ((context.started || context.performed) && _movementVector.y < 0) {
 			Physics2D.IgnoreLayerCollision(3, 8, true);
 			crouch = true;
 			animator.SetBool("IsCrouching", true);
@@ -135,26 +135,23 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 		Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, attackRange, 0, enemyLayers);
 		foreach (Collider2D enemy in hitEnemies) {
 			if (enemy != gameObject.GetComponent<Collider2D>())
-				StartCoroutine(HandleDamage(enemy.gameObject, attackDirection, firstAtkPower));
+				AskServerForTakeDamage(enemy.gameObject, attackDirection, firstAtkPower);
 		}
 	}
 
-	private IEnumerator HandleDamage(GameObject enemy, int attackDirection, int firstAtkPower) {
-		CmdServerRemoveAuthority(enemy);
-		enemy.GetComponent<PlayerBehaviour>().CmdServerTakeDamage(enemy, attackDirection, firstAtkPower);
-		CmdServerAssignAuthority(enemy);
-		yield return null;
+	private void AskServerForTakeDamage(GameObject enemy, int attackDirection, int firstAtkPower) {
+		enemy.GetComponent<PlayerBehaviour>().CmdAskServerForTakeDamage(enemy, attackDirection, firstAtkPower);
 	}
 
 	[Command(requiresAuthority = false)]
-	public void CmdServerTakeDamage(GameObject enemy, int attackDirection, int power) {
-		enemy.GetComponent<PlayerBehaviour>().CmdTargetTakeDamage(
+	public void CmdAskServerForTakeDamage(GameObject enemy, int attackDirection, int power) {
+		enemy.GetComponent<PlayerBehaviour>().TrgtTakeDamage(
 		  enemy.GetComponent<NetworkIdentity>().connectionToClient, attackDirection, power
 		);
 	}
 
 	[TargetRpc]
-	public void CmdTargetTakeDamage(NetworkConnection target, int attackDirection, int power) {
+	public void TrgtTakeDamage(NetworkConnection target, int attackDirection, int power) {
 		int atkPower = power;
 		int crouchMultiplier = 1;
 		if (crouch) {
@@ -164,33 +161,8 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 
 		health += atkPower;
 
-		hitBox.velocity = new Vector2(crouchMultiplier * attackDirection * health, crouchMultiplier * health / 2);
-	}
-
-	[Command]
-	public void CmdServerRemoveAuthority(GameObject target) {
-		target.GetComponent<PlayerBehaviour>().CmdRemoveAuthority(
-		  target.GetComponent<NetworkIdentity>().connectionToClient, target
-		);
-	}
-
-	[TargetRpc]
-	public void CmdRemoveAuthority(NetworkConnection target, GameObject targetObj) {
-		targetObj.GetComponent<NetworkTransform>().clientAuthority = false;
-		targetObj.GetComponent<NetworkRigidbody2D>().clientAuthority = false;
-	}
-
-	[Command]
-	public void CmdServerAssignAuthority(GameObject target) {
-		target.GetComponent<PlayerBehaviour>().CmdAssignAuthority(
-		  target.GetComponent<NetworkIdentity>().connectionToClient, target
-		);
-	}
-
-	[TargetRpc]
-	public void CmdAssignAuthority(NetworkConnection target, GameObject targetObj) {
-		targetObj.GetComponent<NetworkTransform>().clientAuthority = true;
-		targetObj.GetComponent<NetworkRigidbody2D>().clientAuthority = true;
+		// hitBox.velocity = new Vector2(crouchMultiplier * attackDirection * health, crouchMultiplier * health / 3.5f);
+		hitBox.AddForce(new Vector2(crouchMultiplier * attackDirection * health, crouchMultiplier * health / 3.5f), ForceMode2D.Impulse);
 	}
 
 	public void AttackDirection() {
@@ -201,11 +173,20 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	void FixedUpdate() {
 		if (!isLocalPlayer) return;
 
-		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch);
+		if (Keyboard.current.anyKey.IsPressed() || AreAnyGamepadButtonsPressed())
+			controller.Move(horizontalMove * Time.fixedDeltaTime, crouch);
 
 		if (_canCheckForBounds)
 			CheckWorldBoundaries();
 		CheckCameraLimits();
+	}
+
+	private bool AreAnyGamepadButtonsPressed() {
+		for (int i = 0; i < Gamepad.current.allControls.Count; i++) {
+			if (Gamepad.current.allControls[i].IsPressed()) return true;
+		}
+
+		return false;
 	}
 
 	private void CheckWorldBoundaries() {
