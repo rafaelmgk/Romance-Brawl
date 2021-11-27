@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Mirror;
 
 public class CustomNetworkRoomManager : NetworkRoomManager {
@@ -8,7 +9,6 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 	[SerializeField] private GameObject dataManagerPrefab;
 
 	private int _playerCounter = 1;
-
 
 	public override void OnStartHost() {
 		base.OnStartHost();

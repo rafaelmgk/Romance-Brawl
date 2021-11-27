@@ -1626,6 +1626,7 @@ MonoBehaviour:
   roomSlots: []
   clientIndex: 0
   dataManagerPrefab: {fileID: 3257809134108954146, guid: 01d12b7bd8c389a48a3b49148efae21a, type: 3}
+  inputActions: {fileID: -944628639613478452, guid: 344e2004adfdafb47bd0bf79ba743cb3, type: 3}
 --- !u!1 &2062809697
 GameObject:
   m_ObjectHideFlags: 0

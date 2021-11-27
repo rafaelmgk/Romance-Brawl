@@ -46,7 +46,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 
 	private Vector2 _movementVector;
 
-	private PlayerInput playerInput;
+	// private PlayerInput playerInput;
 	// private InputAction movementAction, jumpAction, basicAtkAction;
 
 	// private void Awake() {
@@ -70,19 +70,22 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	// 	basicAtkAction.canceled += BasicAtk;
 	// }
 
+	private void Start() {
+		if (!isLocalPlayer)
+			Destroy(GetComponent<PlayerInput>());
+		else
+			GetComponent<PlayerInput>().enabled = true;
+	}
+
 	public void Movement(InputAction.CallbackContext context) {
-		if (!isLocalPlayer) {
-			// playerInput.gameObject.SetActive(false);
-			return;
-		}
+		if (!isLocalPlayer) return;
 		_movementVector = context.ReadValue<Vector2>();
 
 		if (context.started && _movementVector.y == -1) {
 			Physics2D.IgnoreLayerCollision(3, 8, true);
 			crouch = true;
 			animator.SetBool("IsCrouching", true);
-		}
-		else if (context.canceled) {
+		} else if (context.canceled) {
 			Physics2D.IgnoreLayerCollision(3, 8, false);
 			crouch = false;
 			animator.SetBool("IsCrouching", false);
@@ -95,8 +98,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 			animator.SetBool("IsJumping", true);
 			Physics2D.IgnoreLayerCollision(3, 8, true);
 			controller.Jump();
-		}
-		else if (context.canceled) {
+		} else if (context.canceled) {
 			animator.SetBool("IsJumping", false);
 			Physics2D.IgnoreLayerCollision(3, 8, false);
 		}
