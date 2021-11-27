@@ -98,10 +98,9 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 			animator.SetBool("IsJumping", true);
 			Physics2D.IgnoreLayerCollision(3, 8, true);
 			controller.Jump();
-		} else if (context.canceled) {
-			animator.SetBool("IsJumping", false);
-			Physics2D.IgnoreLayerCollision(3, 8, false);
 		}
+		else if (context.canceled)
+			Physics2D.IgnoreLayerCollision(3, 8, false);
 	}
 
 	public void BasicAtk(InputAction.CallbackContext context) {
