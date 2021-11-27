@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Mirror;
 
 public abstract class PlayerBehaviour : NetworkBehaviour {
@@ -16,7 +17,6 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	public Vector2 attackRange = new Vector2(0.0f, 0.0f);
 	public LayerMask enemyLayers;
 	public int attackDirection;
-	public int attackDamage;
 
 	public int firstAtkPower = 10;
 
@@ -28,8 +28,8 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	private bool _canCheckForBounds = true;
 
 	[SyncVar] public int playerNumber;
-	public int timer = 1;
-	public int time = 1;
+
+	private bool _canAttack = true;
 
 	private bool _AmIOutOfLimit {
 		get {
@@ -43,74 +43,116 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 		}
 	}
 	private bool _amIOutOfLimit = false;
-	IEnumerator WaitForAtacckAgain() {
-		yield return new WaitForSeconds(0.5f);
-		timer = 1;
-	}
 
+	private Vector2 _movementVector;
 
-	void Update() {
-		if (!isLocalPlayer) return;
-		AttackDamage();
+	private PlayerInput playerInput;
+	// private InputAction movementAction, jumpAction, basicAtkAction;
 
+	// private void Awake() {
+	// 	playerInput = GetComponent<PlayerInput>();
+	// 	movementAction = playerInput.actions["Movement"];
+	// 	jumpAction = playerInput.actions["Jump"];
+	// 	basicAtkAction = playerInput.actions["Basic Atk"];
+	// }
 
-		if (timer == time) {
-			if (Input.GetKeyDown(KeyCode.Z)) {
-				Attack();
-				timer = 0;
-				StartCoroutine(WaitForAtacckAgain());
-			}
+	// private void Start() {
+	// 	movementAction.started += Movement;
+	// 	movementAction.performed += Movement;
+	// 	movementAction.canceled += Movement;
+
+	// 	jumpAction.started += Jump;
+	// 	jumpAction.performed += Jump;
+	// 	jumpAction.canceled += Jump;
+
+	// 	basicAtkAction.started += BasicAtk;
+	// 	basicAtkAction.performed += BasicAtk;
+	// 	basicAtkAction.canceled += BasicAtk;
+	// }
+
+	public void Movement(InputAction.CallbackContext context) {
+		if (!isLocalPlayer) {
+			// playerInput.gameObject.SetActive(false);
+			return;
 		}
+		_movementVector = context.ReadValue<Vector2>();
 
-		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
-		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-
-		if (Input.GetButtonDown("Jump")) {
-			Physics2D.IgnoreLayerCollision(3, 8, true);
-			controller.Jump();
-			animator.SetBool("IsJumping", true);
-		}
-		if (Input.GetButtonUp("Jump")) {
-			Physics2D.IgnoreLayerCollision(3, 8, false);
-		}
-		if (Input.GetButtonDown("Crouch")) {
+		if (context.started && _movementVector.y == -1) {
 			Physics2D.IgnoreLayerCollision(3, 8, true);
 			crouch = true;
 			animator.SetBool("IsCrouching", true);
-		} else if (Input.GetButtonUp("Crouch")) {
+		}
+		else if (context.canceled) {
 			Physics2D.IgnoreLayerCollision(3, 8, false);
 			crouch = false;
 			animator.SetBool("IsCrouching", false);
 		}
 	}
 
+	public void Jump(InputAction.CallbackContext context) {
+		if (!isLocalPlayer) return;
+		if (context.started) {
+			animator.SetBool("IsJumping", true);
+			Physics2D.IgnoreLayerCollision(3, 8, true);
+			controller.Jump();
+		}
+		else if (context.canceled) {
+			animator.SetBool("IsJumping", false);
+			Physics2D.IgnoreLayerCollision(3, 8, false);
+		}
+	}
+
+	public void BasicAtk(InputAction.CallbackContext context) {
+		if (!isLocalPlayer) return;
+		if (context.started && _canAttack) {
+			Attack();
+			StartCoroutine(WaitForAttackAgain());
+		}
+	}
+
+	private IEnumerator WaitForAttackAgain() {
+		yield return new WaitForSeconds(0.5f);
+		_canAttack = true;
+	}
+
+
+	void Update() {
+		if (!isLocalPlayer) return;
+		AttackDirection();
+
+		horizontalMove = _movementVector.x * runSpeed;
+
+		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+	}
+
 
 	void Attack() {
+		_canAttack = false;
+
 		animator.SetTrigger("Attack");
 		Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, attackRange, 0, enemyLayers);
 		foreach (Collider2D enemy in hitEnemies) {
 			if (enemy != gameObject.GetComponent<Collider2D>())
-				StartCoroutine(HandleDamage(enemy.gameObject, attackDamage, firstAtkPower));
+				StartCoroutine(HandleDamage(enemy.gameObject, attackDirection, firstAtkPower));
 		}
 	}
 
-	private IEnumerator HandleDamage(GameObject enemy, int attackDamage, int firstAtkPower) {
+	private IEnumerator HandleDamage(GameObject enemy, int attackDirection, int firstAtkPower) {
 		CmdServerRemoveAuthority(enemy);
-		enemy.GetComponent<PlayerBehaviour>().CmdServerTakeDamage(enemy, attackDamage, firstAtkPower);
+		enemy.GetComponent<PlayerBehaviour>().CmdServerTakeDamage(enemy, attackDirection, firstAtkPower);
 		CmdServerAssignAuthority(enemy);
 		yield return null;
 	}
 
 	[Command(requiresAuthority = false)]
-	public void CmdServerTakeDamage(GameObject enemy, int dmgAndDirection, int power) {
+	public void CmdServerTakeDamage(GameObject enemy, int attackDirection, int power) {
 		enemy.GetComponent<PlayerBehaviour>().CmdTargetTakeDamage(
-		  enemy.GetComponent<NetworkIdentity>().connectionToClient, dmgAndDirection, power
+		  enemy.GetComponent<NetworkIdentity>().connectionToClient, attackDirection, power
 		);
 	}
 
 	[TargetRpc]
-	public void CmdTargetTakeDamage(NetworkConnection target, int dmgAndDirection, int power) {
+	public void CmdTargetTakeDamage(NetworkConnection target, int attackDirection, int power) {
 		int atkPower = power;
 		int crouchMultiplier = 1;
 		if (crouch) {
@@ -120,7 +162,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 
 		health += atkPower;
 
-		hitBox.velocity = new Vector2(crouchMultiplier * dmgAndDirection * health, crouchMultiplier * health / 2);
+		hitBox.velocity = new Vector2(crouchMultiplier * attackDirection * health, crouchMultiplier * health / 2);
 	}
 
 	[Command]
@@ -149,21 +191,18 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 		targetObj.GetComponent<NetworkRigidbody2D>().clientAuthority = true;
 	}
 
-	public void AttackDamage() {
-		if (Input.GetAxisRaw("Horizontal") != 0) {
-			attackDirection = (int)Input.GetAxisRaw("Horizontal");
-		}
-		attackDamage = 1 * attackDirection;
+	public void AttackDirection() {
+		if (_movementVector.x != 0)
+			attackDirection = (int)_movementVector.x;
 	}
 
 	void FixedUpdate() {
 		if (!isLocalPlayer) return;
 
+		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch);
 
-
-		if (Input.anyKey) controller.Move(horizontalMove * Time.fixedDeltaTime, crouch);
-
-		if (_canCheckForBounds) CheckWorldBoundaries();
+		if (_canCheckForBounds)
+			CheckWorldBoundaries();
 		CheckCameraLimits();
 	}
 
