@@ -1093,7 +1093,7 @@ TextureImporter:
     second: NamiTimeSkip_362
   - first:
       213: 2020056027370607367
-    second: NamiTimeSkip_363
+    second: NamiTimeSkip_375
   - first:
       213: -7737825908024949318
     second: NamiTimeSkip_364
@@ -1123,7 +1123,7 @@ TextureImporter:
     second: NamiTimeSkip_372
   - first:
       213: 7264851159516544824
-    second: NamiTimeSkip_373
+    second: NamiTimeSkip_374
   - first:
       213: -3866801007947547186
     second: NamiTimeSkip_374
@@ -1141,22 +1141,22 @@ TextureImporter:
     second: NamiTimeSkip_378
   - first:
       213: -4390275307397680868
-    second: NamiTimeSkip_379
+    second: NamiTimeSkip_376
   - first:
       213: 707434122234647233
-    second: NamiTimeSkip_380
+    second: NamiTimeSkip_377
   - first:
       213: 5959646906626121432
     second: NamiTimeSkip_381
   - first:
       213: -1397230876219303069
-    second: NamiTimeSkip_382
+    second: NamiTimeSkip_379
   - first:
       213: 5528940168840326839
     second: NamiTimeSkip_383
   - first:
       213: 5467044147737691896
-    second: NamiTimeSkip_384
+    second: NamiTimeSkip_382
   - first:
       213: -7035902140432764809
     second: NamiTimeSkip_385
@@ -10219,13 +10219,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NamiTimeSkip_363
+      name: NamiTimeSkip_375
       rect:
         serializedVersion: 2
         x: 390
         y: 4233
         width: 105
-        height: 69
+        height: 75
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -10235,111 +10235,6 @@ TextureImporter:
       bones: []
       spriteID: 703dfc1114ea80c10800000000000000
       internalID: 2020056027370607367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NamiTimeSkip_364
-      rect:
-        serializedVersion: 2
-        x: 465
-        y: 4284
-        width: 22
-        height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab5cb5a5558bd9490800000000000000
-      internalID: -7737825908024949318
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NamiTimeSkip_365
-      rect:
-        serializedVersion: 2
-        x: 569
-        y: 4292
-        width: 16
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c29993df652b7fd10800000000000000
-      internalID: 2159390633032784172
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NamiTimeSkip_366
-      rect:
-        serializedVersion: 2
-        x: 578
-        y: 4298
-        width: 11
-        height: 10
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89df2ac0ee20843f0800000000000000
-      internalID: -916479302732415592
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NamiTimeSkip_367
-      rect:
-        serializedVersion: 2
-        x: 677
-        y: 4302
-        width: 5
-        height: 5
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f53a9698d7f23d5f0800000000000000
-      internalID: -733190098108439713
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NamiTimeSkip_368
-      rect:
-        serializedVersion: 2
-        x: 684
-        y: 4300
-        width: 11
-        height: 11
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25b2a96ed49778e30800000000000000
-      internalID: 4505703327695776594
       vertices: []
       indices: 
       edges: []
@@ -10429,13 +10324,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NamiTimeSkip_373
+      name: NamiTimeSkip_374
       rect:
         serializedVersion: 2
         x: 275
         y: 4233
         width: 110
-        height: 61
+        height: 66
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -10445,90 +10340,6 @@ TextureImporter:
       bones: []
       spriteID: 83f711583afe1d460800000000000000
       internalID: 7264851159516544824
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NamiTimeSkip_374
-      rect:
-        serializedVersion: 2
-        x: 362
-        y: 4276
-        width: 22
-        height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ecdf92078fc565ac0800000000000000
-      internalID: -3866801007947547186
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NamiTimeSkip_375
-      rect:
-        serializedVersion: 2
-        x: 563
-        y: 4283
-        width: 21
-        height: 11
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24d815b27346acba0800000000000000
-      internalID: -6067927359815578302
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NamiTimeSkip_376
-      rect:
-        serializedVersion: 2
-        x: 568
-        y: 4286
-        width: 18
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e43ecf521ceafe00800000000000000
-      internalID: 1079434624369571049
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NamiTimeSkip_377
-      rect:
-        serializedVersion: 2
-        x: 671
-        y: 4288
-        width: 13
-        height: 9
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05589c6b3cab8c020800000000000000
-      internalID: 2362343354303874384
       vertices: []
       indices: 
       edges: []
@@ -10555,13 +10366,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NamiTimeSkip_379
+      name: NamiTimeSkip_376
       rect:
         serializedVersion: 2
         x: 500
         y: 4231
         width: 105
-        height: 48
+        height: 77
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -10576,13 +10387,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NamiTimeSkip_380
+      name: NamiTimeSkip_377
       rect:
         serializedVersion: 2
         x: 610
         y: 4227
         width: 105
-        height: 52
+        height: 84
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -10618,7 +10429,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NamiTimeSkip_382
+      name: NamiTimeSkip_379
       rect:
         serializedVersion: 2
         x: 830
@@ -10660,7 +10471,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NamiTimeSkip_384
+      name: NamiTimeSkip_382
       rect:
         serializedVersion: 2
         x: 1015
