@@ -120,7 +120,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour
     if (!isLocalPlayer) return;
     if (context.started && _canAttack)
     {
-      Attack(attackPoint, attackRange, "Attack");
+      Attack(attackPoint, attackRange, "Attack", firstAtkPower);
       StartCoroutine(WaitForAttackAgain());
     }
   }
@@ -129,7 +129,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour
     if (!isLocalPlayer) return;
     if (context.started && _canAttack)
     {
-      Attack(attackPoint, attackRange, "Attack");
+      Attack(attackPoint, attackRange, "Attack", firstAtkPower);
       StartCoroutine(WaitForAttackAgain());
     }
   }
@@ -152,7 +152,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   }
 
 
-  void Attack(Transform attackPoint, Vector2 attackRange, string animation)
+  void Attack(Transform attackPoint, Vector2 attackRange, string animation, int attackPower)
   {
     _canAttack = false;
 
@@ -161,7 +161,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour
     foreach (Collider2D enemy in hitEnemies)
     {
       if (enemy != gameObject.GetComponent<Collider2D>())
-        AskServerForTakeDamage(enemy.gameObject, attackDirection, firstAtkPower);
+        AskServerForTakeDamage(enemy.gameObject, attackDirection, attackPower);
     }
   }
 
