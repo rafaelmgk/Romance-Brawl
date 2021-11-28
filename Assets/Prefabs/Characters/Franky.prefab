@@ -40,7 +40,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1720734485633453343}
   - component: {fileID: 836442417185632381}
-  - component: {fileID: -7378308382211548779}
   - component: {fileID: 5411658225077610186}
   - component: {fileID: 6546482005730255426}
   - component: {fileID: 5409818749854775727}
@@ -49,6 +48,7 @@ GameObject:
   - component: {fileID: 5003981991407762257}
   - component: {fileID: -1728959598436792494}
   - component: {fileID: -1202210561635607654}
+  - component: {fileID: -7378308382211548779}
   - component: {fileID: -8203028029871916909}
   m_Layer: 3
   m_Name: Franky
@@ -103,34 +103,6 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &-7378308382211548779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4559217071842210107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bada3f92388a38245bfe65a488f00fed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  controller: {fileID: 836442417185632381}
-  animator: {fileID: 6546482005730255426}
-  runSpeed: 15
-  crouch: 0
-  attackPoint: {fileID: 8304542415087038332}
-  attackRange: {x: 0.5, y: 0.5}
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 8
-  attackDirection: 0
-  firstAtkPower: 3
-  hitBox: {fileID: 5409818749854775727}
-  health: 0
-  playerNumber: 0
 --- !u!212 &5411658225077610186
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -332,6 +304,34 @@ MonoBehaviour:
   syncAngularVelocity: 1
   clearAngularVelocity: 0
   angularVelocitySensitivity: 0.1
+--- !u!114 &-7378308382211548779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4559217071842210107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bada3f92388a38245bfe65a488f00fed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  controller: {fileID: 836442417185632381}
+  animator: {fileID: 6546482005730255426}
+  runSpeed: 15
+  crouch: 0
+  attackPoint: {fileID: 8304542415087038332}
+  attackRange: {x: 0.5, y: 0.5}
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  attackDirection: 0
+  firstAtkPower: 3
+  hitBox: {fileID: 5409818749854775727}
+  health: 0
+  playerNumber: 0
 --- !u!114 &-8203028029871916909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,6 +405,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: e15d6e2c-5eb5-4a82-bbf6-a034dda99de4
     m_ActionName: Player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -7378308382211548779}
+        m_TargetAssemblyTypeName: PlayerBehaviour, Assembly-CSharp
+        m_MethodName: StrongAtk
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 308d7464-023e-49e1-8b4a-28d1be36f0a0
+    m_ActionName: Player/Strong Atk[/Keyboard/x]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard and Mouse
   m_DefaultActionMap: Player

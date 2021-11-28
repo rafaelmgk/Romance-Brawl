@@ -124,6 +124,15 @@ public abstract class PlayerBehaviour : NetworkBehaviour
       StartCoroutine(WaitForAttackAgain());
     }
   }
+  public void StrongAtk(InputAction.CallbackContext context)
+  {
+    if (!isLocalPlayer) return;
+    if (context.started && _canAttack)
+    {
+      Attack(attackPoint, attackRange, "Attack");
+      StartCoroutine(WaitForAttackAgain());
+    }
+  }
 
   private IEnumerator WaitForAttackAgain()
   {
