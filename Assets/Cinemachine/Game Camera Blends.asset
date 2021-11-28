@@ -17,7 +17,7 @@ MonoBehaviour:
     m_To: Vcam Static (OutOfBounds)
     m_Blend:
       m_Style: 7
-      m_Time: 0.8
+      m_Time: 0.5
       m_CustomCurve:
         serializedVersion: 2
         m_Curve:
