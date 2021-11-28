@@ -22,6 +22,6 @@ public class DynamicTargetGroup : MonoBehaviour {
 
 	public void AddMemberToTargetGroup(GameObject player) {
 		CinemachineTargetGroup targetGroup = GetComponent<CinemachineTargetGroup>();
-		targetGroup.AddMember(player.transform, 1, 0);
+		targetGroup.AddMember(player.transform, 1, .3f);
 	}
 }
