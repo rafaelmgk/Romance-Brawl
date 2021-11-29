@@ -8,7 +8,7 @@ link
 This project requires [Unity3D](https://unity.com/), 2020.3 or greater, to build and run.
 
 ## License
-Open sourced under the 
+Open sourced under the [MIT License](https://github.com/rafaelmgk/One-Piece-Game/blob/main/LICENSE).
 
 ## Disclaimer
 This software comes bundled with data and graphics extracted from the One Piece series of video games. Some terminology from the One Piece franchise is also necessarily used within the software itself. This is all the intellectual property of Eiichiro Oda, Shueisha, inc. and Bandai Namco Entertainment, inc. and is protected by various copyrights and trademarks.
