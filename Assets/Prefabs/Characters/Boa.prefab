@@ -280,7 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  clientAuthority: 0
+  clientAuthority: 1
   animator: {fileID: 6546482005730255426}
 --- !u!114 &5806586969133861965
 MonoBehaviour:
@@ -323,12 +323,14 @@ MonoBehaviour:
   runSpeed: 15
   crouch: 0
   attackPoint: {fileID: 8304542415087038332}
-  attackRange: {x: 0.5, y: 0.6}
+  attack1Range: {x: 0, y: 0}
+  attack2Range: {x: 0, y: 0}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 8
   attackDirection: 0
-  firstAtkPower: 3
+  atk1Power: 10
+  atk2Power: 10
   hitBox: {fileID: 5409818749854775727}
   health: 0
   playerNumber: 0
