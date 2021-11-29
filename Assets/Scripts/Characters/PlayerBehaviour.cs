@@ -52,6 +52,8 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   private bool _amIOutOfLimit = false;
 
   private Vector2 _movementVector;
+  [Range(0, 1)] private float stunTime = 0f;
+  [Range(0, 1)] private float stunTimer = 1f;
 
   // private PlayerInput playerInput;
   // private InputAction movementAction, jumpAction, basicAtkAction;
@@ -200,7 +202,8 @@ public abstract class PlayerBehaviour : NetworkBehaviour
     enemy.GetComponent<PlayerBehaviour>().TrgtTakeDamage(
       enemy.GetComponent<NetworkIdentity>().connectionToClient, attackDirection, power
     );
-    enemy.GetComponent<PlayerBehaviour>().animator.SetBool("TakeDamage", true);
+    enemy.GetComponent<PlayerBehaviour>().animator.SetTrigger("TakeDamages");
+    stunTime = 1f;
   }
 
   [TargetRpc]
@@ -218,7 +221,8 @@ public abstract class PlayerBehaviour : NetworkBehaviour
 
     // hitBox.velocity = new Vector2(crouchMultiplier * attackDirection * health, crouchMultiplier * health / 3.5f);
     hitBox.AddForce(new Vector2(crouchMultiplier * attackDirection * health, crouchMultiplier * health / 3.5f), ForceMode2D.Impulse);
-    animator.SetBool("TakeDamage", true);
+    animator.SetTrigger("TakeDamages");
+    stunTime = 1f;
   }
 
   public void AttackDirection()
@@ -230,11 +234,20 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   void FixedUpdate()
   {
     if (!isLocalPlayer) return;
+    if (stunTime > 0)
+    {
+      stunTime -= stunTimer * Time.fixedDeltaTime;
+      print(stunTime);
+      if (stunTime < 0)
+      {
+        stunTime = 0;
+      }
+    }
 
-    if ((Keyboard.current.anyKey.IsPressed() || AreAnyGamepadButtonsPressed()) && !crouch)
+    if ((Keyboard.current.anyKey.IsPressed() || AreAnyGamepadButtonsPressed()) && !crouch && stunTime == 0)
     {
       controller.Move(horizontalMove * Time.fixedDeltaTime, crouch);
-      animator.SetBool("TakeDamage", false);
+      //animator.SetBool("TakeDamage", false);
     }
     if (_canCheckForBounds)
       CheckWorldBoundaries();
