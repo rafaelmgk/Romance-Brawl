@@ -191,12 +191,14 @@ public abstract class PlayerBehaviour : NetworkBehaviour
     enemy.GetComponent<PlayerBehaviour>().CmdAskServerForTakeDamage(enemy, attackDirection, firstAtkPower);
   }
 
+
   [Command(requiresAuthority = false)]
   public void CmdAskServerForTakeDamage(GameObject enemy, int attackDirection, int power)
   {
     enemy.GetComponent<PlayerBehaviour>().TrgtTakeDamage(
       enemy.GetComponent<NetworkIdentity>().connectionToClient, attackDirection, power
     );
+    enemy.GetComponent<PlayerBehaviour>().animator.SetBool("TakeDamage", true);
   }
 
   [TargetRpc]
@@ -214,6 +216,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour
 
     // hitBox.velocity = new Vector2(crouchMultiplier * attackDirection * health, crouchMultiplier * health / 3.5f);
     hitBox.AddForce(new Vector2(crouchMultiplier * attackDirection * health, crouchMultiplier * health / 3.5f), ForceMode2D.Impulse);
+    animator.SetBool("TakeDamage", true);
   }
 
   public void AttackDirection()
@@ -227,8 +230,10 @@ public abstract class PlayerBehaviour : NetworkBehaviour
     if (!isLocalPlayer) return;
 
     if ((Keyboard.current.anyKey.IsPressed() || AreAnyGamepadButtonsPressed()) && !crouch)
+    {
       controller.Move(horizontalMove * Time.fixedDeltaTime, crouch);
-
+      animator.SetBool("TakeDamage", false);
+    }
     if (_canCheckForBounds)
       CheckWorldBoundaries();
     CheckCameraLimits();
