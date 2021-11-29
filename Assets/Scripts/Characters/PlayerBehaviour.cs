@@ -15,13 +15,13 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   public bool crouch = false;
 
   public Transform attackPoint;
-  public Vector2 attack1Range = new Vector2(0.0f, 0.0f);
-  public Vector2 attack2Range = new Vector2(0.0f, 0.0f);
+  public Vector2 attack1Range;
+  public Vector2 attack2Range;
   public LayerMask enemyLayers;
   public int attackDirection;
 
-  public int atk1Power = 10;
-  public int atk2Power = 10;
+  public int atk1Power;
+  public int atk2Power;
 
   public Rigidbody2D hitBox;
   public int health = 0;
