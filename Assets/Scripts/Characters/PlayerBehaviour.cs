@@ -179,8 +179,6 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 		enemy.GetComponent<PlayerBehaviour>().TrgtTakeDamage(
 		  enemy.GetComponent<NetworkIdentity>().connectionToClient, attackDirection, power
 		);
-		enemy.GetComponent<PlayerBehaviour>().animator.SetTrigger("TakeDamages");
-		stunTime = 1f;
 	}
 
 	[TargetRpc]
@@ -193,7 +191,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 		}
 
 		health += atkPower;
-		if (!crouch) {
+		if (crouch) {
 			return;
 		}
 
