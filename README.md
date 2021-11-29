@@ -20,3 +20,31 @@ The author believes that the use of this intellectual property for a fan referen
 This software is not affiliated in any way with One Piece, Bandai Namco or any other company.
 
 ## Contributors
+<table>
+  <tr>
+    <td align="center">
+			<a
+				href="https://github.com/rafaelmgk" 
+				title="rafaelmgk"
+			>
+				<img src="https://avatars.githubusercontent.com/rafaelmgk" width="100px;" alt=""/>
+				<br />
+				<sub>
+					<b>Rafael Magesky</b>
+				</sub>
+			</a>
+		</td>
+		<td align="center">
+			<a
+				href="https://github.com/lcscout" 
+				title="lcscout"
+			>
+				<img src="https://avatars.githubusercontent.com/lcscout" width="100px;" alt=""/>
+				<br />
+				<sub>
+					<b>Lucas Coutinho de Oliveira</b>
+				</sub>
+			</a>
+		</td>
+  </tr>
+</table>
