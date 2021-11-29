@@ -128,7 +128,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   public void Jump(InputAction.CallbackContext context)
   {
     if (!isLocalPlayer) return;
-    if (context.started)
+    if (context.started && stunTime == 0)
     {
       animator.SetBool("IsJumping", true);
       Physics2D.IgnoreLayerCollision(3, 8, true);
