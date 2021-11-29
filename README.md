@@ -18,3 +18,5 @@ The goal of this project is not to create and/or distribute a game, but to learn
 The author believes that the use of this intellectual property for a fan reference is covered by fair use and that the software is significantly impaired without said property included. Any use of this copyrighted property is at your own legal risk.
 
 This software is not affiliated in any way with One Piece, Bandai Namco or any other company.
+
+## Contributors
