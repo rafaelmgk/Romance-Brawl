@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Mirror;
 
-public abstract class PlayerBehaviour : NetworkBehaviour
-{
+public abstract class PlayerBehaviour : NetworkBehaviour {
   public CharacterController2D controller;
   public Animator animator;
 
@@ -34,16 +33,12 @@ public abstract class PlayerBehaviour : NetworkBehaviour
 
   private bool _canAttack = true;
 
-  private bool _AmIOutOfLimit
-  {
-    get
-    {
+  private bool _AmIOutOfLimit {
+    get {
       return _amIOutOfLimit;
     }
-    set
-    {
-      if (_amIOutOfLimit != value)
-      {
+    set {
+      if (_amIOutOfLimit != value) {
         _amIOutOfLimit = value;
         OnAmIOutOfLimitsChanged();
       }
@@ -79,38 +74,33 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   // 	basicAtkAction.canceled += BasicAtk;
   // }
 
-  private void Start()
-  {
+  private void Start() {
     if (!isLocalPlayer)
       Destroy(GetComponent<PlayerInput>());
     else
       GetComponent<PlayerInput>().enabled = true;
   }
 
-  public void Movement(InputAction.CallbackContext context)
-  {
+  public void Movement(InputAction.CallbackContext context) {
     if (!isLocalPlayer) return;
 
     _movementVector = context.ReadValue<Vector2>();
     if (Gamepad.current != null)
       _movementVector = DigitalizeVector2(_movementVector);
 
-    if ((context.started || context.performed) && _movementVector.y < 0f)
-    {
+    if ((context.started || context.performed) && _movementVector.y < 0f) {
       Physics2D.IgnoreLayerCollision(3, 8, true);
       crouch = true;
       animator.SetBool("IsCrouching", true);
     }
-    if (context.canceled || _movementVector.y >= 0f)
-    {
+    if (context.canceled || _movementVector.y >= 0f) {
       Physics2D.IgnoreLayerCollision(3, 8, false);
       crouch = false;
       animator.SetBool("IsCrouching", false);
     }
   }
 
-  private Vector2 DigitalizeVector2(Vector2 vec)
-  {
+  private Vector2 DigitalizeVector2(Vector2 vec) {
     Vector2 vec2 = Vector2.zero;
 
     if (vec.x < -.5f)
@@ -125,47 +115,38 @@ public abstract class PlayerBehaviour : NetworkBehaviour
     return vec2;
   }
 
-  public void Jump(InputAction.CallbackContext context)
-  {
+  public void Jump(InputAction.CallbackContext context) {
     if (!isLocalPlayer) return;
-    if (context.started && stunTime == 0)
-    {
+    if (context.started && stunTime == 0) {
       animator.SetBool("IsJumping", true);
       Physics2D.IgnoreLayerCollision(3, 8, true);
       controller.Jump();
-    }
-    else if (context.canceled)
+    } else if (context.canceled)
       Physics2D.IgnoreLayerCollision(3, 8, false);
   }
 
-  public void BasicAtk(InputAction.CallbackContext context)
-  {
+  public void BasicAtk(InputAction.CallbackContext context) {
     if (!isLocalPlayer) return;
-    if (context.started && _canAttack && !crouch)
-    {
+    if (context.started && _canAttack && !crouch) {
       Attack(attackPoint, attack1Range, "Attack", atk1Power);
       StartCoroutine(WaitForAttackAgain());
     }
   }
-  public void StrongAtk(InputAction.CallbackContext context)
-  {
+  public void StrongAtk(InputAction.CallbackContext context) {
     if (!isLocalPlayer) return;
-    if (context.started && _canAttack && !crouch)
-    {
+    if (context.started && _canAttack && !crouch) {
       Attack(attackPoint, attack2Range, "Attack2", atk2Power);
       StartCoroutine(WaitForAttackAgain());
     }
   }
 
-  private IEnumerator WaitForAttackAgain()
-  {
+  private IEnumerator WaitForAttackAgain() {
     yield return new WaitForSeconds(0.5f);
     _canAttack = true;
   }
 
 
-  void Update()
-  {
+  void Update() {
     if (!isLocalPlayer) return;
     AttackDirection();
 
@@ -177,28 +158,24 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   }
 
 
-  void Attack(Transform attackPoint, Vector2 attackRange, string animation, int attackPower)
-  {
+  void Attack(Transform attackPoint, Vector2 attackRange, string animation, int attackPower) {
     _canAttack = false;
 
     animator.SetTrigger(animation);
     Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, attackRange, 0, enemyLayers);
-    foreach (Collider2D enemy in hitEnemies)
-    {
+    foreach (Collider2D enemy in hitEnemies) {
       if (enemy != gameObject.GetComponent<Collider2D>())
         AskServerForTakeDamage(enemy.gameObject, attackDirection, attackPower);
     }
   }
 
-  private void AskServerForTakeDamage(GameObject enemy, int attackDirection, int firstAtkPower)
-  {
+  private void AskServerForTakeDamage(GameObject enemy, int attackDirection, int firstAtkPower) {
     enemy.GetComponent<PlayerBehaviour>().CmdAskServerForTakeDamage(enemy, attackDirection, firstAtkPower);
   }
 
 
   [Command(requiresAuthority = false)]
-  public void CmdAskServerForTakeDamage(GameObject enemy, int attackDirection, int power)
-  {
+  public void CmdAskServerForTakeDamage(GameObject enemy, int attackDirection, int power) {
     enemy.GetComponent<PlayerBehaviour>().TrgtTakeDamage(
       enemy.GetComponent<NetworkIdentity>().connectionToClient, attackDirection, power
     );
@@ -207,17 +184,18 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   }
 
   [TargetRpc]
-  public void TrgtTakeDamage(NetworkConnection target, int attackDirection, int power)
-  {
+  public void TrgtTakeDamage(NetworkConnection target, int attackDirection, int power) {
     int atkPower = power;
     int crouchMultiplier = 1;
-    if (crouch)
-    {
+    if (crouch) {
       crouchMultiplier = 0;
       atkPower = 0;
     }
 
     health += atkPower;
+    if (!crouch) {
+      return;
+    }
 
     // hitBox.velocity = new Vector2(crouchMultiplier * attackDirection * health, crouchMultiplier * health / 3.5f);
     hitBox.AddForce(new Vector2(crouchMultiplier * attackDirection * health, crouchMultiplier * health / 3.5f), ForceMode2D.Impulse);
@@ -225,27 +203,22 @@ public abstract class PlayerBehaviour : NetworkBehaviour
     stunTime = 1f;
   }
 
-  public void AttackDirection()
-  {
+  public void AttackDirection() {
     if (_movementVector.x != 0)
       attackDirection = (int)_movementVector.x;
   }
 
-  void FixedUpdate()
-  {
+  void FixedUpdate() {
     if (!isLocalPlayer) return;
-    if (stunTime > 0)
-    {
+    if (stunTime > 0) {
       stunTime -= stunTimer * Time.fixedDeltaTime;
       print(stunTime);
-      if (stunTime < 0)
-      {
+      if (stunTime < 0) {
         stunTime = 0;
       }
     }
 
-    if ((Keyboard.current.anyKey.IsPressed() || AreAnyGamepadButtonsPressed()) && !crouch && stunTime == 0)
-    {
+    if ((Keyboard.current.anyKey.IsPressed() || AreAnyGamepadButtonsPressed()) && !crouch && stunTime == 0) {
       controller.Move(horizontalMove * Time.fixedDeltaTime, crouch);
       //animator.SetBool("TakeDamage", false);
     }
@@ -254,20 +227,17 @@ public abstract class PlayerBehaviour : NetworkBehaviour
     CheckCameraLimits();
   }
 
-  private bool AreAnyGamepadButtonsPressed()
-  {
+  private bool AreAnyGamepadButtonsPressed() {
     if (Gamepad.current == null) return false;
 
-    for (int i = 0; i < Gamepad.current.allControls.Count; i++)
-    {
+    for (int i = 0; i < Gamepad.current.allControls.Count; i++) {
       if (Gamepad.current.allControls[i].IsPressed()) return true;
     }
 
     return false;
   }
 
-  private void CheckWorldBoundaries()
-  {
+  private void CheckWorldBoundaries() {
     WorldData worldData = GameObject.FindGameObjectWithTag("Map").GetComponent<WorldData>();
     WorldData.WorldBounds worldBounds = worldData.GenerateWorldBounds();
 
@@ -276,8 +246,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour
       StartCoroutine(WaitAndRespawn(gameObject));
   }
 
-  private IEnumerator WaitAndRespawn(GameObject player)
-  {
+  private IEnumerator WaitAndRespawn(GameObject player) {
     _canCheckForBounds = false;
 
     player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
@@ -290,34 +259,27 @@ public abstract class PlayerBehaviour : NetworkBehaviour
     _canCheckForBounds = true;
   }
 
-  private void CheckCameraLimits()
-  {
+  private void CheckCameraLimits() {
     WorldData worldData = GameObject.FindGameObjectWithTag("Map").GetComponent<WorldData>();
     WorldData.CameraLimits cameraLimits = worldData.GenerateCameraLimits();
 
     if (transform.position.x < cameraLimits.leftLimit || transform.position.x > cameraLimits.rightLimit ||
-      transform.position.y < cameraLimits.downLimit || transform.position.y > cameraLimits.upLimit)
-    {
+      transform.position.y < cameraLimits.downLimit || transform.position.y > cameraLimits.upLimit) {
       _AmIOutOfLimit = true;
-    }
-    else
-    {
+    } else {
       _AmIOutOfLimit = false;
     }
   }
 
-  private void OnAmIOutOfLimitsChanged()
-  {
+  private void OnAmIOutOfLimitsChanged() {
     CmdHandleDataManagerOutOfLimitsDictionary(_AmIOutOfLimit);
   }
 
   [Command(requiresAuthority = false)]
-  private void CmdHandleDataManagerOutOfLimitsDictionary(bool boolean)
-  {
+  private void CmdHandleDataManagerOutOfLimitsDictionary(bool boolean) {
     DataManager dataManager = GameObject.FindWithTag("Data").GetComponent<DataManager>();
 
-    if (isServer)
-    {
+    if (isServer) {
       if (dataManager.arePlayersOutOfLimits.ContainsKey(playerNumber))
         ModifyDataManagerOutOfLimitsDictionary(dataManager, boolean);
       else
@@ -332,30 +294,25 @@ public abstract class PlayerBehaviour : NetworkBehaviour
       CmdAddToDataManagerOutOfLimitsDictionary(dataManager, boolean);
   }
 
-  private void AddToDataManagerOutOfLimitsDictionary(DataManager dataManager, bool boolean)
-  {
+  private void AddToDataManagerOutOfLimitsDictionary(DataManager dataManager, bool boolean) {
     dataManager.arePlayersOutOfLimits.Add(playerNumber, boolean);
   }
 
-  private void ModifyDataManagerOutOfLimitsDictionary(DataManager dataManager, bool boolean)
-  {
+  private void ModifyDataManagerOutOfLimitsDictionary(DataManager dataManager, bool boolean) {
     dataManager.arePlayersOutOfLimits[playerNumber] = boolean;
   }
 
   [Command(requiresAuthority = false)]
-  private void CmdAddToDataManagerOutOfLimitsDictionary(DataManager dataManager, bool boolean)
-  {
+  private void CmdAddToDataManagerOutOfLimitsDictionary(DataManager dataManager, bool boolean) {
     dataManager.arePlayersOutOfLimits.Add(playerNumber, boolean);
   }
 
   [Command(requiresAuthority = false)]
-  private void CmdModifyDataManagerOutOfLimitsDictionary(DataManager dataManager, bool boolean)
-  {
+  private void CmdModifyDataManagerOutOfLimitsDictionary(DataManager dataManager, bool boolean) {
     dataManager.arePlayersOutOfLimits[playerNumber] = boolean;
   }
 
-  private void OnDrawGizmosSelected()
-  {
+  private void OnDrawGizmosSelected() {
     if (attackPoint == null) return;
 
     Gizmos.DrawWireCube(attackPoint.position, attack1Range);
