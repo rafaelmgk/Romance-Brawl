@@ -7,6 +7,7 @@ using Mirror;
 public class CustomNetworkRoomManager : NetworkRoomManager {
 
 	[SerializeField] private GameObject dataManagerPrefab;
+	[SerializeField] private GameObject uiManagerPrefab;
 
 	private int _playerCounter = 1;
 
@@ -30,5 +31,14 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 		NetworkServer.AddConnection((NetworkConnectionToClient)conn);
 
 		return _temp;
+	}
+
+	public override bool OnRoomServerSceneLoadedForPlayer(NetworkConnection conn, GameObject roomPlayer, GameObject gamePlayer) {
+		if (gamePlayer.GetComponent<PlayerBehaviour>().playerNumber == 1) {
+			GameObject uiManagerClone = Instantiate(uiManagerPrefab, Vector3.zero, Quaternion.identity);
+			NetworkServer.Spawn(uiManagerClone);
+		}
+
+		return true;
 	}
 }

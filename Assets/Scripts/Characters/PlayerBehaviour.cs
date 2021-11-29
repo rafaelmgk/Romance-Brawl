@@ -23,7 +23,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	public int atk2Power;
 
 	public Rigidbody2D hitBox;
-	public int health = 0;
+	[SyncVar(hook = nameof(OnHealthChange))] public int health = 0;
 
 	public NetworkConnectionToClient enemyConnection;
 
@@ -190,7 +190,8 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 			atkPower = 0;
 		}
 
-		health += atkPower;
+    health += atkPower;
+    CmdUpdateHealth(health);
 		if (crouch) {
 			return;
 		}
@@ -200,6 +201,18 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 		animator.SetTrigger("TakeDamages");
 		stunTime = 1f;
 	}
+
+	private void OnHealthChange(int oldHealth, int newHealth) {
+    health = newHealth;
+
+		if (GameObject.FindWithTag("UI Manager") != null)
+			GameObject.FindWithTag("UI Manager").GetComponent<UIManager>().CanUpdateHealth();
+	}
+
+  [Command(requiresAuthority = false)]
+  private void CmdUpdateHealth(int newHealth) {
+    health = newHealth;
+  }
 
 	public void AttackDirection() {
 		if (_movementVector.x != 0)
@@ -249,6 +262,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 
 		player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		player.GetComponent<PlayerBehaviour>().health = 0;
+    CmdUpdateHealth(0);
 		GameObject map = GameObject.FindWithTag("Map");
 		player.transform.position = (map != null ? map.GetComponent<Renderer>().bounds.center : Vector3.zero);
 
