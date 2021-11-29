@@ -15,11 +15,13 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   public bool crouch = false;
 
   public Transform attackPoint;
-  public Vector2 attackRange = new Vector2(0.0f, 0.0f);
+  public Vector2 attack1Range = new Vector2(0.0f, 0.0f);
+  public Vector2 attack2Range = new Vector2(0.0f, 0.0f);
   public LayerMask enemyLayers;
   public int attackDirection;
 
-  public int firstAtkPower = 10;
+  public int atk1Power = 10;
+  public int atk2Power = 10;
 
   public Rigidbody2D hitBox;
   public int health = 0;
@@ -139,7 +141,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour
     if (!isLocalPlayer) return;
     if (context.started && _canAttack && !crouch)
     {
-      Attack(attackPoint, attackRange, "Attack", firstAtkPower);
+      Attack(attackPoint, attack1Range, "Attack", atk1Power);
       StartCoroutine(WaitForAttackAgain());
     }
   }
@@ -148,7 +150,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour
     if (!isLocalPlayer) return;
     if (context.started && _canAttack && !crouch)
     {
-      Attack(attackPoint, attackRange, "Attack", firstAtkPower);
+      Attack(attackPoint, attack2Range, "Attack2", atk2Power);
       StartCoroutine(WaitForAttackAgain());
     }
   }
@@ -343,6 +345,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour
   {
     if (attackPoint == null) return;
 
-    Gizmos.DrawWireCube(attackPoint.position, attackRange);
+    Gizmos.DrawWireCube(attackPoint.position, attack1Range);
+    Gizmos.DrawWireCube(attackPoint.position, attack2Range);
   }
 }

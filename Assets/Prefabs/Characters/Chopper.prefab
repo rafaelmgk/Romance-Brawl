@@ -323,12 +323,14 @@ MonoBehaviour:
   runSpeed: 15
   crouch: 0
   attackPoint: {fileID: 8304542415087038332}
-  attackRange: {x: 0.2, y: 0.3}
+  attack1Range: {x: 0.5, y: 0.5}
+  attack2Range: {x: 0.8, y: 0.8}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 8
   attackDirection: 0
-  firstAtkPower: 3
+  atk1Power: 10
+  atk2Power: 20
   hitBox: {fileID: 5409818749854775727}
   health: 0
   playerNumber: 0
