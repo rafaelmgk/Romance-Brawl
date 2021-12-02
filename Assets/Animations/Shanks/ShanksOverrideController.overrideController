@@ -7,7 +7,7 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ShanksOverrideController
-  m_Controller: {fileID: 9100000, guid: 1e3948824ccb6e84f9cf13aa9e9f174d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7210b7021a3b3734d8a17e783fe1d213, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: 488e20440a62a9c4f8ceca06a129dc40, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: d060057de6308aa48a09fd8adc1f89c7, type: 2}
@@ -19,3 +19,5 @@ AnimatorOverrideController:
     m_OverrideClip: {fileID: 7400000, guid: f64bef74e6cdf734788c74374e6520a5, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 1cf633fdb8f363942b02fb9d484bfd2e, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: c97b373cb8f40eb4dbd1b56b4e4b851a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c5875cedf5dfdfd43898bd324e076b5c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 700eaf13aac203d4bbddcf688cbdc5a5, type: 2}

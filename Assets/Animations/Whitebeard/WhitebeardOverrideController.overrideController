@@ -7,7 +7,7 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WhitebeardOverrideController
-  m_Controller: {fileID: 9100000, guid: 1e3948824ccb6e84f9cf13aa9e9f174d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7210b7021a3b3734d8a17e783fe1d213, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: 488e20440a62a9c4f8ceca06a129dc40, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: dd50988114148b94caee3e7121e1e239, type: 2}
@@ -19,3 +19,5 @@ AnimatorOverrideController:
     m_OverrideClip: {fileID: 7400000, guid: 9c4b705b846313d44b01512e1cda041e, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 1cf633fdb8f363942b02fb9d484bfd2e, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 34616915bf0a8c0489b37eb6b3143993, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c5875cedf5dfdfd43898bd324e076b5c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2a863bf4e310d3e46b4fe0038b992e51, type: 2}
