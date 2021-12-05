@@ -23,7 +23,8 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	public int atk2Power;
 
 	public Rigidbody2D hitBox;
-	[SyncVar(hook = nameof(OnHealthChange))] public int health = 0;
+	[SyncVar] public int hitPercentage = 0;
+	[SyncVar] public int health = 0;
 
 	public NetworkConnectionToClient enemyConnection;
 
@@ -184,35 +185,33 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	[TargetRpc]
 	public void TrgtTakeDamage(NetworkConnection target, int attackDirection, int power) {
 		int atkPower = power;
-		int crouchMultiplier = 1;
-		if (crouch) {
-			crouchMultiplier = 0;
-			atkPower = 0;
-		}
-
-    health += atkPower;
-    CmdUpdateHealth(health);
-		if (crouch) {
+		if (crouch)
 			return;
-		}
 
-		// hitBox.velocity = new Vector2(crouchMultiplier * attackDirection * health, crouchMultiplier * health / 3.5f);
-		hitBox.AddForce(new Vector2(crouchMultiplier * attackDirection * health, crouchMultiplier * health / 3.5f), ForceMode2D.Impulse);
+		hitPercentage += atkPower;
+		UpdateHitPercentage(hitPercentage);
+
+		hitBox.AddForce(new Vector2(attackDirection * hitPercentage, hitPercentage / 3.5f), ForceMode2D.Impulse);
 		animator.SetTrigger("TakeDamages");
 		stunTime = 1f;
 	}
 
-	private void OnHealthChange(int oldHealth, int newHealth) {
-    health = newHealth;
-
-		if (GameObject.FindWithTag("UI Manager") != null)
-			GameObject.FindWithTag("UI Manager").GetComponent<UIManager>().CanUpdateHealth();
+	private void UpdateHitPercentage(int newHitPercentage) {
+		UIManager.CanUpdateHitPercentage = true;
+		if (isClientOnly) CmdUpdateHitPercentageOnServer(newHitPercentage);
+		if (isServer) CmdUpdateHitPercentageOnAllClients();
 	}
 
-  [Command(requiresAuthority = false)]
-  private void CmdUpdateHealth(int newHealth) {
-    health = newHealth;
-  }
+	[Command(requiresAuthority = false)]
+	private void CmdUpdateHitPercentageOnServer(int newHitPercentage) {
+		hitPercentage = newHitPercentage;
+		UIManager.CanUpdateHitPercentage = true;
+	}
+
+	[ClientRpc]
+	private void CmdUpdateHitPercentageOnAllClients() {
+		UIManager.CanUpdateHitPercentage = true;
+	}
 
 	public void AttackDirection() {
 		if (_movementVector.x != 0)
@@ -261,8 +260,8 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 		_canCheckForBounds = false;
 
 		player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-		player.GetComponent<PlayerBehaviour>().health = 0;
-    CmdUpdateHealth(0);
+		player.GetComponent<PlayerBehaviour>().hitPercentage = 0;
+		UpdateHitPercentage(0);
 		GameObject map = GameObject.FindWithTag("Map");
 		player.transform.position = (map != null ? map.GetComponent<Renderer>().bounds.center : Vector3.zero);
 

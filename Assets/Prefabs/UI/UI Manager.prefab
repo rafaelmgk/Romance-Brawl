@@ -899,10 +899,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d06ffd45c8d28f48915829cd414dbe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1Health: {fileID: 4200964744868681738}
-  player2Health: {fileID: 4200964745709208232}
-  player3Health: {fileID: 4200964746889055287}
-  player4Health: {fileID: 4200964746151659899}
+  player1HitPercentage: {fileID: 4200964744868681738}
+  player2HitPercentage: {fileID: 4200964745709208232}
+  player3HitPercentage: {fileID: 4200964746889055287}
+  player4HitPercentage: {fileID: 4200964746151659899}
 --- !u!1 &4200964746458478378
 GameObject:
   m_ObjectHideFlags: 0

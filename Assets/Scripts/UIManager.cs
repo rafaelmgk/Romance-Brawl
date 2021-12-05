@@ -4,36 +4,33 @@ using UnityEngine;
 using TMPro;
 
 public class UIManager : MonoBehaviour {
-	[SerializeField] private TMP_Text player1Health;
-	[SerializeField] private TMP_Text player2Health;
-	[SerializeField] private TMP_Text player3Health;
-	[SerializeField] private TMP_Text player4Health;
+	[SerializeField] private TMP_Text player1HitPercentage;
+	[SerializeField] private TMP_Text player2HitPercentage;
+	[SerializeField] private TMP_Text player3HitPercentage;
+	[SerializeField] private TMP_Text player4HitPercentage;
 
-    private bool _canUpdateHealth = false;
+    public static bool CanUpdateHitPercentage { get; set; }
 
-    public void CanUpdateHealth() {
-        _canUpdateHealth = true;
-    }
-
-	private void UpdatePlayerHealth(int playerNumber, int health) {
+	private void UpdatePlayerHitPercentage(int playerNumber, int hitPercentage) {
 		if (playerNumber == 1)
-			player1Health.text = health.ToString() + ".00%";
+			player1HitPercentage.text = hitPercentage.ToString() + ".00%";
 		else if (playerNumber == 2)
-			player2Health.text = health.ToString() + ".00%";
+			player2HitPercentage.text = hitPercentage.ToString() + ".00%";
 		else if (playerNumber == 3)
-			player3Health.text = health.ToString() + ".00%";
+			player3HitPercentage.text = hitPercentage.ToString() + ".00%";
 		else
-			player4Health.text = health.ToString() + ".00%";
+			player4HitPercentage.text = hitPercentage.ToString() + ".00%";
 	}
 
 	private void Update() {
-        // if (_canUpdateHealth) {
+        if (CanUpdateHitPercentage) {
             foreach(GameObject player in GameObject.FindGameObjectsWithTag("Player")) {
                 PlayerBehaviour playerBehaviour = player.GetComponent<PlayerBehaviour>();
-                UpdatePlayerHealth(playerBehaviour.playerNumber, playerBehaviour.health);
+				print("n: " + playerBehaviour.playerNumber + ", h: " + playerBehaviour.hitPercentage);
+                UpdatePlayerHitPercentage(playerBehaviour.playerNumber, playerBehaviour.hitPercentage);
             }
 
-            // _canUpdateHealth = false;
-        // }
+            CanUpdateHitPercentage = false;
+        }
 	}
 }
