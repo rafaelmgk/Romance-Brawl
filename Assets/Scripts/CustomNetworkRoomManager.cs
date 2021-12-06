@@ -9,6 +9,8 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 	[SerializeField] private GameObject dataManagerPrefab;
 	[SerializeField] private GameObject uiManagerPrefab;
 
+	private List<UIPlayerStats> stats = new List<UIPlayerStats>();
+
 	private int _playerCounter = 1;
 
 	public override void OnStartHost() {
@@ -21,10 +23,11 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 	public override GameObject OnRoomServerCreateGamePlayer(NetworkConnection conn, GameObject roomPlayer) {
 		int index = GameObject.FindGameObjectWithTag("Data").GetComponent<DataManager>().charactersByPlayer[conn.connectionId];
 
-		GameObject _temp = (GameObject)GameObject.Instantiate(spawnPrefabs[index],
+		GameObject _temp = Instantiate(
+			spawnPrefabs[index],
 			startPositions[conn.connectionId].position,
-			Quaternion.identity);
-
+			Quaternion.identity
+		);
 		_temp.GetComponent<PlayerBehaviour>().playerNumber = _playerCounter;
 		_playerCounter++;
 
@@ -34,11 +37,29 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 	}
 
 	public override bool OnRoomServerSceneLoadedForPlayer(NetworkConnection conn, GameObject roomPlayer, GameObject gamePlayer) {
-		if (gamePlayer.GetComponent<PlayerBehaviour>().playerNumber == 1) {
-			GameObject uiManagerClone = Instantiate(uiManagerPrefab, Vector3.zero, Quaternion.identity);
-			NetworkServer.Spawn(uiManagerClone);
-		}
+		CreatePlayerStats(gamePlayer);
+		if (gamePlayer.GetComponent<PlayerBehaviour>().playerNumber == numPlayers)
+			CreateUIManager();
 
 		return true;
+	}
+
+	private void CreateUIManager() {
+		GameObject uiManagerClone = Instantiate(uiManagerPrefab, Vector3.zero, Quaternion.identity);
+		foreach (UIPlayerStats stat in stats)
+			uiManagerClone.GetComponent<UIManager>().PlayersStats.Add(stat);
+		NetworkServer.Spawn(uiManagerClone);
+	}
+
+	private void CreatePlayerStats(GameObject gamePlayer) {
+		PlayerBehaviour playerBehaviour = gamePlayer.GetComponent<PlayerBehaviour>();
+		UIPlayerStats newPlayerStats = new UIPlayerStats(
+			playerBehaviour.playerNumber,
+			"Player " + playerBehaviour.playerNumber,
+			playerBehaviour.hitPercentage,
+			playerBehaviour.health
+		);
+
+		stats.Add(newPlayerStats);
 	}
 }
