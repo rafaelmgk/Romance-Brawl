@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,13 @@ using UnityEngine.InputSystem;
 using Mirror;
 
 public abstract class PlayerBehaviour : NetworkBehaviour {
+	public static event Action<PlayerBehaviour, bool> CrouchChanged;
+	public static event Action<PlayerBehaviour, bool> JumpChanged;
+	public static event Action<PlayerBehaviour, float> SpeedChanged;
+	public static event Action<PlayerBehaviour, string> PlayerAttacked;
+	public static event Action<PlayerBehaviour> PlayerTookDamage;
+
 	public CharacterController2D controller;
-	public Animator animator;
 
 	public float runSpeed = 40f;
 
@@ -89,16 +95,10 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 		if (Gamepad.current != null)
 			_movementVector = DigitalizeVector2(_movementVector);
 
-		if ((context.started || context.performed) && _movementVector.y < 0f) {
-			Physics2D.IgnoreLayerCollision(3, 8, true);
-			crouch = true;
-			animator.SetBool("IsCrouching", true);
-		}
-		if (context.canceled || _movementVector.y >= 0f) {
-			Physics2D.IgnoreLayerCollision(3, 8, false);
-			crouch = false;
-			animator.SetBool("IsCrouching", false);
-		}
+		if ((context.started || context.performed) && _movementVector.y < 0f)
+			Crouch(true);
+		if (context.canceled || _movementVector.y >= 0f)
+			Crouch(false);
 	}
 
 	private Vector2 DigitalizeVector2(Vector2 vec) {
@@ -116,14 +116,35 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 		return vec2;
 	}
 
+	private void Crouch(bool crouchState) {
+		IgnorePlatformCollision(crouchState);
+		crouch = crouchState;
+
+		CrouchChanged?.Invoke(this, crouchState);
+	}
+
+	private void IgnorePlatformCollision(bool ignore = true) { // TODO: Is default state confusing to read?
+		Physics2D.IgnoreLayerCollision(3, 8, ignore);
+	}
+
 	public void Jump(InputAction.CallbackContext context) {
 		if (!isLocalPlayer) return;
-		if (context.started && stunTime == 0) {
-			animator.SetBool("IsJumping", true);
-			Physics2D.IgnoreLayerCollision(3, 8, true);
-			controller.Jump();
-		} else if (context.canceled)
-			Physics2D.IgnoreLayerCollision(3, 8, false);
+
+		if (context.started && stunTime == 0)
+			IgnorePlatformCollisionAndJump();
+		else if (context.canceled)
+			IgnorePlatformCollision(false);
+	}
+
+	private void IgnorePlatformCollisionAndJump() {
+		IgnorePlatformCollision();
+		controller.Jump();
+
+		InvokeJumpEvent(true);
+	}
+
+	public void InvokeJumpEvent(bool jumpState) {
+		JumpChanged?.Invoke(this, jumpState);
 	}
 
 	public void BasicAtk(InputAction.CallbackContext context) {
@@ -155,14 +176,15 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 		if (crouch)
 			crouchModifier = 0;
 		horizontalMove = _movementVector.x * runSpeed * crouchModifier;
-		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-	}
 
+		SpeedChanged?.Invoke(this, horizontalMove);
+	}
 
 	void Attack(Transform attackPoint, Vector2 attackRange, string animation, int attackPower) {
 		_canAttack = false;
 
-		animator.SetTrigger(animation);
+		PlayerAttacked?.Invoke(this, animation);
+
 		Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, attackRange, 0, enemyLayers);
 		foreach (Collider2D enemy in hitEnemies) {
 			if (enemy != gameObject.GetComponent<Collider2D>())
@@ -192,7 +214,9 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 		UpdateHitPercentage(hitPercentage);
 
 		hitBox.AddForce(new Vector2(attackDirection * hitPercentage, hitPercentage / 3.5f), ForceMode2D.Impulse);
-		animator.SetTrigger("TakeDamages");
+
+		PlayerTookDamage?.Invoke(this);
+
 		stunTime = 1f;
 	}
 
@@ -277,7 +301,8 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 		if (transform.position.x < cameraLimits.leftLimit || transform.position.x > cameraLimits.rightLimit ||
 		  transform.position.y < cameraLimits.downLimit || transform.position.y > cameraLimits.upLimit) {
 			_AmIOutOfLimit = true;
-		} else {
+		}
+		else {
 			_AmIOutOfLimit = false;
 		}
 	}

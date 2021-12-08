@@ -52,7 +52,7 @@ public class CharacterController2D : NetworkBehaviour {
 	private void OnLanding() {
 		if (_airTime > 0 && m_Grounded == true) {
 			extraJumps = 1;
-			player.animator.SetBool("IsJumping", false);
+			player.InvokeJumpEvent(false);
 
 			_airTime = 0;
 		}
