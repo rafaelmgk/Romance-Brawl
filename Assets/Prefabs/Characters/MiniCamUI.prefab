@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4981286642358916880}
   - component: {fileID: 4981286642358916881}
   - component: {fileID: 4981286642358916882}
-  - component: {fileID: 3166873749917568255}
   m_Layer: 5
   m_Name: MiniCamUI
   m_TagString: Untagged
@@ -101,23 +100,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &3166873749917568255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4981286642358916883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  visible: 0
-  m_AssetId: 4a4b080b81d06f948b85acdeffab968e
-  hasSpawned: 0
 --- !u!1 &4981286643290476198
 GameObject:
   m_ObjectHideFlags: 0
