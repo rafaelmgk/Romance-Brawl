@@ -3,12 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MiniCam : MonoBehaviour {
-	public Transform player;
-	void Update() {
-		Vector3 newPosition = player.position;
-		newPosition.y = transform.position.y;
-		newPosition.z = -10;
-		transform.position = newPosition;
+	[SerializeField] Transform miniCamPosition;
+	Vector3 offset;
+
+	private void Awake() {
+		offset = transform.position - miniCamPosition.position;
+	}
+	private void Update() {
+		if (GameObject.FindGameObjectWithTag("Player")) {
+			miniCamPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<MiniCamUIDestroyer>().characterposition;
+		}
+	}
+
+
+	private void LateUpdate() {
+		transform.position = miniCamPosition.position + offset;
 	}
 
 }
