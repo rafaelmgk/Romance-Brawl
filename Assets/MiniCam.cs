@@ -11,7 +11,9 @@ public class MiniCam : MonoBehaviour {
 	}
 	private void Update() {
 		if (GameObject.FindGameObjectWithTag("Player")) {
-			miniCamPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<MiniCamUIDestroyer>().characterposition;
+			if (GameObject.FindGameObjectWithTag("Player").GetComponent<MiniCamUIDestroyer>().characterposition == null) {
+				return;
+			} else { miniCamPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<MiniCamUIDestroyer>().characterposition; }
 		}
 	}
 
