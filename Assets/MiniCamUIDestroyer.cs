@@ -7,12 +7,7 @@ public class MiniCamUIDestroyer : NetworkBehaviour {
 	[SerializeField] GameObject miniCamUI;
 	[SerializeField] GameObject character;
 	public Transform characterposition;
-	private void Start() {
-		if (!isLocalPlayer) {
-			Destroy(miniCamUI);
-			return;
-		}
+	private void Awake() {
 		characterposition = character.transform;
-
 	}
 }
