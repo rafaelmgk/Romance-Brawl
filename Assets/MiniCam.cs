@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class MiniCam : MonoBehaviour {
+public class MiniCam : NetworkBehaviour {
 	[SerializeField] Transform miniCamPosition;
 	Vector3 offset;
 
