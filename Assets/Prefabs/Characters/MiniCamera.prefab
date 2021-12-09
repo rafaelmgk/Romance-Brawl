@@ -87,4 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad149f8cdfd24b4aa0a596aaecc8555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   miniCamPosition: {fileID: 0}
+  respawns: []

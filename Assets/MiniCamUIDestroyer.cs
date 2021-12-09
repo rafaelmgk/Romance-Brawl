@@ -4,7 +4,7 @@ using UnityEngine;
 using Mirror;
 
 public class MiniCamUIDestroyer : NetworkBehaviour {
-	[SerializeField] GameObject miniCamUI;
+	//[SerializeField] GameObject miniCamUI;
 	[SerializeField] GameObject character;
 	public Transform characterposition;
 	private void Awake() {

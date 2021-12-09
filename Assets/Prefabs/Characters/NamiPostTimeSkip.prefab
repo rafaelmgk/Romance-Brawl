@@ -519,6 +519,10 @@ PrefabInstance:
       propertyPath: character
       value: 
       objectReference: {fileID: 4559217071842210107}
+    - target: {fileID: 3166873749917568255, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
+      propertyPath: m_AssetId
+      value: c06a034a7de85904e89d4b6ec5851eda
+      objectReference: {fileID: 0}
     - target: {fileID: 4981286642358916883, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
       propertyPath: m_Name
       value: MiniCamUI
