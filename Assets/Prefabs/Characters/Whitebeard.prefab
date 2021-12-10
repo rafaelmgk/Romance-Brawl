@@ -446,7 +446,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   character: {fileID: 4559217071842210107}
-  characterposition: {fileID: 0}
+  characterposition: {fileID: 1720734485633453343}
 --- !u!1 &9111604492829658178
 GameObject:
   m_ObjectHideFlags: 0

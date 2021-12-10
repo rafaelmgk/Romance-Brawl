@@ -11,12 +11,17 @@ public class MiniCam : NetworkBehaviour {
 		offset = transform.position - miniCamPosition.position;
 	}
 	void Update() {
+
 		respawns = GameObject.FindGameObjectsWithTag("Player");
 		if (isServer) {
-			miniCamPosition = respawns[0].GetComponent<MiniCamUIDestroyer>().characterposition;
+			miniCamPosition = respawns[0].GetComponent<Transform>();
 		}
 		if (isClientOnly) {
-			miniCamPosition = respawns[1].GetComponent<MiniCamUIDestroyer>().characterposition;
+			if (respawns.Length >= 1) {
+				for (int i = 1; i < respawns.Length; i++) {
+					miniCamPosition = respawns[i].GetComponent<Transform>();
+				}
+			}
 		}
 	}
 

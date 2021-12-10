@@ -445,9 +445,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  miniCamUI: {fileID: 1044296300739189449}
   character: {fileID: 4559217071842210107}
-  characterposition: {fileID: 0}
+  characterposition: {fileID: 1720734485633453343}
 --- !u!1 &9111604492829658178
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,11 +604,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
---- !u!1 &1044296300739189449 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4981286642358916883, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
-  m_PrefabInstance: {fileID: 5431059937489047002}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1044296300739188021 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4981286642358917359, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
