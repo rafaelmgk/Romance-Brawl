@@ -1,5 +1,5 @@
 # One-Piece-Game
-image
+image/gif
 
 ## Play the game
 link
