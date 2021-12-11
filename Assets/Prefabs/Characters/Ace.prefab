@@ -115,7 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934acad909aac4243af13f6f71e62dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerBehaviour: {fileID: 4865830200153497327}
   _animator: {fileID: 1093136003961466793}
 --- !u!1 &4263184635918041581
 GameObject:
@@ -233,8 +232,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  _observers:
+  - {fileID: 1117334914639432146}
   controller: {fileID: 836442417185632381}
-  animator: {fileID: 1093136003961466793}
   runSpeed: 15
   crouch: 0
   attackPoint: {fileID: 8304542415087038332}

@@ -5,13 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Mirror;
 
-public abstract class PlayerBehaviour : NetworkBehaviour {
-	public static event Action<PlayerBehaviour, bool> CrouchChanged;
-	public static event Action<PlayerBehaviour, bool> JumpChanged;
-	public static event Action<PlayerBehaviour, float> SpeedChanged;
-	public static event Action<PlayerBehaviour, string> PlayerAttacked;
-	public static event Action<PlayerBehaviour> PlayerTookDamage;
-
+public abstract class PlayerBehaviour : Subject {
 	public CharacterController2D controller;
 
 	public float runSpeed = 40f;
@@ -57,30 +51,6 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	[Range(0, 1)] private float stunTime = 0f;
 	[Range(0, 1)] private float stunTimer = 1f;
 
-	// private PlayerInput playerInput;
-	// private InputAction movementAction, jumpAction, basicAtkAction;
-
-	// private void Awake() {
-	// 	playerInput = GetComponent<PlayerInput>();
-	// 	movementAction = playerInput.actions["Movement"];
-	// 	jumpAction = playerInput.actions["Jump"];
-	// 	basicAtkAction = playerInput.actions["Basic Atk"];
-	// }
-
-	// private void Start() {
-	// 	movementAction.started += Movement;
-	// 	movementAction.performed += Movement;
-	// 	movementAction.canceled += Movement;
-
-	// 	jumpAction.started += Jump;
-	// 	jumpAction.performed += Jump;
-	// 	jumpAction.canceled += Jump;
-
-	// 	basicAtkAction.started += BasicAtk;
-	// 	basicAtkAction.performed += BasicAtk;
-	// 	basicAtkAction.canceled += BasicAtk;
-	// }
-
 	private void Start() {
 		if (!isLocalPlayer)
 			Destroy(GetComponent<PlayerInput>());
@@ -120,7 +90,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 		IgnorePlatformCollision(crouchState);
 		crouch = crouchState;
 
-		CrouchChanged?.Invoke(this, crouchState);
+		Notify(AnimatorController.NotificationType.CrouchChanged, crouchState);
 	}
 
 	private void IgnorePlatformCollision(bool ignore = true) { // TODO: Is default state confusing to read?
@@ -144,7 +114,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	}
 
 	public void InvokeJumpEvent(bool jumpState) {
-		JumpChanged?.Invoke(this, jumpState);
+		Notify(AnimatorController.NotificationType.JumpChanged, jumpState);
 	}
 
 	public void BasicAtk(InputAction.CallbackContext context) {
@@ -177,13 +147,13 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 			crouchModifier = 0;
 		horizontalMove = _movementVector.x * runSpeed * crouchModifier;
 
-		SpeedChanged?.Invoke(this, horizontalMove);
+		Notify(AnimatorController.NotificationType.SpeedChanged, horizontalMove);
 	}
 
 	void Attack(Transform attackPoint, Vector2 attackRange, string animation, int attackPower) {
 		_canAttack = false;
 
-		PlayerAttacked?.Invoke(this, animation);
+		Notify(AnimatorController.NotificationType.PlayerAttacked, animation);
 
 		Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, attackRange, 0, enemyLayers);
 		foreach (Collider2D enemy in hitEnemies) {
@@ -215,7 +185,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 
 		hitBox.AddForce(new Vector2(attackDirection * hitPercentage, hitPercentage / 3.5f), ForceMode2D.Impulse);
 
-		PlayerTookDamage?.Invoke(this);
+		Notify(AnimatorController.NotificationType.PlayerTookDamage);
 
 		stunTime = 1f;
 	}
