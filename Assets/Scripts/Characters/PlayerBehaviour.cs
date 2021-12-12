@@ -52,6 +52,8 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	[Range(0, 1)] private float stunTimer = 1f;
 
 	private bool updateMiniCam = true;
+	[SerializeField] private Canvas miniCam;
+	[SerializeField] private Object miniCamObject;
 
 	// private PlayerInput playerInput;
 	// private InputAction movementAction, jumpAction, basicAtkAction;
@@ -78,9 +80,10 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	// }
 
 	private void Start() {
-		if (!isLocalPlayer)
+		if (!isLocalPlayer) {
 			Destroy(GetComponent<PlayerInput>());
-		else
+			Destroy(miniCamObject);
+		} else
 			GetComponent<PlayerInput>().enabled = true;
 	}
 
@@ -152,6 +155,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	void Update() {
 		if (!isLocalPlayer) return;
 		AttackDirection();
+		AmIOutOfMiniLimits();
 		if (updateMiniCam == true) {
 			GameObject.FindGameObjectsWithTag("MiniCam")[0].GetComponent<MiniCam>().SetMiniCam(playerNumber - 1);
 			updateMiniCam = false;
@@ -333,5 +337,14 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 
 		Gizmos.DrawWireCube(attackPoint.position, attack1Range);
 		Gizmos.DrawWireCube(attackPoint.position, attack2Range);
+	}
+	private void AmIOutOfMiniLimits() {
+		if (_amIOutOfLimit == true) {
+			miniCam.enabled = true;
+		}
+
+		if (_amIOutOfLimit == false) {
+			miniCam.enabled = false;
+		}
 	}
 }

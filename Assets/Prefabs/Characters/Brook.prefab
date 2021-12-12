@@ -337,6 +337,8 @@ MonoBehaviour:
   hitPercentage: 0
   health: 0
   playerNumber: 0
+  miniCam: {fileID: 3956095100874899588}
+  miniCamObject: {fileID: 3956095100874899591}
 --- !u!114 &7497855191211784173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -608,8 +610,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
+--- !u!1 &3956095100874899591 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4981286642358916883, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
+  m_PrefabInstance: {fileID: 8342859243627239316}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3956095100874903419 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4981286642358917359, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
+  m_PrefabInstance: {fileID: 8342859243627239316}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &3956095100874899588 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 4981286642358916880, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
   m_PrefabInstance: {fileID: 8342859243627239316}
   m_PrefabAsset: {fileID: 0}

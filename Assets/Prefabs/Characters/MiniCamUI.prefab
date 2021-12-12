@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4981286642358916882}
   m_Layer: 5
   m_Name: MiniCamUI
-  m_TagString: Untagged
+  m_TagString: MiniCamUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

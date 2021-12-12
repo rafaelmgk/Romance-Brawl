@@ -9,6 +9,7 @@ TagManager:
   - Map
   - UI Manager
   - MiniCam
+  - MiniCamUI
   layers:
   - Default
   - TransparentFX
