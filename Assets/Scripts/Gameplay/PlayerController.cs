@@ -1,13 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Mirror;
 
-public abstract class PlayerController : Subject {
-	public CharacterController2D controller;
-
+public class PlayerController : Physics {
 	public float runSpeed = 40f;
 
 	float horizontalMove = 0f;
@@ -28,28 +27,37 @@ public abstract class PlayerController : Subject {
 
 	public NetworkConnectionToClient enemyConnection;
 
-	private bool _canCheckForBounds = true;
-
 	[SyncVar] public int playerNumber;
 
 	private bool _canAttack = true;
 
-	private bool _AmIOutOfLimit {
-		get {
-			return _amIOutOfLimit;
-		}
-		set {
-			if (_amIOutOfLimit != value) {
-				_amIOutOfLimit = value;
-				OnAmIOutOfLimitsChanged();
-			}
-		}
-	}
-	private bool _amIOutOfLimit = false;
-
 	private Vector2 _movementVector;
 	[Range(0, 1)] private float stunTime = 0f;
 	[Range(0, 1)] private float stunTimer = 1f;
+
+	[SerializeField] private List<Transceiver> _transceivers = new List<Transceiver>();
+	public override bool IsNotificationTypeValid(Enum notificationType) {
+		return true;
+	}
+
+	public override void OnNotify(Enum notificationType, object actionParams = null) {
+		CallAction(notificationType, actionParams);
+	}
+
+	public override void Notify(Enum notificationType, object actionParams = null) {
+		foreach (Transceiver transceiver in _transceivers)
+			transceiver.OnNotify(notificationType, actionParams);
+	}
+
+	private void OnEnable() {
+		OutOfWorldBounds += OnOutOfWorldBounds;
+		OutOfCameraLimits += OnOutOfCameraLimits;
+	}
+
+	private void OnDisable() {
+		OutOfWorldBounds -= OnOutOfWorldBounds;
+		OutOfCameraLimits -= OnOutOfCameraLimits;
+	}
 
 	private void Start() {
 		if (!isLocalPlayer)
@@ -93,7 +101,7 @@ public abstract class PlayerController : Subject {
 		Notify(AnimatorController.NotificationType.CrouchChanged, crouchState);
 	}
 
-	private void IgnorePlatformCollision(bool ignore = true) { // TODO: Is default state confusing to read?
+	private void IgnorePlatformCollision(bool ignore = true) {
 		Physics2D.IgnoreLayerCollision(3, 8, ignore);
 	}
 
@@ -108,7 +116,7 @@ public abstract class PlayerController : Subject {
 
 	private void IgnorePlatformCollisionAndJump() {
 		IgnorePlatformCollision();
-		controller.Jump();
+		DoJump();
 
 		InvokeJumpEvent(true);
 	}
@@ -137,7 +145,6 @@ public abstract class PlayerController : Subject {
 		_canAttack = true;
 	}
 
-
 	void Update() {
 		if (!isLocalPlayer) return;
 		AttackDirection();
@@ -147,7 +154,17 @@ public abstract class PlayerController : Subject {
 			crouchModifier = 0;
 		horizontalMove = _movementVector.x * runSpeed * crouchModifier;
 
+		// TODO: Move only when receive an move input event
+		if ((Keyboard.current.anyKey.IsPressed() || AreAnyGamepadButtonsPressed()) && !crouch && stunTime == 0)
+			Move(horizontalMove * Time.fixedDeltaTime, crouch);
+
 		Notify(AnimatorController.NotificationType.SpeedChanged, horizontalMove);
+
+		if (stunTime > 0) {
+			stunTime -= stunTimer * Time.fixedDeltaTime;
+			if (stunTime < 0)
+				stunTime = 0;
+		}
 	}
 
 	void Attack(Transform attackPoint, Vector2 attackRange, string animation, int attackPower) {
@@ -212,25 +229,6 @@ public abstract class PlayerController : Subject {
 			attackDirection = (int)_movementVector.x;
 	}
 
-	void FixedUpdate() {
-		if (!isLocalPlayer) return;
-		if (stunTime > 0) {
-			stunTime -= stunTimer * Time.fixedDeltaTime;
-			print(stunTime);
-			if (stunTime < 0) {
-				stunTime = 0;
-			}
-		}
-
-		if ((Keyboard.current.anyKey.IsPressed() || AreAnyGamepadButtonsPressed()) && !crouch && stunTime == 0) {
-			controller.Move(horizontalMove * Time.fixedDeltaTime, crouch);
-			//animator.SetBool("TakeDamage", false);
-		}
-		if (_canCheckForBounds)
-			CheckWorldBoundaries();
-		CheckCameraLimits();
-	}
-
 	private bool AreAnyGamepadButtonsPressed() {
 		if (Gamepad.current == null) return false;
 
@@ -241,17 +239,12 @@ public abstract class PlayerController : Subject {
 		return false;
 	}
 
-	private void CheckWorldBoundaries() {
-		WorldData worldData = GameObject.FindGameObjectWithTag("Map").GetComponent<WorldData>();
-		WorldData.WorldBounds worldBounds = worldData.GenerateWorldBounds();
-
-		if (transform.position.x < worldBounds.leftBound || transform.position.x > worldBounds.rightBound ||
-		  transform.position.y < worldBounds.downBound || transform.position.y > worldBounds.upBound)
-			StartCoroutine(WaitAndRespawn(gameObject));
+	private void OnOutOfWorldBounds() {
+		StartCoroutine(WaitAndRespawn(gameObject));
 	}
 
 	private IEnumerator WaitAndRespawn(GameObject player) {
-		_canCheckForBounds = false;
+		canCheckForWorldBounds = false;
 
 		player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		player.GetComponent<PlayerController>().hitPercentage = 0;
@@ -261,24 +254,11 @@ public abstract class PlayerController : Subject {
 
 		yield return new WaitForSeconds(1f);
 		// player.SetActive(true);
-		_canCheckForBounds = true;
+		canCheckForWorldBounds = true;
 	}
 
-	private void CheckCameraLimits() {
-		WorldData worldData = GameObject.FindGameObjectWithTag("Map").GetComponent<WorldData>();
-		WorldData.CameraLimits cameraLimits = worldData.GenerateCameraLimits();
-
-		if (transform.position.x < cameraLimits.leftLimit || transform.position.x > cameraLimits.rightLimit ||
-		  transform.position.y < cameraLimits.downLimit || transform.position.y > cameraLimits.upLimit) {
-			_AmIOutOfLimit = true;
-		}
-		else {
-			_AmIOutOfLimit = false;
-		}
-	}
-
-	private void OnAmIOutOfLimitsChanged() {
-		CmdHandleDataManagerOutOfLimitsDictionary(_AmIOutOfLimit);
+	private void OnOutOfCameraLimits(bool outOfLimits) {
+		CmdHandleDataManagerOutOfLimitsDictionary(outOfLimits);
 	}
 
 	[Command(requiresAuthority = false)]

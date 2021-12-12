@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class AnimatorController : Observer {
+public class AnimatorController : Transceiver {
 	public enum NotificationType {
 		CrouchChanged,
 		JumpChanged,
@@ -36,11 +36,10 @@ public class AnimatorController : Observer {
 	}
 
 	public override void OnNotify(Enum notificationType, object actionParams = null) {
-		if (IsNotificationTypeValid(notificationType))
-			CallAction(notificationType, actionParams);
+		CallAction(notificationType, actionParams);
 	}
 
-	protected override bool IsNotificationTypeValid(Enum notificationType) {
+	public override bool IsNotificationTypeValid(Enum notificationType) {
 		if (notificationType.GetType() == typeof(NotificationType))
 			return true;
 
