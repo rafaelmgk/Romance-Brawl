@@ -51,6 +51,8 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	[Range(0, 1)] private float stunTime = 0f;
 	[Range(0, 1)] private float stunTimer = 1f;
 
+	private bool updateMiniCam = true;
+
 	// private PlayerInput playerInput;
 	// private InputAction movementAction, jumpAction, basicAtkAction;
 
@@ -150,7 +152,10 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	void Update() {
 		if (!isLocalPlayer) return;
 		AttackDirection();
-
+		if (updateMiniCam == true) {
+			GameObject.FindGameObjectsWithTag("MiniCam")[0].GetComponent<MiniCam>().SetMiniCam(playerNumber - 1);
+			updateMiniCam = false;
+		}
 		int crouchModifier = 1;
 		if (crouch)
 			crouchModifier = 0;
