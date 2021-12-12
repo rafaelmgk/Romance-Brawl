@@ -28,7 +28,7 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 			startPositions[conn.connectionId].position,
 			Quaternion.identity
 		);
-		_temp.GetComponent<PlayerBehaviour>().playerNumber = _playerCounter;
+		_temp.GetComponent<PlayerController>().playerNumber = _playerCounter;
 		_playerCounter++;
 
 		NetworkServer.AddConnection((NetworkConnectionToClient)conn);
@@ -38,7 +38,7 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 
 	public override bool OnRoomServerSceneLoadedForPlayer(NetworkConnection conn, GameObject roomPlayer, GameObject gamePlayer) {
 		CreatePlayerStats(gamePlayer);
-		if (gamePlayer.GetComponent<PlayerBehaviour>().playerNumber == numPlayers)
+		if (gamePlayer.GetComponent<PlayerController>().playerNumber == numPlayers)
 			CreateUIManager();
 
 		return true;
@@ -52,12 +52,12 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 	}
 
 	private void CreatePlayerStats(GameObject gamePlayer) {
-		PlayerBehaviour playerBehaviour = gamePlayer.GetComponent<PlayerBehaviour>();
+		PlayerController playerController = gamePlayer.GetComponent<PlayerController>();
 		UIPlayerStats newPlayerStats = new UIPlayerStats(
-			playerBehaviour.playerNumber,
-			"Player " + playerBehaviour.playerNumber,
-			playerBehaviour.hitPercentage,
-			playerBehaviour.health
+			playerController.playerNumber,
+			"Player " + playerController.playerNumber,
+			playerController.hitPercentage,
+			playerController.health
 		);
 
 		stats.Add(newPlayerStats);

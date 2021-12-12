@@ -41,8 +41,8 @@ public class UIManager : NetworkBehaviour {
 	private void Update() {
 		if (CanUpdateHitPercentage) {
 			foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player")) {
-				PlayerBehaviour playerBehaviour = player.GetComponent<PlayerBehaviour>();
-				UpdatePlayerHitPercentage(playerBehaviour.playerNumber, playerBehaviour.hitPercentage);
+				PlayerController playerController = player.GetComponent<PlayerController>();
+				UpdatePlayerHitPercentage(playerController.playerNumber, playerController.hitPercentage);
 			}
 
 			CanUpdateHitPercentage = false;

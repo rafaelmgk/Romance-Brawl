@@ -19,7 +19,7 @@ public class CharacterController2D : NetworkBehaviour {
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 	[SyncVar] public int extraJumps;
-	public PlayerBehaviour player;
+	public PlayerController player;
 
 	private float _airTime = 0;
 

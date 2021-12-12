@@ -2,5 +2,5 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Zoro : PlayerBehaviour {
+public class Zoro : PlayerController {
 }

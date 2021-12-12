@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Mirror;
 
-public abstract class PlayerBehaviour : Subject {
+public abstract class PlayerController : Subject {
 	public CharacterController2D controller;
 
 	public float runSpeed = 40f;
@@ -163,13 +163,13 @@ public abstract class PlayerBehaviour : Subject {
 	}
 
 	private void AskServerForTakeDamage(GameObject enemy, int attackDirection, int firstAtkPower) {
-		enemy.GetComponent<PlayerBehaviour>().CmdAskServerForTakeDamage(enemy, attackDirection, firstAtkPower);
+		enemy.GetComponent<PlayerController>().CmdAskServerForTakeDamage(enemy, attackDirection, firstAtkPower);
 	}
 
 
 	[Command(requiresAuthority = false)]
 	public void CmdAskServerForTakeDamage(GameObject enemy, int attackDirection, int power) {
-		enemy.GetComponent<PlayerBehaviour>().TrgtTakeDamage(
+		enemy.GetComponent<PlayerController>().TrgtTakeDamage(
 		  enemy.GetComponent<NetworkIdentity>().connectionToClient, attackDirection, power
 		);
 	}
@@ -254,7 +254,7 @@ public abstract class PlayerBehaviour : Subject {
 		_canCheckForBounds = false;
 
 		player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-		player.GetComponent<PlayerBehaviour>().hitPercentage = 0;
+		player.GetComponent<PlayerController>().hitPercentage = 0;
 		UpdateHitPercentage(0);
 		GameObject map = GameObject.FindWithTag("Map");
 		player.transform.position = (map != null ? map.GetComponent<Renderer>().bounds.center : Vector3.zero);

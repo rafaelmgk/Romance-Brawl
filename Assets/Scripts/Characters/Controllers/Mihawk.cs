@@ -2,6 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mihawk : PlayerBehaviour
+public class Mihawk : PlayerController
 {
 }

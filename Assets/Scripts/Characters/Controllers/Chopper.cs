@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Chopper : PlayerBehaviour
+public class Chopper : PlayerController
 {
   private Vector2 chopper1Range = new Vector2(0.5f, 0.5f);
   private Vector2 chopper2Range = new Vector2(0.8f, 0.8f);

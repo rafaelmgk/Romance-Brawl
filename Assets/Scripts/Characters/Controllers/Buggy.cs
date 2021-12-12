@@ -2,6 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Buggy : PlayerBehaviour
+public class Buggy : PlayerController
 {
 }
