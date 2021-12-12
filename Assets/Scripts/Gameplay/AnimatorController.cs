@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using System;
 using UnityEngine;
 
@@ -13,8 +11,6 @@ public class AnimatorController : Observer {
 	}
 
 	[SerializeField] private Animator _animator;
-
-	private Dictionary<Enum, Action<object>> _ActionByEnum = new Dictionary<Enum, Action<object>>();
 
 	private void Awake() {
 		RegisterAction(
@@ -39,13 +35,15 @@ public class AnimatorController : Observer {
 		);
 	}
 
-	public override void OnNotify(Enum notification, object value = null) {
-		if (_ActionByEnum.ContainsKey(notification))
-			_ActionByEnum[notification](value);
+	public override void OnNotify(Enum notificationType, object actionParams = null) {
+		if (IsNotificationTypeValid(notificationType))
+			CallAction(notificationType, actionParams);
 	}
 
-	private void RegisterAction(Enum key, Action<object> value) {
-		if (!_ActionByEnum.ContainsKey(key))
-			_ActionByEnum.Add(key, value);
+	protected override bool IsNotificationTypeValid(Enum notificationType) {
+		if (notificationType.GetType() == typeof(NotificationType))
+			return true;
+
+		return false;
 	}
 }
