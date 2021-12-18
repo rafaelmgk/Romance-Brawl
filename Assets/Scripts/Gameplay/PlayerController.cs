@@ -30,6 +30,7 @@ public class PlayerController : Physics {
 	[SyncVar] public int playerNumber;
 
 	private bool _canAttack = true;
+	private bool _canRespawn = true;
 
 	private Vector2 _movementVector;
 	[Range(0, 1)] private float stunTime = 0f;
@@ -240,11 +241,12 @@ public class PlayerController : Physics {
 	}
 
 	private void OnOutOfWorldBounds() {
-		StartCoroutine(WaitAndRespawn(gameObject));
+		if (_canRespawn)
+			StartCoroutine(WaitAndRespawn(gameObject));
 	}
 
 	private IEnumerator WaitAndRespawn(GameObject player) {
-		canCheckForWorldBounds = false;
+		_canRespawn = false;
 
 		player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		player.GetComponent<PlayerController>().hitPercentage = 0;
@@ -254,7 +256,7 @@ public class PlayerController : Physics {
 
 		yield return new WaitForSeconds(1f);
 		// player.SetActive(true);
-		canCheckForWorldBounds = true;
+		_canRespawn = true;
 	}
 
 	private void OnOutOfCameraLimits(bool outOfLimits) {
