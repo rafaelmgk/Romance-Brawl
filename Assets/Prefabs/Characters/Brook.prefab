@@ -520,6 +520,14 @@ PrefabInstance:
       propertyPath: m_AssetId
       value: 0cf5b4560b368fe418bdd7c27845d2fa
       objectReference: {fileID: 0}
+    - target: {fileID: 3169657022136740617, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1720734485633453343}
+    - target: {fileID: 4981286642358916881, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4981286642358916883, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
       propertyPath: m_Name
       value: MiniCamUI

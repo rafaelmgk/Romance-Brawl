@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MiniCamClamp : MonoBehaviour {
-	// Start is called before the first frame update
+	float xMin = -4f;
+	float xMax = 4f;
+	float yMin = -4.5f;
+	float yMax = 0f;
+
+	public Transform player;
+
 	void Start() {
 
 	}
@@ -11,10 +17,10 @@ public class MiniCamClamp : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate() {
 		transform.rotation = transform.rotation;
-		Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
-		pos.x = Mathf.Clamp01(pos.x);
-		pos.y = Mathf.Clamp01(pos.y);
-		transform.position = Camera.main.ViewportToWorldPoint(pos);
+		Vector3 pos = player.transform.position;
+		pos.x = Mathf.Clamp(pos.x, xMin, xMax);
+		pos.y = Mathf.Clamp(pos.y, yMin, yMax);
+		transform.position = pos;
 
 	}
 }
