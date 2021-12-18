@@ -15,8 +15,6 @@ public abstract class Physics : NetworkTransceiver {
 	protected event Action OutOfWorldBounds;
 	protected event Action<bool> OutOfCameraLimits;
 
-	protected bool canCheckForWorldBounds = true;
-
 	private const float GroundCheckRadius = .2f;
 
 	private bool _isGrounded;
@@ -25,6 +23,7 @@ public abstract class Physics : NetworkTransceiver {
 	private float _airTime = 0;
 	private Vector2 _velocity = Vector2.zero;
 	private Rigidbody2D _rigidbody2D;
+	private WorldData _worldData;
 
 	// [SyncVar]
 	private int _extraJumps = 1;
@@ -38,8 +37,7 @@ public abstract class Physics : NetworkTransceiver {
 		OnGround();
 		OnAir();
 
-		if (canCheckForWorldBounds)
-			CheckWorldBoundaries();
+		CheckWorldBoundaries();
 		CheckCameraLimits();
 	}
 
@@ -106,26 +104,50 @@ public abstract class Physics : NetworkTransceiver {
 	}
 
 	private void CheckWorldBoundaries() {
-		WorldData worldData = GameObject.FindGameObjectWithTag("Map").GetComponent<WorldData>();
-		WorldData.WorldBounds worldBounds = worldData.GenerateWorldBounds();
+		WorldData.WorldBounds worldBounds = FindWorldBounds(FindWorldData());
 
-		if (transform.position.x < worldBounds.leftBound || transform.position.x > worldBounds.rightBound ||
-			transform.position.y < worldBounds.downBound || transform.position.y > worldBounds.upBound)
+		if (IsPositionSquaredOutside(worldBounds.leftBound, worldBounds.rightBound,
+			worldBounds.downBound, worldBounds.upBound))
 			OutOfWorldBounds?.Invoke();
 	}
 
-	private void CheckCameraLimits() {
-		WorldData worldData = GameObject.FindGameObjectWithTag("Map").GetComponent<WorldData>();
-		WorldData.CameraLimits cameraLimits = worldData.GenerateCameraLimits();
+	private WorldData.WorldBounds FindWorldBounds(WorldData worldData) {
+		return worldData.GenerateWorldBounds();
+	}
 
-		if (transform.position.x < cameraLimits.leftLimit || transform.position.x > cameraLimits.rightLimit ||
-			transform.position.y < cameraLimits.downLimit || transform.position.y > cameraLimits.upLimit)
+	private WorldData FindWorldData() {
+		if (_worldData != null)
+			return _worldData;
+
+		_worldData = GameObject.FindGameObjectWithTag("Map").GetComponent<WorldData>();
+		return _worldData;
+	}
+
+	private bool IsPositionSquaredOutside(float leftBound, float rightBound, float downBound, float upBound) {
+		if (transform.position.x < leftBound || transform.position.x > rightBound ||
+			transform.position.y < downBound || transform.position.y > upBound)
+			return true;
+		else
+			return false;
+	}
+
+	private void CheckCameraLimits() {
+		WorldData.CameraLimits cameraLimits = FindCameraLimits(FindWorldData());
+
+		if (IsPositionSquaredOutside(cameraLimits.leftLimit, cameraLimits.rightLimit,
+			cameraLimits.downLimit, cameraLimits.upLimit))
 			ChangeOutOfCameraLimits(true);
 		else
 			ChangeOutOfCameraLimits(false);
 	}
 
+	private WorldData.CameraLimits FindCameraLimits(WorldData worldData) {
+		return worldData.GenerateCameraLimits();
+	}
+
 	private void ChangeOutOfCameraLimits(bool newState) {
+		// Without this condition the event would be fired a few times
+		// instead of one, flickering the camera
 		if (_isOutOfCameraLimits != newState) {
 			_isOutOfCameraLimits = newState;
 			OutOfCameraLimits?.Invoke(newState);
