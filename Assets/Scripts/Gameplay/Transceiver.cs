@@ -7,6 +7,7 @@ public abstract class Transceiver : MonoBehaviour, ITransmitter, IReceiver {
 
 	public abstract bool IsNotificationTypeValid(Enum notificationType);
 
+	// The transceiver is obligated to receiver, but can choose to transmit
 	public virtual void Notify(Enum notificationType, object actionParams = null) { }
 
 	private Dictionary<Enum, Action<object>> _ActionsByEnum = new Dictionary<Enum, Action<object>>();
