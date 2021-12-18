@@ -19,7 +19,7 @@ public abstract class Physics : NetworkTransceiver {
 
 	private bool _isGrounded;
 	private bool _isOutOfCameraLimits;
-	private bool _facingRight = true;
+	private bool _isFacingRight = true;
 	private float _airTime = 0;
 	private Vector2 _velocity = Vector2.zero;
 	[SerializeField] private Rigidbody2D _rigidbody2D;
@@ -35,6 +35,43 @@ public abstract class Physics : NetworkTransceiver {
 
 		CheckWorldBoundaries();
 		CheckCameraLimits();
+	}
+
+	protected void Move(float move, bool crouch) {
+		if (_isGrounded || playerData.airControl) {
+			if (crouch)
+				move *= playerData.crouchSpeed;
+
+			// TODO: remove hard coded number
+			SmoothVelocity(new Vector2(move * Time.fixedDeltaTime * 10f, _rigidbody2D.velocity.y));
+
+			if (move != 0)
+				AssignIsFacingRight(move > 0);
+		}
+	}
+
+	protected void DoJump() {
+		if (_extraJumps > 0) {
+			_rigidbody2D.velocity = Vector2.zero;
+			_rigidbody2D.AddForce(new Vector2(0f, playerData.jumpForce));
+
+			_extraJumps--;
+		}
+	}
+
+	protected void Flip() {
+		_isFacingRight = !_isFacingRight;
+
+		transform.Rotate(0f, 180f, 0f);
+	}
+
+	private void SmoothVelocity(Vector2 targetVelocity) {
+		_rigidbody2D.velocity = Vector2.SmoothDamp(_rigidbody2D.velocity, targetVelocity, ref _velocity,
+			playerData.movementSmoothing);
+	}
+
+	private void AssignIsFacingRight(bool isFacingRight) {
+		_isFacingRight = isFacingRight;
 	}
 
 	private void OnLanding() {
@@ -60,43 +97,6 @@ public abstract class Physics : NetworkTransceiver {
 	private void OnAir() {
 		if (!_isGrounded)
 			_airTime += Time.deltaTime;
-	}
-
-	public void Move(float move, bool crouch) {
-		if (_isGrounded || playerData.airControl) {
-			if (crouch)
-				move *= playerData.crouchSpeed;
-
-			Vector2 targetVelocity = new Vector2(move * 10f, _rigidbody2D.velocity.y);
-			HandleVelocity(targetVelocity);
-
-			if (move != 0)
-				_facingRight = (move > 0);
-		}
-	}
-
-	private void HandleVelocity(Vector2 targetVelocity) {
-		_rigidbody2D.velocity = Vector2.SmoothDamp(
-			_rigidbody2D.velocity,
-			targetVelocity,
-			ref _velocity,
-			playerData.movementSmoothing
-		);
-	}
-
-	public void DoJump() {
-		if (_extraJumps > 0) {
-			_rigidbody2D.velocity = Vector2.zero;
-			_rigidbody2D.AddForce(new Vector2(0f, playerData.jumpForce));
-
-			_extraJumps--;
-		}
-	}
-
-	private void Flip() {
-		_facingRight = !_facingRight;
-
-		transform.Rotate(0f, 180f, 0f);
 	}
 
 	private void CheckWorldBoundaries() {

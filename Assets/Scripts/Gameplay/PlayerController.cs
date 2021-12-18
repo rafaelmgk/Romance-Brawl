@@ -23,13 +23,14 @@ public class PlayerController : Physics {
 	public Vector2 attack1Range;
 	public Vector2 attack2Range;
 	public LayerMask enemyLayers;
-	public int attackDirection;
+
+	public NetworkController networkController;
 
 	public int atk1Power;
 	public int atk2Power;
 
 	public Rigidbody2D hitBox;
-	[SyncVar] public int hitPercentage = 0;
+	[SyncVar(hook = nameof(OnHitPercentageChange))] public int hitPercentage = 0;
 	[SyncVar] public int health = 0;
 
 	public NetworkConnectionToClient enemyConnection;
@@ -38,6 +39,7 @@ public class PlayerController : Physics {
 
 	private bool _canAttack = true;
 	private bool _canRespawn = true;
+	private int _attackDirection;
 
 	private Vector2 _movementVector;
 	[Range(0, 1)] private float stunTime = 0f;
@@ -179,21 +181,27 @@ public class PlayerController : Physics {
 
 	void Update() {
 		if (!isLocalPlayer) return;
-		AttackDirection();
 
-		int crouchModifier = 1;
-		if (crouch)
-			crouchModifier = 0;
-		horizontalMove = _movementVector.x * runSpeed * crouchModifier;
+		AssignAttackDirection();
 
+		horizontalMove = _movementVector.x * runSpeed;
 		// TODO: Move only when receive an move input event
 		if ((Keyboard.current.anyKey.IsPressed() || AreAnyGamepadButtonsPressed()) && !crouch && stunTime == 0)
-			Move(horizontalMove * Time.fixedDeltaTime, crouch);
+			Move(horizontalMove, crouch);
 
 		Notify(AnimatorController.NotificationType.SpeedChanged, horizontalMove);
 
+		HandleStun();
+	}
+
+	private void AssignAttackDirection() {
+		if (_movementVector.x != 0)
+			_attackDirection = (int)_movementVector.x;
+	}
+
+	private void HandleStun() {
 		if (stunTime > 0) {
-			stunTime -= stunTimer * Time.fixedDeltaTime;
+			stunTime -= stunTimer * Time.deltaTime;
 			if (stunTime < 0)
 				stunTime = 0;
 		}
@@ -207,59 +215,44 @@ public class PlayerController : Physics {
 		Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, attackRange, 0, enemyLayers);
 		foreach (Collider2D enemy in hitEnemies) {
 			if (enemy != gameObject.GetComponent<Collider2D>())
-				AskServerForTakeDamage(enemy.gameObject, attackDirection, attackPower);
+				AskServerForTakeDamage(enemy.gameObject.GetComponent<PlayerController>(), _attackDirection, attackPower);
 		}
 	}
 
-	private void AskServerForTakeDamage(GameObject enemy, int attackDirection, int firstAtkPower) {
-		enemy.GetComponent<PlayerController>().CmdAskServerForTakeDamage(enemy, attackDirection, firstAtkPower);
+	private void AskServerForTakeDamage(PlayerController enemy, int attackDirection, int firstAtkPower) {
+		enemy.networkController.CmdAskServerForTakeDamage(enemy, attackDirection, firstAtkPower);
 	}
 
-
-	[Command(requiresAuthority = false)]
-	public void CmdAskServerForTakeDamage(GameObject enemy, int attackDirection, int power) {
-		enemy.GetComponent<PlayerController>().TrgtTakeDamage(
-		  enemy.GetComponent<NetworkIdentity>().connectionToClient, attackDirection, power
-		);
-	}
-
-	[TargetRpc]
-	public void TrgtTakeDamage(NetworkConnection target, int attackDirection, int power) {
-		int atkPower = power;
+	public void TakeDamage(int attackDirection, int power) {
 		if (crouch)
 			return;
 
-		hitPercentage += atkPower;
-		UpdateHitPercentage(hitPercentage);
-
-		hitBox.AddForce(new Vector2(attackDirection * hitPercentage, hitPercentage / 3.5f), ForceMode2D.Impulse);
+		AddDamage(power);
+		PushAwayFrom(attackDirection);
 
 		Notify(AnimatorController.NotificationType.PlayerTookDamage);
 
 		stunTime = 1f;
 	}
 
+	private void AddDamage(int power) {
+		int newHitPercentage = hitPercentage + power;
+		UpdateHitPercentage(newHitPercentage);
+	}
+
+	private void OnHitPercentageChange(int oldHitPercentage, int newHitPercentage) {
+		UIManager.CanUpdateHitPercentage = true;
+	}
+
 	private void UpdateHitPercentage(int newHitPercentage) {
-		UIManager.CanUpdateHitPercentage = true;
-		if (isClientOnly) CmdUpdateHitPercentageOnServer(newHitPercentage);
-		if (isServer) CmdUpdateHitPercentageOnAllClients();
+		networkController.CmdUpdateHitPercentageOnServer(this, newHitPercentage);
 	}
 
-	[Command(requiresAuthority = false)]
-	private void CmdUpdateHitPercentageOnServer(int newHitPercentage) {
-		hitPercentage = newHitPercentage;
-		UIManager.CanUpdateHitPercentage = true;
+	private void PushAwayFrom(int attackDirection) {
+		// TODO: remove hard coded number
+		hitBox.AddForce(new Vector2(attackDirection * hitPercentage, hitPercentage / 3.5f), ForceMode2D.Impulse);
 	}
 
-	[ClientRpc]
-	private void CmdUpdateHitPercentageOnAllClients() {
-		UIManager.CanUpdateHitPercentage = true;
-	}
-
-	public void AttackDirection() {
-		if (_movementVector.x != 0)
-			attackDirection = (int)_movementVector.x;
-	}
 
 	private bool AreAnyGamepadButtonsPressed() {
 		if (Gamepad.current == null) return false;
