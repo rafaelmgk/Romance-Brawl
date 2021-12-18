@@ -22,15 +22,11 @@ public abstract class Physics : NetworkTransceiver {
 	private bool _facingRight = true;
 	private float _airTime = 0;
 	private Vector2 _velocity = Vector2.zero;
-	private Rigidbody2D _rigidbody2D;
+	[SerializeField] private Rigidbody2D _rigidbody2D;
 	private WorldData _worldData;
 
 	// [SyncVar]
 	private int _extraJumps = 1;
-
-	private void Awake() {
-		_rigidbody2D = GetComponent<Rigidbody2D>();
-	}
 
 	private void FixedUpdate() {
 		OnLanding();

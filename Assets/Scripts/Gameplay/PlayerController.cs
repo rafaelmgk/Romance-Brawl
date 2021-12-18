@@ -7,6 +7,13 @@ using UnityEngine.InputSystem;
 using Mirror;
 
 public class PlayerController : Physics {
+	public enum NotificationType {
+		PlayerMoved,
+		PlayerJumped,
+		PlayerBasicAttacked,
+		PlayerStrongAttacked,
+	}
+
 	public float runSpeed = 40f;
 
 	float horizontalMove = 0f;
@@ -37,18 +44,6 @@ public class PlayerController : Physics {
 	[Range(0, 1)] private float stunTimer = 1f;
 
 	[SerializeField] private List<Transceiver> _transceivers = new List<Transceiver>();
-	public override bool IsNotificationTypeValid(Enum notificationType) {
-		return true;
-	}
-
-	public override void OnNotify(Enum notificationType, object actionParams = null) {
-		CallAction(notificationType, actionParams);
-	}
-
-	public override void Notify(Enum notificationType, object actionParams = null) {
-		foreach (Transceiver transceiver in _transceivers)
-			transceiver.OnNotify(notificationType, actionParams);
-	}
 
 	private void OnEnable() {
 		OutOfWorldBounds += OnOutOfWorldBounds;
@@ -60,15 +55,48 @@ public class PlayerController : Physics {
 		OutOfCameraLimits -= OnOutOfCameraLimits;
 	}
 
-	private void Start() {
-		if (!isLocalPlayer)
-			Destroy(GetComponent<PlayerInput>());
-		else
-			GetComponent<PlayerInput>().enabled = true;
+	private void Awake() {
+		RegisterAction(
+			NotificationType.PlayerMoved,
+			(context) => OnPlayerMoved((InputAction.CallbackContext)context)
+		);
+		RegisterAction(
+			NotificationType.PlayerJumped,
+			(context) => OnPlayerJumped((InputAction.CallbackContext)context)
+		);
+		RegisterAction(
+			NotificationType.PlayerBasicAttacked,
+			(context) => OnPlayerBasicAttacked((InputAction.CallbackContext)context)
+		);
+		RegisterAction(
+			NotificationType.PlayerStrongAttacked,
+			(context) => OnPlayerStrongAttacked((InputAction.CallbackContext)context)
+		);
 	}
 
-	public void Movement(InputAction.CallbackContext context) {
-		if (!isLocalPlayer) return;
+	private void Start() {
+		if (!isLocalPlayer)
+			Destroy(transform.GetChild(3).gameObject); // TODO: change this
+	}
+
+	public override void OnNotify(Enum notificationType, object actionParams = null) {
+		CallAction(notificationType, actionParams);
+	}
+
+	public override bool IsNotificationTypeValid(Enum notificationType) {
+		if (notificationType.GetType() == typeof(NotificationType))
+			return true;
+
+		return false;
+	}
+
+	public override void Notify(Enum notificationType, object actionParams = null) {
+		foreach (Transceiver transceiver in _transceivers)
+			transceiver.OnNotify(notificationType, actionParams);
+	}
+
+	private void OnPlayerMoved(InputAction.CallbackContext context) {
+		// if (!isLocalPlayer) return;
 
 		_movementVector = context.ReadValue<Vector2>();
 		if (Gamepad.current != null)
@@ -106,8 +134,8 @@ public class PlayerController : Physics {
 		Physics2D.IgnoreLayerCollision(3, 8, ignore);
 	}
 
-	public void Jump(InputAction.CallbackContext context) {
-		if (!isLocalPlayer) return;
+	public void OnPlayerJumped(InputAction.CallbackContext context) {
+		// if (!isLocalPlayer) return;
 
 		if (context.started && stunTime == 0)
 			IgnorePlatformCollisionAndJump();
@@ -126,15 +154,18 @@ public class PlayerController : Physics {
 		Notify(AnimatorController.NotificationType.JumpChanged, jumpState);
 	}
 
-	public void BasicAtk(InputAction.CallbackContext context) {
-		if (!isLocalPlayer) return;
+	public void OnPlayerBasicAttacked(InputAction.CallbackContext context) {
+		// if (!isLocalPlayer) return;
+
 		if (context.started && _canAttack && !crouch) {
 			Attack(attackPoint, attack1Range, "Attack", atk1Power);
 			StartCoroutine(WaitForAttackAgain());
 		}
 	}
-	public void StrongAtk(InputAction.CallbackContext context) {
-		if (!isLocalPlayer) return;
+
+	public void OnPlayerStrongAttacked(InputAction.CallbackContext context) {
+		// if (!isLocalPlayer) return;
+
 		if (context.started && _canAttack && !crouch) {
 			Attack(attackPoint, attack2Range, "Attack2", atk2Power);
 			StartCoroutine(WaitForAttackAgain());
