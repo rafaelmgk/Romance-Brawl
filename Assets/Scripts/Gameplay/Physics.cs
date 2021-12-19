@@ -7,26 +7,26 @@ public abstract class Physics : NetworkTransceiver {
 	public PlayerData playerData = new PlayerData();
 
 	[Tooltip("A mask determining what is ground to the character.")]
-	public LayerMask groundLayerMask;
+	[SerializeField] private LayerMask groundLayerMask;
 
 	[Tooltip("A position marking where to check if the player is grounded.")]
-	public Transform groundCheck;
+	[SerializeField] private Transform groundCheck;
 
 	protected event Action OutOfWorldBounds;
 	protected event Action<bool> OutOfCameraLimits;
 
-	private const float GroundCheckRadius = .2f;
+	[SerializeField] private Rigidbody2D _rigidbody2D;
 
+	private const float _GROUND_CHECK_RADIUS = .2f;
+
+	private Vector2 _velocity = Vector2.zero;
+	private float _airTime = 0;
+	private int _extraJumps = 1;
 	private bool _isGrounded;
 	private bool _isOutOfCameraLimits;
 	private bool _isFacingRight = true;
-	private float _airTime = 0;
-	private Vector2 _velocity = Vector2.zero;
-	[SerializeField] private Rigidbody2D _rigidbody2D;
 	private WorldData _worldData;
 
-	// [SyncVar]
-	private int _extraJumps = 1;
 
 	private void FixedUpdate() {
 		OnLanding();
@@ -65,6 +65,11 @@ public abstract class Physics : NetworkTransceiver {
 		transform.Rotate(0f, 180f, 0f);
 	}
 
+	protected void BeThrown(int attackDirection, int hitPercentage) {
+		// TODO: remove hard coded number
+		_rigidbody2D.AddForce(new Vector2(attackDirection * hitPercentage, hitPercentage / 3.5f), ForceMode2D.Impulse);
+	}
+
 	private void SmoothVelocity(Vector2 targetVelocity) {
 		_rigidbody2D.velocity = Vector2.SmoothDamp(_rigidbody2D.velocity, targetVelocity, ref _velocity,
 			playerData.movementSmoothing);
@@ -84,7 +89,7 @@ public abstract class Physics : NetworkTransceiver {
 	}
 
 	private void OnGround() {
-		_isGrounded = Physics2D.OverlapCircle(groundCheck.position, GroundCheckRadius, groundLayerMask);
+		_isGrounded = Physics2D.OverlapCircle(groundCheck.position, _GROUND_CHECK_RADIUS, groundLayerMask);
 
 		if (_isGrounded)
 			RechargeJumps();
