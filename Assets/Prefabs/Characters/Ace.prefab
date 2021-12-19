@@ -213,18 +213,16 @@ MonoBehaviour:
     m_Bits: 384
   groundCheck: {fileID: 7074083855439903602}
   _rigidbody2D: {fileID: 6729560697246243761}
-  runSpeed: 15
-  crouch: 0
-  attackPoint: {fileID: 8304542415087038332}
-  attack1Range: {x: 0.48, y: 0.42}
-  attack2Range: {x: 0.7, y: 0.63}
-  enemyLayers:
+  _runSpeed: 20
+  _attackPoint: {fileID: 8304542415087038332}
+  _attack1Range: {x: 0.34, y: 0.38}
+  _attack2Range: {x: 0.58, y: 0.61}
+  _enemyLayers:
     serializedVersion: 2
     m_Bits: 8
   networkController: {fileID: -4636072495843866953}
-  atk1Power: 3
-  atk2Power: 6
-  hitBox: {fileID: 6729560697246243761}
+  _atk1Power: 3
+  _atk2Power: 6
   hitPercentage: 0
   health: 0
   playerNumber: 0

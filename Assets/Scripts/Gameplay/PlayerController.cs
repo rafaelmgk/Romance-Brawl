@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Mirror;
 
-public class PlayerController : Physics {
+public abstract class PlayerController : Physics { // TODO: put common data in PlayerData and create a new NetworkData
 	public enum NotificationType {
 		PlayerMoved,
 		PlayerJumped,
@@ -14,38 +14,30 @@ public class PlayerController : Physics {
 		PlayerStrongAttacked,
 	}
 
-	public float runSpeed = 40f;
-
-	float horizontalMove = 0f;
-	public bool crouch = false;
-
-	public Transform attackPoint;
-	public Vector2 attack1Range;
-	public Vector2 attack2Range;
-	public LayerMask enemyLayers;
-
 	public NetworkController networkController;
 
-	public int atk1Power;
-	public int atk2Power;
-
-	public Rigidbody2D hitBox;
 	[SyncVar(hook = nameof(OnHitPercentageChange))] public int hitPercentage = 0;
 	[SyncVar] public int health = 0;
-
-	public NetworkConnectionToClient enemyConnection;
-
 	[SyncVar] public int playerNumber;
 
-	private bool _canAttack = true;
-	private bool _canRespawn = true;
-	private int _attackDirection;
+	[SerializeField] private List<Transceiver> _transceivers = new List<Transceiver>();
+	[SerializeField] private Transform _attackPoint;
+	[SerializeField] private Vector2 _attack1Range;
+	[SerializeField] private Vector2 _attack2Range;
+	[SerializeField] private LayerMask _enemyLayers;
+
+	[SerializeField] private int _atk1Power;
+	[SerializeField] private int _atk2Power;
+	[SerializeField] private float _runSpeed = 10f;
 
 	private Vector2 _movementVector;
-	[Range(0, 1)] private float stunTime = 0f;
-	[Range(0, 1)] private float stunTimer = 1f;
-
-	[SerializeField] private List<Transceiver> _transceivers = new List<Transceiver>();
+	private float _horizontalMove = 0f;
+	private float _stunTime = 0f;
+	private float _stunTimer = 1f;
+	private int _attackDirection;
+	private bool _crouch = false;
+	private bool _canAttack = true;
+	private bool _canRespawn = true;
 
 	private void OnEnable() {
 		OutOfWorldBounds += OnOutOfWorldBounds;
@@ -81,6 +73,45 @@ public class PlayerController : Physics {
 			Destroy(transform.GetChild(3).gameObject); // TODO: change this
 	}
 
+	// TODO: remove this update and change this script to MonoBehaviour
+	private void Update() {
+		if (!isLocalPlayer) return;
+
+		AssignAttackDirection();
+
+		_horizontalMove = _movementVector.x * _runSpeed;
+		// TODO: Move only when receive an move input event
+		if ((Keyboard.current.anyKey.IsPressed() || AreAnyGamepadButtonsPressed()) && !_crouch && _stunTime == 0)
+			Move(_horizontalMove, _crouch);
+
+		Notify(AnimatorController.NotificationType.SpeedChanged, _horizontalMove);
+
+		HandleStun();
+	}
+
+	private void AssignAttackDirection() {
+		if (_movementVector.x != 0)
+			_attackDirection = (int)_movementVector.x;
+	}
+
+	private bool AreAnyGamepadButtonsPressed() {
+		if (Gamepad.current == null) return false;
+
+		for (int i = 0; i < Gamepad.current.allControls.Count; i++) {
+			if (Gamepad.current.allControls[i].IsPressed()) return true;
+		}
+
+		return false;
+	}
+
+	private void HandleStun() {
+		if (_stunTime > 0) {
+			_stunTime -= _stunTimer * Time.deltaTime;
+			if (_stunTime < 0)
+				_stunTime = 0;
+		}
+	}
+
 	public override void OnNotify(Enum notificationType, object actionParams = null) {
 		CallAction(notificationType, actionParams);
 	}
@@ -95,6 +126,31 @@ public class PlayerController : Physics {
 	public override void Notify(Enum notificationType, object actionParams = null) {
 		foreach (Transceiver transceiver in _transceivers)
 			transceiver.OnNotify(notificationType, actionParams);
+	}
+
+	public void TakeDamage(int attackDirection, int power) {
+		if (_crouch)
+			return;
+
+		AddDamage(power);
+		BeThrown(attackDirection, hitPercentage);
+
+		Notify(AnimatorController.NotificationType.PlayerTookDamage);
+
+		_stunTime = 1f;
+	}
+
+	private void AddDamage(int power) {
+		int newHitPercentage = hitPercentage + power;
+		UpdateHitPercentage(newHitPercentage);
+	}
+
+	private void UpdateHitPercentage(int newHitPercentage) {
+		networkController.CmdUpdateHitPercentageOnServer(this, newHitPercentage);
+	}
+
+	private void OnHitPercentageChange(int oldHitPercentage, int newHitPercentage) {
+		UIManager.CanUpdateHitPercentage = true;
 	}
 
 	private void OnPlayerMoved(InputAction.CallbackContext context) {
@@ -127,7 +183,7 @@ public class PlayerController : Physics {
 
 	private void Crouch(bool crouchState) {
 		IgnorePlatformCollision(crouchState);
-		crouch = crouchState;
+		_crouch = crouchState;
 
 		Notify(AnimatorController.NotificationType.CrouchChanged, crouchState);
 	}
@@ -136,10 +192,10 @@ public class PlayerController : Physics {
 		Physics2D.IgnoreLayerCollision(3, 8, ignore);
 	}
 
-	public void OnPlayerJumped(InputAction.CallbackContext context) {
+	private void OnPlayerJumped(InputAction.CallbackContext context) {
 		// if (!isLocalPlayer) return;
 
-		if (context.started && stunTime == 0)
+		if (context.started && _stunTime == 0)
 			IgnorePlatformCollisionAndJump();
 		else if (context.canceled)
 			IgnorePlatformCollision(false);
@@ -152,67 +208,35 @@ public class PlayerController : Physics {
 		InvokeJumpEvent(true);
 	}
 
-	public void InvokeJumpEvent(bool jumpState) {
+	private void InvokeJumpEvent(bool jumpState) {
 		Notify(AnimatorController.NotificationType.JumpChanged, jumpState);
 	}
 
-	public void OnPlayerBasicAttacked(InputAction.CallbackContext context) {
+	// TODO: remove this method repetition
+	private void OnPlayerBasicAttacked(InputAction.CallbackContext context) {
 		// if (!isLocalPlayer) return;
 
-		if (context.started && _canAttack && !crouch) {
-			Attack(attackPoint, attack1Range, "Attack", atk1Power);
+		if (context.started && _canAttack && !_crouch) {
+			Attack(_attackPoint, _attack1Range, "Attack", _atk1Power);
 			StartCoroutine(WaitForAttackAgain());
 		}
 	}
 
-	public void OnPlayerStrongAttacked(InputAction.CallbackContext context) {
+	private void OnPlayerStrongAttacked(InputAction.CallbackContext context) {
 		// if (!isLocalPlayer) return;
 
-		if (context.started && _canAttack && !crouch) {
-			Attack(attackPoint, attack2Range, "Attack2", atk2Power);
+		if (context.started && _canAttack && !_crouch) {
+			Attack(_attackPoint, _attack2Range, "Attack2", _atk2Power);
 			StartCoroutine(WaitForAttackAgain());
 		}
 	}
 
-	private IEnumerator WaitForAttackAgain() {
-		yield return new WaitForSeconds(0.5f);
-		_canAttack = true;
-	}
-
-	void Update() {
-		if (!isLocalPlayer) return;
-
-		AssignAttackDirection();
-
-		horizontalMove = _movementVector.x * runSpeed;
-		// TODO: Move only when receive an move input event
-		if ((Keyboard.current.anyKey.IsPressed() || AreAnyGamepadButtonsPressed()) && !crouch && stunTime == 0)
-			Move(horizontalMove, crouch);
-
-		Notify(AnimatorController.NotificationType.SpeedChanged, horizontalMove);
-
-		HandleStun();
-	}
-
-	private void AssignAttackDirection() {
-		if (_movementVector.x != 0)
-			_attackDirection = (int)_movementVector.x;
-	}
-
-	private void HandleStun() {
-		if (stunTime > 0) {
-			stunTime -= stunTimer * Time.deltaTime;
-			if (stunTime < 0)
-				stunTime = 0;
-		}
-	}
-
-	void Attack(Transform attackPoint, Vector2 attackRange, string animation, int attackPower) {
+	private void Attack(Transform attackPoint, Vector2 attackRange, string animation, int attackPower) {
 		_canAttack = false;
 
 		Notify(AnimatorController.NotificationType.PlayerAttacked, animation);
 
-		Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, attackRange, 0, enemyLayers);
+		Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, attackRange, 0, _enemyLayers);
 		foreach (Collider2D enemy in hitEnemies) {
 			if (enemy != gameObject.GetComponent<Collider2D>())
 				AskServerForTakeDamage(enemy.gameObject.GetComponent<PlayerController>(), _attackDirection, attackPower);
@@ -223,111 +247,37 @@ public class PlayerController : Physics {
 		enemy.networkController.CmdAskServerForTakeDamage(enemy, attackDirection, firstAtkPower);
 	}
 
-	public void TakeDamage(int attackDirection, int power) {
-		if (crouch)
-			return;
-
-		AddDamage(power);
-		PushAwayFrom(attackDirection);
-
-		Notify(AnimatorController.NotificationType.PlayerTookDamage);
-
-		stunTime = 1f;
-	}
-
-	private void AddDamage(int power) {
-		int newHitPercentage = hitPercentage + power;
-		UpdateHitPercentage(newHitPercentage);
-	}
-
-	private void OnHitPercentageChange(int oldHitPercentage, int newHitPercentage) {
-		UIManager.CanUpdateHitPercentage = true;
-	}
-
-	private void UpdateHitPercentage(int newHitPercentage) {
-		networkController.CmdUpdateHitPercentageOnServer(this, newHitPercentage);
-	}
-
-	private void PushAwayFrom(int attackDirection) {
-		// TODO: remove hard coded number
-		hitBox.AddForce(new Vector2(attackDirection * hitPercentage, hitPercentage / 3.5f), ForceMode2D.Impulse);
-	}
-
-
-	private bool AreAnyGamepadButtonsPressed() {
-		if (Gamepad.current == null) return false;
-
-		for (int i = 0; i < Gamepad.current.allControls.Count; i++) {
-			if (Gamepad.current.allControls[i].IsPressed()) return true;
-		}
-
-		return false;
+	private IEnumerator WaitForAttackAgain() {
+		yield return new WaitForSeconds(0.5f);
+		_canAttack = true;
 	}
 
 	private void OnOutOfWorldBounds() {
 		if (_canRespawn)
-			StartCoroutine(WaitAndRespawn(gameObject));
+			StartCoroutine(WaitAndRespawn());
 	}
 
-	private IEnumerator WaitAndRespawn(GameObject player) {
+	private IEnumerator WaitAndRespawn() {
 		_canRespawn = false;
 
-		player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-		player.GetComponent<PlayerController>().hitPercentage = 0;
+		GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		UpdateHitPercentage(0);
 		GameObject map = GameObject.FindWithTag("Map");
-		player.transform.position = (map != null ? map.GetComponent<Renderer>().bounds.center : Vector3.zero);
+		transform.position = (map != null ? map.GetComponent<Renderer>().bounds.center : Vector3.zero);
 
 		yield return new WaitForSeconds(1f);
-		// player.SetActive(true);
+		// gameObject.SetActive(true);
 		_canRespawn = true;
 	}
 
 	private void OnOutOfCameraLimits(bool outOfLimits) {
-		CmdHandleDataManagerOutOfLimitsDictionary(outOfLimits);
-	}
-
-	[Command(requiresAuthority = false)]
-	private void CmdHandleDataManagerOutOfLimitsDictionary(bool boolean) {
-		DataManager dataManager = GameObject.FindWithTag("Data").GetComponent<DataManager>();
-
-		if (isServer) {
-			if (dataManager.arePlayersOutOfLimits.ContainsKey(playerNumber))
-				ModifyDataManagerOutOfLimitsDictionary(dataManager, boolean);
-			else
-				AddToDataManagerOutOfLimitsDictionary(dataManager, boolean);
-
-			return;
-		}
-
-		if (dataManager.arePlayersOutOfLimits.ContainsKey(playerNumber))
-			CmdModifyDataManagerOutOfLimitsDictionary(dataManager, boolean);
-		else
-			CmdAddToDataManagerOutOfLimitsDictionary(dataManager, boolean);
-	}
-
-	private void AddToDataManagerOutOfLimitsDictionary(DataManager dataManager, bool boolean) {
-		dataManager.arePlayersOutOfLimits.Add(playerNumber, boolean);
-	}
-
-	private void ModifyDataManagerOutOfLimitsDictionary(DataManager dataManager, bool boolean) {
-		dataManager.arePlayersOutOfLimits[playerNumber] = boolean;
-	}
-
-	[Command(requiresAuthority = false)]
-	private void CmdAddToDataManagerOutOfLimitsDictionary(DataManager dataManager, bool boolean) {
-		dataManager.arePlayersOutOfLimits.Add(playerNumber, boolean);
-	}
-
-	[Command(requiresAuthority = false)]
-	private void CmdModifyDataManagerOutOfLimitsDictionary(DataManager dataManager, bool boolean) {
-		dataManager.arePlayersOutOfLimits[playerNumber] = boolean;
+		networkController.CmdHandleDataManagerOutOfLimitsDictionary(outOfLimits, playerNumber);
 	}
 
 	private void OnDrawGizmosSelected() {
-		if (attackPoint == null) return;
+		if (_attackPoint == null) return;
 
-		Gizmos.DrawWireCube(attackPoint.position, attack1Range);
-		Gizmos.DrawWireCube(attackPoint.position, attack2Range);
+		Gizmos.DrawWireCube(_attackPoint.position, _attack1Range);
+		Gizmos.DrawWireCube(_attackPoint.position, _attack2Range);
 	}
 }
