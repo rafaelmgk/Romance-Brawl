@@ -4,17 +4,36 @@ using UnityEngine.Events;
 using Mirror;
 
 public abstract class Physics : NetworkTransceiver {
-	public PlayerData playerData = new PlayerData();
-
-	[Tooltip("A mask determining what is ground to the character.")]
-	[SerializeField] private LayerMask groundLayerMask;
-
-	[Tooltip("A position marking where to check if the player is grounded.")]
-	[SerializeField] private Transform groundCheck;
-
 	protected event Action OutOfWorldBounds;
 	protected event Action<bool> OutOfCameraLimits;
 
+	[Header("Movement Settings")]
+	[Tooltip("The player running speed")]
+	[SerializeField] protected float runSpeed = 20f;
+
+	[Tooltip("How much to smooth out the movement")]
+	[Range(0, .3f)] [SerializeField] private float _movementSmoothing = .05f;
+
+	[Tooltip("Amount of force added when the player jumps")]
+	[SerializeField] private float _jumpForce = 400f;
+
+	[Tooltip("Whether or not a player can steer while jumping")]
+	[SerializeField] private bool _airControl = false;
+
+	[Tooltip("The percentage to decrease from speed when crouching")]
+	[Range(0, 1)] [SerializeField] private float _crouchSpeed = .36f;
+
+	[Header("Ground Settings")]
+	[Space]
+	[Tooltip("A mask determining what is ground to the character")]
+	[SerializeField] private LayerMask _groundLayerMask;
+
+	[Tooltip("A position marking where to check if the player is grounded")]
+	[SerializeField] private Transform _groundCheck;
+
+	[Header("Components Reference")]
+	[Space]
+	[Tooltip("The player rigidbody")]
 	[SerializeField] private Rigidbody2D _rigidbody2D;
 
 	private const float _GROUND_CHECK_RADIUS = .2f;
@@ -27,7 +46,6 @@ public abstract class Physics : NetworkTransceiver {
 	private bool _isFacingRight = true;
 	private WorldData _worldData;
 
-
 	private void FixedUpdate() {
 		OnLanding();
 		OnGround();
@@ -38,12 +56,12 @@ public abstract class Physics : NetworkTransceiver {
 	}
 
 	protected void Move(float move, bool crouch) {
-		if (_isGrounded || playerData.airControl) {
+		if (_isGrounded || _airControl) {
 			if (crouch)
-				move *= playerData.crouchSpeed;
+				move *= _crouchSpeed;
 
 			// TODO: remove hard coded number
-			SmoothVelocity(new Vector2(move * Time.fixedDeltaTime * 10f, _rigidbody2D.velocity.y));
+			SmoothVelocity(new Vector2(move * runSpeed * Time.fixedDeltaTime * 10f, _rigidbody2D.velocity.y));
 
 			if (move != 0)
 				AssignIsFacingRight(move > 0);
@@ -53,7 +71,7 @@ public abstract class Physics : NetworkTransceiver {
 	protected void DoJump() {
 		if (_extraJumps > 0) {
 			_rigidbody2D.velocity = Vector2.zero;
-			_rigidbody2D.AddForce(new Vector2(0f, playerData.jumpForce));
+			_rigidbody2D.AddForce(new Vector2(0f, _jumpForce));
 
 			_extraJumps--;
 		}
@@ -71,8 +89,7 @@ public abstract class Physics : NetworkTransceiver {
 	}
 
 	private void SmoothVelocity(Vector2 targetVelocity) {
-		_rigidbody2D.velocity = Vector2.SmoothDamp(_rigidbody2D.velocity, targetVelocity, ref _velocity,
-			playerData.movementSmoothing);
+		_rigidbody2D.velocity = Vector2.SmoothDamp(_rigidbody2D.velocity, targetVelocity, ref _velocity, _movementSmoothing);
 	}
 
 	private void AssignIsFacingRight(bool isFacingRight) {
@@ -89,7 +106,7 @@ public abstract class Physics : NetworkTransceiver {
 	}
 
 	private void OnGround() {
-		_isGrounded = Physics2D.OverlapCircle(groundCheck.position, _GROUND_CHECK_RADIUS, groundLayerMask);
+		_isGrounded = Physics2D.OverlapCircle(_groundCheck.position, _GROUND_CHECK_RADIUS, _groundLayerMask);
 
 		if (_isGrounded)
 			RechargeJumps();

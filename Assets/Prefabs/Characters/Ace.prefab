@@ -203,31 +203,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  playerData:
-    jumpForce: 400
-    crouchSpeed: 0
-    movementSmoothing: 0.05
-    airControl: 1
-  groundLayerMask:
+  runSpeed: 20
+  _movementSmoothing: 0.05
+  _jumpForce: 400
+  _airControl: 1
+  _crouchSpeed: 0.36
+  _groundLayerMask:
     serializedVersion: 2
     m_Bits: 384
-  groundCheck: {fileID: 7074083855439903602}
+  _groundCheck: {fileID: 7074083855439903602}
   _rigidbody2D: {fileID: 6729560697246243761}
-  _runSpeed: 20
-  _attackPoint: {fileID: 8304542415087038332}
-  _attack1Range: {x: 0.34, y: 0.38}
-  _attack2Range: {x: 0.58, y: 0.61}
+  networkController: {fileID: -4636072495843866953}
+  _transceivers:
+  - {fileID: 1117334914639432146}
   _enemyLayers:
     serializedVersion: 2
     m_Bits: 8
-  networkController: {fileID: -4636072495843866953}
+  _attackPoint: {fileID: 8304542415087038332}
+  _attack1Range: {x: 0.45, y: 0.34}
+  _attack2Range: {x: 0.7, y: 0.68}
   _atk1Power: 3
   _atk2Power: 6
-  hitPercentage: 0
-  health: 0
-  playerNumber: 0
-  _transceivers:
-  - {fileID: 1117334914639432146}
 --- !u!114 &-4636072495843866953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +238,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  hitPercentage: 0
+  health: 0
+  playerNumber: 0
 --- !u!50 &6729560697246243761
 Rigidbody2D:
   serializedVersion: 4
@@ -553,7 +552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7074083855439903602}
   m_Layer: 3
-  m_Name: GroundCheck
+  m_Name: Ground Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -583,7 +582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8304542415087038332}
   m_Layer: 3
-  m_Name: AttackPoint
+  m_Name: Attack Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

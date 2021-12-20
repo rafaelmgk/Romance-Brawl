@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Mirror;
 
-public abstract class PlayerController : Physics { // TODO: put common data in PlayerData and create a new NetworkData
+public abstract class PlayerController : Physics {
 	public enum NotificationType {
 		PlayerMoved,
 		PlayerJumped,
@@ -16,22 +16,29 @@ public abstract class PlayerController : Physics { // TODO: put common data in P
 
 	public NetworkController networkController;
 
-	[SyncVar(hook = nameof(OnHitPercentageChange))] public int hitPercentage = 0;
-	[SyncVar] public int health = 0;
-	[SyncVar] public int playerNumber;
-
+	[Tooltip("List of transceivers (observers) to send events")]
 	[SerializeField] private List<Transceiver> _transceivers = new List<Transceiver>();
-	[SerializeField] private Transform _attackPoint;
-	[SerializeField] private Vector2 _attack1Range;
-	[SerializeField] private Vector2 _attack2Range;
-	[SerializeField] private LayerMask _enemyLayers;
 
+	[Header("Attack Settings")]
+	[Tooltip("The mask layer to determine whom the attack will collide")]
+	[SerializeField] private LayerMask _enemyLayers; // TODO: change 'enemy' to 'player'
+
+	[Tooltip("The base position where the range attack will be calculated from")]
+	[SerializeField] private Transform _attackPoint; // TODO: create an Attack class
+
+	[Tooltip("The range/hitbox of the 1st attack")]
+	[SerializeField] private Vector2 _attack1Range;
+
+	[Tooltip("The range/hitbox of the 2nd attack")]
+	[SerializeField] private Vector2 _attack2Range;
+
+	[Tooltip("The damage dealt on the 1st attack")]
 	[SerializeField] private int _atk1Power;
+
+	[Tooltip("The damage dealt on the 2nd attack")]
 	[SerializeField] private int _atk2Power;
-	[SerializeField] private float _runSpeed = 10f;
 
 	private Vector2 _movementVector;
-	private float _horizontalMove = 0f;
 	private float _stunTime = 0f;
 	private float _stunTimer = 1f;
 	private int _attackDirection;
@@ -79,14 +86,42 @@ public abstract class PlayerController : Physics { // TODO: put common data in P
 
 		AssignAttackDirection();
 
-		_horizontalMove = _movementVector.x * _runSpeed;
 		// TODO: Move only when receive an move input event
 		if ((Keyboard.current.anyKey.IsPressed() || AreAnyGamepadButtonsPressed()) && !_crouch && _stunTime == 0)
-			Move(_horizontalMove, _crouch);
+			Move(_movementVector.x, _crouch);
 
-		Notify(AnimatorController.NotificationType.SpeedChanged, _horizontalMove);
+		// TODO: remove this runSpeed dependency
+		Notify(AnimatorController.NotificationType.SpeedChanged, _movementVector.x * runSpeed);
 
 		HandleStun();
+	}
+
+	public override void OnNotify(Enum notificationType, object actionParams = null) {
+		CallAction(notificationType, actionParams);
+	}
+
+	public override bool IsNotificationTypeValid(Enum notificationType) {
+		if (notificationType.GetType() == typeof(NotificationType))
+			return true;
+
+		return false;
+	}
+
+	public override void Notify(Enum notificationType, object actionParams = null) {
+		foreach (Transceiver transceiver in _transceivers)
+			transceiver.OnNotify(notificationType, actionParams);
+	}
+
+	public void TakeDamage(int attackDirection, int power) {
+		if (_crouch)
+			return;
+
+		AddDamage(power);
+		BeThrown(attackDirection, networkController.hitPercentage);
+
+		Notify(AnimatorController.NotificationType.PlayerTookDamage);
+
+		_stunTime = 1f;
 	}
 
 	private void AssignAttackDirection() {
@@ -112,45 +147,13 @@ public abstract class PlayerController : Physics { // TODO: put common data in P
 		}
 	}
 
-	public override void OnNotify(Enum notificationType, object actionParams = null) {
-		CallAction(notificationType, actionParams);
-	}
-
-	public override bool IsNotificationTypeValid(Enum notificationType) {
-		if (notificationType.GetType() == typeof(NotificationType))
-			return true;
-
-		return false;
-	}
-
-	public override void Notify(Enum notificationType, object actionParams = null) {
-		foreach (Transceiver transceiver in _transceivers)
-			transceiver.OnNotify(notificationType, actionParams);
-	}
-
-	public void TakeDamage(int attackDirection, int power) {
-		if (_crouch)
-			return;
-
-		AddDamage(power);
-		BeThrown(attackDirection, hitPercentage);
-
-		Notify(AnimatorController.NotificationType.PlayerTookDamage);
-
-		_stunTime = 1f;
-	}
-
 	private void AddDamage(int power) {
-		int newHitPercentage = hitPercentage + power;
+		int newHitPercentage = networkController.hitPercentage + power;
 		UpdateHitPercentage(newHitPercentage);
 	}
 
 	private void UpdateHitPercentage(int newHitPercentage) {
-		networkController.CmdUpdateHitPercentageOnServer(this, newHitPercentage);
-	}
-
-	private void OnHitPercentageChange(int oldHitPercentage, int newHitPercentage) {
-		UIManager.CanUpdateHitPercentage = true;
+		networkController.CmdUpdateHitPercentageOnServer(newHitPercentage);
 	}
 
 	private void OnPlayerMoved(InputAction.CallbackContext context) {
@@ -271,7 +274,7 @@ public abstract class PlayerController : Physics { // TODO: put common data in P
 	}
 
 	private void OnOutOfCameraLimits(bool outOfLimits) {
-		networkController.CmdHandleDataManagerOutOfLimitsDictionary(outOfLimits, playerNumber);
+		networkController.CmdHandleDataManagerOutOfLimitsDictionary(outOfLimits, networkController.playerNumber);
 	}
 
 	private void OnDrawGizmosSelected() {

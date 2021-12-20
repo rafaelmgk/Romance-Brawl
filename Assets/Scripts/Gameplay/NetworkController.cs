@@ -5,10 +5,18 @@ using UnityEngine;
 using Mirror;
 
 public class NetworkController : NetworkBehaviour {
+	[Header("Network Data")]
+	[SyncVar(hook = nameof(OnHitPercentageChange))] public int hitPercentage = 0;
+	[SyncVar] public int health = 0;
+	[SyncVar] public int playerNumber;
+
+	public void OnHitPercentageChange(int oldHitPercentage, int newHitPercentage) {
+		UIManager.CanUpdateHitPercentage = true;
+	}
 
 	[Command(requiresAuthority = false)]
-	public void CmdUpdateHitPercentageOnServer(PlayerController player, int newHitPercentage) {
-		player.hitPercentage = newHitPercentage;
+	public void CmdUpdateHitPercentageOnServer(int newHitPercentage) {
+		hitPercentage = newHitPercentage;
 	}
 
 	[Command(requiresAuthority = false)]
