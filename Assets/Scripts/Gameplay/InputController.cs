@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class InputController : MonoBehaviour, ITransmitter {
-	[SerializeField] private NetworkTransceiver transceiver;
+	[SerializeField] private Transceiver transceiver;
 
 	private PlayerInput _playerInput;
 

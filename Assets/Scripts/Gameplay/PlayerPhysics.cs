@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Mirror;
 
-public abstract class Physics : NetworkTransceiver {
+public abstract class PlayerPhysics : Transceiver {
 	protected event Action OutOfWorldBounds;
 	protected event Action<bool> OutOfCameraLimits;
 

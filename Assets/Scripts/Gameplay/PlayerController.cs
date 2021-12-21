@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Mirror;
 
-public abstract class PlayerController : Physics {
+public abstract class PlayerController : PlayerPhysics {
 	public enum NotificationType {
 		PlayerMoved,
 		PlayerJumped,
@@ -45,6 +45,7 @@ public abstract class PlayerController : Physics {
 	private bool _crouch = false;
 	private bool _canAttack = true;
 	private bool _canRespawn = true;
+	private bool _canMove = false;
 
 	private void OnEnable() {
 		OutOfWorldBounds += OnOutOfWorldBounds;
@@ -75,23 +76,9 @@ public abstract class PlayerController : Physics {
 		);
 	}
 
-	private void Start() {
-		if (!isLocalPlayer)
-			Destroy(transform.GetChild(3).gameObject); // TODO: change this
-	}
-
-	// TODO: remove this update and change this script to MonoBehaviour
 	private void Update() {
-		if (!isLocalPlayer) return;
-
-		AssignAttackDirection();
-
-		// TODO: Move only when receive an move input event
-		if ((Keyboard.current.anyKey.IsPressed() || AreAnyGamepadButtonsPressed()) && !_crouch && _stunTime == 0)
+		if (_canMove)
 			Move(_movementVector.x, _crouch);
-
-		// TODO: remove this runSpeed dependency
-		Notify(AnimatorController.NotificationType.SpeedChanged, _movementVector.x * runSpeed);
 
 		HandleStun();
 	}
@@ -129,15 +116,15 @@ public abstract class PlayerController : Physics {
 			_attackDirection = (int)_movementVector.x;
 	}
 
-	private bool AreAnyGamepadButtonsPressed() {
-		if (Gamepad.current == null) return false;
+	// private bool AreAnyGamepadButtonsPressed() {
+	// 	if (Gamepad.current == null) return false;
 
-		for (int i = 0; i < Gamepad.current.allControls.Count; i++) {
-			if (Gamepad.current.allControls[i].IsPressed()) return true;
-		}
+	// 	for (int i = 0; i < Gamepad.current.allControls.Count; i++) {
+	// 		if (Gamepad.current.allControls[i].IsPressed()) return true;
+	// 	}
 
-		return false;
-	}
+	// 	return false;
+	// }
 
 	private void HandleStun() {
 		if (_stunTime > 0) {
@@ -157,16 +144,26 @@ public abstract class PlayerController : Physics {
 	}
 
 	private void OnPlayerMoved(InputAction.CallbackContext context) {
-		// if (!isLocalPlayer) return;
-
 		_movementVector = context.ReadValue<Vector2>();
 		if (Gamepad.current != null)
 			_movementVector = DigitalizeVector2(_movementVector);
 
-		if ((context.started || context.performed) && _movementVector.y < 0f)
-			Crouch(true);
-		if (context.canceled || _movementVector.y >= 0f)
-			Crouch(false);
+		AssignAttackDirection();
+
+		// TODO: refactor this
+		if (context.started || context.performed) {
+			_canMove = true;
+			if (_movementVector.y < 0f)
+				Crouch(true);
+		}
+		if (context.canceled) {
+			_canMove = false;
+			if (_movementVector.y >= 0f)
+				Crouch(false);
+		}
+
+		// TODO: remove this runSpeed dependency
+		Notify(AnimatorController.NotificationType.SpeedChanged, _movementVector.x * runSpeed);
 	}
 
 	private Vector2 DigitalizeVector2(Vector2 vec) {
@@ -196,8 +193,6 @@ public abstract class PlayerController : Physics {
 	}
 
 	private void OnPlayerJumped(InputAction.CallbackContext context) {
-		// if (!isLocalPlayer) return;
-
 		if (context.started && _stunTime == 0)
 			IgnorePlatformCollisionAndJump();
 		else if (context.canceled)
@@ -217,8 +212,6 @@ public abstract class PlayerController : Physics {
 
 	// TODO: remove this method repetition
 	private void OnPlayerBasicAttacked(InputAction.CallbackContext context) {
-		// if (!isLocalPlayer) return;
-
 		if (context.started && _canAttack && !_crouch) {
 			Attack(_attackPoint, _attack1Range, "Attack", _atk1Power);
 			StartCoroutine(WaitForAttackAgain());
@@ -226,8 +219,6 @@ public abstract class PlayerController : Physics {
 	}
 
 	private void OnPlayerStrongAttacked(InputAction.CallbackContext context) {
-		// if (!isLocalPlayer) return;
-
 		if (context.started && _canAttack && !_crouch) {
 			Attack(_attackPoint, _attack2Range, "Attack2", _atk2Power);
 			StartCoroutine(WaitForAttackAgain());
@@ -242,12 +233,12 @@ public abstract class PlayerController : Physics {
 		Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, attackRange, 0, _enemyLayers);
 		foreach (Collider2D enemy in hitEnemies) {
 			if (enemy != gameObject.GetComponent<Collider2D>())
-				AskServerForTakeDamage(enemy.gameObject.GetComponent<PlayerController>(), _attackDirection, attackPower);
+				AskServerForTakeDamage(enemy.gameObject.GetComponent<NetworkController>(), _attackDirection, attackPower);
 		}
 	}
 
-	private void AskServerForTakeDamage(PlayerController enemy, int attackDirection, int firstAtkPower) {
-		enemy.networkController.CmdAskServerForTakeDamage(enemy, attackDirection, firstAtkPower);
+	private void AskServerForTakeDamage(NetworkController enemy, int attackDirection, int firstAtkPower) {
+		enemy.CmdAskServerForTakeDamage(enemy, attackDirection, firstAtkPower);
 	}
 
 	private IEnumerator WaitForAttackAgain() {

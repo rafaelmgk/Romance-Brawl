@@ -10,6 +10,12 @@ public class NetworkController : NetworkBehaviour {
 	[SyncVar] public int health = 0;
 	[SyncVar] public int playerNumber;
 
+	// TODO: refactor how this is working
+	private void Start() {
+		if (!isLocalPlayer)
+			Destroy(transform.GetChild(3).gameObject);
+	}
+
 	public void OnHitPercentageChange(int oldHitPercentage, int newHitPercentage) {
 		UIManager.CanUpdateHitPercentage = true;
 	}
@@ -20,8 +26,8 @@ public class NetworkController : NetworkBehaviour {
 	}
 
 	[Command(requiresAuthority = false)]
-	public void CmdAskServerForTakeDamage(PlayerController enemy, int attackDirection, int power) {
-		enemy.networkController.TrgtTakeDamage(enemy.gameObject.GetComponent<NetworkIdentity>().connectionToClient,
+	public void CmdAskServerForTakeDamage(NetworkController enemy, int attackDirection, int power) {
+		enemy.TrgtTakeDamage(enemy.gameObject.GetComponent<NetworkIdentity>().connectionToClient,
 			attackDirection, power);
 	}
 
