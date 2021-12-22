@@ -5,6 +5,7 @@ using Mirror;
 
 public class MiniCam : MonoBehaviour {
 	[SerializeField] Transform miniCamPosition;
+
 	Vector3 offset;
 	public GameObject[] respawns;
 	private void Awake() {

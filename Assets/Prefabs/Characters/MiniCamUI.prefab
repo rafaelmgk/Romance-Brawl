@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3169657022136740617}
   m_Layer: 5
   m_Name: MiniCamUI
-  m_TagString: MiniCamUI
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,10 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653e7482b28d7ef4ca2ec9865140ef36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMin: 0
-  xMax: 9
-  yMin: -3
-  yMax: 4
+  player: {fileID: 0}
 --- !u!1 &4981286643290476198
 GameObject:
   m_ObjectHideFlags: 0

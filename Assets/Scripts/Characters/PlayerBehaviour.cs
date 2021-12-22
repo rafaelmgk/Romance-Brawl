@@ -82,7 +82,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	private void Start() {
 		if (!isLocalPlayer) {
 			Destroy(GetComponent<PlayerInput>());
-			Destroy(miniCamObject);
+			//Destroy(miniCamObject);
 		} else
 			GetComponent<PlayerInput>().enabled = true;
 	}

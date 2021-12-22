@@ -570,6 +570,10 @@ PrefabInstance:
       value: MiniCamera
       objectReference: {fileID: 0}
     - target: {fileID: 3009070467969878094, guid: 87361cc683a418842adec739077c9164, type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 2156e1b07e659a940a070b78e2d8fe19, type: 2}
+    - target: {fileID: 3009070467969878094, guid: 87361cc683a418842adec739077c9164, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
       value: 1
       objectReference: {fileID: 0}
@@ -591,6 +595,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1720734485633453343}
     m_Modifications:
+    - target: {fileID: 3169657022136740617, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1720734485633453343}
     - target: {fileID: 4981286642358916883, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
       propertyPath: m_Name
       value: MiniCamUI

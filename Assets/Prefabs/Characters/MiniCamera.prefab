@@ -65,7 +65,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: 2156e1b07e659a940a070b78e2d8fe19, type: 2}
+  m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -88,4 +88,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miniCamPosition: {fileID: 0}
+  miniCamTest: {fileID: 3009070467969878094}
   respawns: []
