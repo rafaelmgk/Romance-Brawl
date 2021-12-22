@@ -164,8 +164,7 @@ public abstract class PlayerPhysics : Transceiver {
 	}
 
 	private void ChangeOutOfCameraLimits(bool newState) {
-		// Without this condition the event would be fired a few times
-		// instead of one, flickering the camera
+		// Without this condition the event would be fired a few times instead of one, flickering the camera
 		if (_isOutOfCameraLimits != newState) {
 			_isOutOfCameraLimits = newState;
 			OutOfCameraLimits?.Invoke(newState);

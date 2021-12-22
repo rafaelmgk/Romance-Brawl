@@ -144,6 +144,7 @@ public abstract class PlayerController : PlayerPhysics {
 	}
 
 	private void OnPlayerMoved(InputAction.CallbackContext context) {
+		// TODO: relocate input methods to input controller
 		_movementVector = context.ReadValue<Vector2>();
 		if (Gamepad.current != null)
 			_movementVector = DigitalizeVector2(_movementVector);
