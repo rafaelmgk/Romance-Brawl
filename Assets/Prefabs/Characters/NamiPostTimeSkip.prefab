@@ -631,7 +631,11 @@ PrefabInstance:
       objectReference: {fileID: 8400000, guid: 08dac58808351374d885a6bc69d1126a, type: 2}
     - target: {fileID: 4981286643290476198, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
       propertyPath: m_TagString
-      value: MiniCamUI
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4981286643290476198, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5583652960499414125, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
       propertyPath: m_AssetId
@@ -654,6 +658,17 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 4981286642358916880, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
   m_PrefabInstance: {fileID: 320227703944712469}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4706464646816014257 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4981286643290476196, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
+  m_PrefabInstance: {fileID: 320227703944712469}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5933147945353477892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -661,6 +676,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1720734485633453343}
     m_Modifications:
+    - target: {fileID: -6448752446455580293, guid: 87361cc683a418842adec739077c9164, type: 3}
+      propertyPath: rt
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -6448752446455580293, guid: 87361cc683a418842adec739077c9164, type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 4706464646816014257}
+    - target: {fileID: -6448752446455580293, guid: 87361cc683a418842adec739077c9164, type: 3}
+      propertyPath: miniCam
+      value: 
+      objectReference: {fileID: 8904913040283498314}
     - target: {fileID: -6448752446455580293, guid: 87361cc683a418842adec739077c9164, type: 3}
       propertyPath: miniCamPosition
       value: 
@@ -675,7 +702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3009070467969878081, guid: 87361cc683a418842adec739077c9164, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.47
+      value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: 3009070467969878081, guid: 87361cc683a418842adec739077c9164, type: 3}
       propertyPath: m_LocalPosition.z
@@ -713,6 +740,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 3009070467969878092, guid: 87361cc683a418842adec739077c9164, type: 3}
+      propertyPath: m_TagString
+      value: MiniCam
+      objectReference: {fileID: 0}
     - target: {fileID: 3009070467969878094, guid: 87361cc683a418842adec739077c9164, type: 3}
       propertyPath: m_TargetTexture
       value: 
@@ -722,5 +753,10 @@ PrefabInstance:
 --- !u!4 &8904913040283498309 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3009070467969878081, guid: 87361cc683a418842adec739077c9164, type: 3}
+  m_PrefabInstance: {fileID: 5933147945353477892}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &8904913040283498314 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3009070467969878094, guid: 87361cc683a418842adec739077c9164, type: 3}
   m_PrefabInstance: {fileID: 5933147945353477892}
   m_PrefabAsset: {fileID: 0}

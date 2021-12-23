@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -6448752446455580293}
   m_Layer: 0
   m_Name: MiniCamera
-  m_TagString: Untagged
+  m_TagString: MiniCam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,5 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miniCamPosition: {fileID: 0}
-  miniCamTest: {fileID: 3009070467969878094}
+  image: {fileID: 0}
+  miniCam: {fileID: 0}
+  rt: {fileID: 0}
   respawns: []

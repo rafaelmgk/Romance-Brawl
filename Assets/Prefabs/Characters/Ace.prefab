@@ -518,6 +518,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 1720734485633453343}
     m_Modifications:
     - target: {fileID: -6448752446455580293, guid: 87361cc683a418842adec739077c9164, type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 2072583668321228258}
+    - target: {fileID: -6448752446455580293, guid: 87361cc683a418842adec739077c9164, type: 3}
+      propertyPath: miniCam
+      value: 
+      objectReference: {fileID: 9063479251786653471}
+    - target: {fileID: -6448752446455580293, guid: 87361cc683a418842adec739077c9164, type: 3}
       propertyPath: miniCamPosition
       value: 
       objectReference: {fileID: 1720734485633453343}
@@ -586,6 +594,11 @@ PrefabInstance:
 --- !u!4 &9063479251786653456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3009070467969878081, guid: 87361cc683a418842adec739077c9164, type: 3}
+  m_PrefabInstance: {fileID: 6054438780409698129}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &9063479251786653471 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3009070467969878094, guid: 87361cc683a418842adec739077c9164, type: 3}
   m_PrefabInstance: {fileID: 6054438780409698129}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6476842649342581574
@@ -704,3 +717,14 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 4981286642358916880, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
   m_PrefabInstance: {fileID: 6476842649342581574}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2072583668321228258 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4981286643290476196, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
+  m_PrefabInstance: {fileID: 6476842649342581574}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
