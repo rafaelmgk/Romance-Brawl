@@ -45,14 +45,12 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 			}
 		}
 	}
-	private bool _amIOutOfLimit = false;
+	public bool _amIOutOfLimit = false;
 
 	private Vector2 _movementVector;
 	[Range(0, 1)] private float stunTime = 0f;
 	[Range(0, 1)] private float stunTimer = 1f;
-
-	private bool updateMiniCam = true;
-	[SerializeField] private Canvas miniCam;
+	public Canvas miniCam;
 	[SerializeField] private Object miniCamObject;
 
 	// private PlayerInput playerInput;
@@ -155,11 +153,7 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 	void Update() {
 		if (!isLocalPlayer) return;
 		AttackDirection();
-		AmIOutOfMiniLimits();
-		if (updateMiniCam == true) {
-			GameObject.FindGameObjectsWithTag("MiniCam")[0].GetComponent<MiniCam>().SetMiniCam(playerNumber - 1);
-			updateMiniCam = false;
-		}
+		//AmIOutOfMiniLimits();
 		int crouchModifier = 1;
 		if (crouch)
 			crouchModifier = 0;
@@ -338,13 +332,15 @@ public abstract class PlayerBehaviour : NetworkBehaviour {
 		Gizmos.DrawWireCube(attackPoint.position, attack1Range);
 		Gizmos.DrawWireCube(attackPoint.position, attack2Range);
 	}
-	private void AmIOutOfMiniLimits() {
-		if (_amIOutOfLimit == true) {
-			miniCam.enabled = true;
-		}
 
-		if (_amIOutOfLimit == false) {
-			miniCam.enabled = false;
-		}
-	}
+	//[Command(requiresAuthority = false)]
+	//private void AmIOutOfMiniLimits() {
+	//if (_amIOutOfLimit == true) {
+	//miniCam.enabled = true;
+	//}
+
+	//if (_amIOutOfLimit == false) {
+	//miniCam.enabled = false;
+	//}
+	//}
 }

@@ -9,6 +9,7 @@ public class MiniCam : MonoBehaviour {
 	public RawImage image;
 	public Camera miniCam;
 	public RenderTexture rt;
+	private Quaternion my_rotation;
 
 
 	Vector3 offset;
@@ -17,15 +18,14 @@ public class MiniCam : MonoBehaviour {
 		offset = transform.position - miniCamPosition.position;
 	}
 	private void Start() {
+		my_rotation = this.transform.rotation;
 		CreateRenderTexture();
 	}
 	void Update() {
 		respawns = GameObject.FindGameObjectsWithTag("Player");
 		miniCam.targetTexture = rt;
 		image.texture = rt;
-	}
-	public void SetMiniCam(int PlayerNumber) {
-		//miniCamPosition = respawns[PlayerNumber].GetComponent<MiniCamUIDestroyer>().characterposition;
+		this.transform.rotation = my_rotation;
 	}
 
 

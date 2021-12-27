@@ -9,14 +9,18 @@ public class MiniCamClamp : MonoBehaviour {
 	float yMax = 0f;
 
 	public Transform player;
+	private Quaternion my_rotation;
 
 	void Start() {
-
+		my_rotation = this.transform.rotation;
+	}
+	private void Update() {
+		this.transform.rotation = my_rotation;
 	}
 
 	// Update is called once per frame
 	void LateUpdate() {
-		transform.rotation = transform.rotation;
+
 		Vector3 pos = player.transform.position;
 		pos.x = Mathf.Clamp(pos.x, xMin, xMax);
 		pos.y = Mathf.Clamp(pos.y, yMin, yMax);
