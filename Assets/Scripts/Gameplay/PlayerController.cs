@@ -152,7 +152,6 @@ public class PlayerController : PlayerPhysics {
 			IgnorePlatformCollision(false);
 	}
 
-	// TODO: remove this method repetition
 	private void OnPlayerAttacked(Attack.AttackInput atkInput) {
 		if (atkInput.context.started && _canAttack && !_crouch) {
 			Attack(_attacks[atkInput.attackIndex]);
