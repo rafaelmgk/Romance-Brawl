@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Transceiver : MonoBehaviour, ITransmitter, IReceiver {
-	public abstract void OnNotify(Enum notificationType, object actionParams = null);
+	[Header("Components Reference")]
+	[SerializeField] private EventsManager _eventsManager;
 
 	public abstract bool IsNotificationTypeValid(Enum notificationType);
 
-	// The transceiver is obligated to receive, but can choose to transmit
-	public virtual void Notify(Enum notificationType, object actionParams = null) { }
+	public virtual void OnNotify(Enum notificationType, object actionParams = null) {
+		CallAction(notificationType, actionParams);
+	}
+
+	public virtual void Notify(Enum notificationType, object actionParams = null) {
+		_eventsManager.OnNotify(notificationType, actionParams);
+	}
 
 	private Dictionary<Enum, Action<object>> _ActionsByEnum = new Dictionary<Enum, Action<object>>();
 

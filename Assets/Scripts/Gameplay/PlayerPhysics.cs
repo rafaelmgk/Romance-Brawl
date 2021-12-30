@@ -4,8 +4,7 @@ using UnityEngine.Events;
 using Mirror;
 
 public abstract class PlayerPhysics : Transceiver {
-	protected event Action OutOfWorldBounds;
-	protected event Action<bool> OutOfCameraLimits;
+	[SerializeField] private Rigidbody2D _rigidbody2D;
 
 	[Header("Movement Settings")]
 	[Tooltip("The player running speed")]
@@ -30,11 +29,6 @@ public abstract class PlayerPhysics : Transceiver {
 
 	[Tooltip("A position marking where to check if the player is grounded")]
 	[SerializeField] private Transform _groundCheck;
-
-	[Header("Components Reference")]
-	[Space]
-	[Tooltip("The player rigidbody")]
-	[SerializeField] private Rigidbody2D _rigidbody2D;
 
 	private const float _GROUND_CHECK_RADIUS = .2f;
 
@@ -68,10 +62,12 @@ public abstract class PlayerPhysics : Transceiver {
 		}
 	}
 
-	protected void DoJump() {
+	protected void Jump() {
 		if (_extraJumps > 0) {
 			_rigidbody2D.velocity = Vector2.zero;
 			_rigidbody2D.AddForce(new Vector2(0f, _jumpForce));
+
+			NotifyJump(true);
 
 			_extraJumps--;
 		}
@@ -88,6 +84,14 @@ public abstract class PlayerPhysics : Transceiver {
 		_rigidbody2D.AddForce(new Vector2(attackDirection * hitPercentage, hitPercentage / 3.5f), ForceMode2D.Impulse);
 	}
 
+	protected void IgnorePlatformCollision(bool ignore = true) {
+		Physics2D.IgnoreLayerCollision(3, 8, ignore);
+	}
+
+	private void NotifyJump(bool jumpState) {
+		Notify(AnimatorController.NotificationType.JumpChanged, jumpState);
+	}
+
 	private void SmoothVelocity(Vector2 targetVelocity) {
 		_rigidbody2D.velocity = Vector2.SmoothDamp(_rigidbody2D.velocity, targetVelocity, ref _velocity, _movementSmoothing);
 	}
@@ -99,7 +103,7 @@ public abstract class PlayerPhysics : Transceiver {
 	private void OnLanding() {
 		if (_airTime > 0 && _isGrounded == true) {
 			_extraJumps = 1;
-			// player.InvokeJumpEvent(false);
+			NotifyJump(false);
 
 			_airTime = 0;
 		}
@@ -126,7 +130,7 @@ public abstract class PlayerPhysics : Transceiver {
 
 		if (IsPositionSquaredOutside(worldBounds.leftBound, worldBounds.rightBound,
 			worldBounds.downBound, worldBounds.upBound))
-			OutOfWorldBounds?.Invoke();
+			Notify(PlayerController.NotificationType.OutOfWorldBounds);
 	}
 
 	private WorldData.WorldBounds FindWorldBounds(WorldData worldData) {
@@ -167,7 +171,7 @@ public abstract class PlayerPhysics : Transceiver {
 		// Without this condition the event would be fired a few times instead of one, flickering the camera
 		if (_isOutOfCameraLimits != newState) {
 			_isOutOfCameraLimits = newState;
-			OutOfCameraLimits?.Invoke(newState);
+			Notify(PlayerController.NotificationType.OutOfCameraLimits, newState);
 		}
 	}
 }

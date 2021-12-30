@@ -35,10 +35,6 @@ public class AnimatorController : Transceiver {
 		);
 	}
 
-	public override void OnNotify(Enum notificationType, object actionParams = null) {
-		CallAction(notificationType, actionParams);
-	}
-
 	public override bool IsNotificationTypeValid(Enum notificationType) {
 		if (notificationType.GetType() == typeof(NotificationType))
 			return true;

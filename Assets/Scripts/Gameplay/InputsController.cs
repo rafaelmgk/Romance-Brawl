@@ -4,10 +4,23 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InputsController : MonoBehaviour, ITransmitter {
-	[SerializeField] private Transceiver transceiver;
-
+public class InputsController : Transceiver {
 	private PlayerInput _playerInput;
+
+	public static Vector2 DigitalizeVector2(Vector2 vec) {
+		Vector2 vec2 = Vector2.zero;
+
+		if (vec.x < -.5f)
+			vec2.x = -1;
+		if (vec.x > .5f)
+			vec2.x = 1;
+		if (vec.y < -.5f)
+			vec2.y = -1;
+		if (vec.y > .5f)
+			vec2.y = 1;
+
+		return vec2;
+	}
 
 	private void Start() {
 		_playerInput = GetComponent<PlayerInput>();
@@ -15,8 +28,8 @@ public class InputsController : MonoBehaviour, ITransmitter {
 		_playerInput.SwitchCurrentControlScheme(_playerInput.defaultControlScheme);
 	}
 
-	public void Notify(Enum notificationType, object actionParams = null) {
-		transceiver.OnNotify(notificationType, actionParams);
+	public override bool IsNotificationTypeValid(Enum notificationType) {
+		return false; // InputsController only sends events, it shouldn't receive
 	}
 
 	public void Movement(InputAction.CallbackContext context) {
@@ -28,10 +41,10 @@ public class InputsController : MonoBehaviour, ITransmitter {
 	}
 
 	public void BasicAtk(InputAction.CallbackContext context) {
-		Notify(PlayerController.NotificationType.PlayerBasicAttacked, context);
+		Notify(PlayerController.NotificationType.PlayerAttacked, new Attack.AttackInput(context, 0));
 	}
 
 	public void StrongAtk(InputAction.CallbackContext context) {
-		Notify(PlayerController.NotificationType.PlayerStrongAttacked, context);
+		Notify(PlayerController.NotificationType.PlayerAttacked, new Attack.AttackInput(context, 1));
 	}
 }
