@@ -12,7 +12,8 @@ public class PlayerController : PlayerPhysics {
 		PlayerJumped,
 		PlayerAttacked,
 		OutOfWorldBounds,
-		OutOfCameraLimits
+		OutOfCameraLimits,
+		PlayerFlipped
 	}
 
 	public NetworkController networkController;
@@ -48,11 +49,15 @@ public class PlayerController : PlayerPhysics {
 		);
 		RegisterAction(
 			NotificationType.OutOfWorldBounds,
-			(obj) => OnOutOfWorldBounds()
+			(any) => OnOutOfWorldBounds()
 		);
 		RegisterAction(
 			NotificationType.OutOfCameraLimits,
-			(newState) => OnOutOfCameraLimits((bool)newState)
+			(outOfLimits) => networkController.CmdHandleDataManagerOutOfLimitsDictionary((bool)outOfLimits, networkController.playerNumber)
+		);
+		RegisterAction(
+			NotificationType.PlayerFlipped,
+			(flipState) => networkController.CmdUpdateFlipOnServer((bool)flipState)
 		);
 	}
 
@@ -79,6 +84,7 @@ public class PlayerController : PlayerPhysics {
 
 		Notify(AnimatorController.NotificationType.PlayerTookDamage);
 
+		// TODO: remove hard coded number
 		_stunTime = 1f;
 	}
 
@@ -118,6 +124,7 @@ public class PlayerController : PlayerPhysics {
 			_movementVector = InputsController.DigitalizeVector2(_movementVector);
 	}
 
+	// TODO: maybe use facingLeft
 	private void AssignAttackDirection() {
 		if (_movementVector.x != 0)
 			_attackDirection = (int)_movementVector.x;
@@ -153,6 +160,7 @@ public class PlayerController : PlayerPhysics {
 		}
 	}
 
+	// TODO: maybe place this in AttacksController
 	private void Attack(Attack atk) {
 		_canAttack = false;
 
@@ -190,10 +198,6 @@ public class PlayerController : PlayerPhysics {
 		yield return new WaitForSeconds(1f);
 		// gameObject.SetActive(true);
 		_canRespawn = true;
-	}
-
-	private void OnOutOfCameraLimits(bool outOfLimits) {
-		networkController.CmdHandleDataManagerOutOfLimitsDictionary(outOfLimits, networkController.playerNumber);
 	}
 
 	private void OnDrawGizmosSelected() {

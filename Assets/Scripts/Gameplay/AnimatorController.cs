@@ -7,7 +7,8 @@ public class AnimatorController : Transceiver {
 		JumpChanged,
 		SpeedChanged,
 		PlayerAttacked,
-		PlayerTookDamage
+		PlayerTookDamage,
+		PlayerFlipped
 	}
 
 	[SerializeField] private Animator _animator;
@@ -33,6 +34,10 @@ public class AnimatorController : Transceiver {
 			NotificationType.PlayerTookDamage,
 			(any) => _animator.SetTrigger("TakeDamages")
 		);
+		RegisterAction(
+			NotificationType.PlayerFlipped,
+			(flipState) => OnPlayerFlipped((bool)flipState)
+		);
 	}
 
 	public override bool IsNotificationTypeValid(Enum notificationType) {
@@ -40,5 +45,9 @@ public class AnimatorController : Transceiver {
 			return true;
 
 		return false;
+	}
+
+	private void OnPlayerFlipped(bool flipState) {
+		GetComponent<SpriteRenderer>().flipX = flipState;
 	}
 }

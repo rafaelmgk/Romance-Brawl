@@ -191,9 +191,11 @@ MonoBehaviour:
   - attackPoint: {fileID: 8304542415087038332}
     attackRange: {x: 0.48, y: 0.36}
     attackPower: 3
+    attackAnimation: Attack
   - attackPoint: {fileID: 8304542415087038332}
     attackRange: {x: 1.06, y: 1.02}
     attackPower: 6
+    attackAnimation: Attack2
 --- !u!114 &-4636072495843866953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,9 +210,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  _playerController: {fileID: 4865830200153497327}
   hitPercentage: 0
   health: 0
   playerNumber: 0
+  isFacingLeft: 0
 --- !u!50 &6729560697246243761
 Rigidbody2D:
   serializedVersion: 4
@@ -388,6 +392,7 @@ MonoBehaviour:
   _transceivers:
   - {fileID: 4865830200153497327}
   - {fileID: 1117334914639432146}
+  - {fileID: 4655733704998934218}
 --- !u!1 &5992980277374923607
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,8 +402,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4437415139942536959}
+  - component: {fileID: 4655733704998934218}
   m_Layer: 3
-  m_Name: Attacks
+  m_Name: Attacks Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -419,6 +425,19 @@ Transform:
   m_Father: {fileID: 1720734485633453343}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4655733704998934218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5992980277374923607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a40da9e6c92ca564abc8dba46867dc07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventsManager: {fileID: 5326441206768498813}
 --- !u!1 &6413381658211637287
 GameObject:
   m_ObjectHideFlags: 0

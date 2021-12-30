@@ -5,10 +5,14 @@ using UnityEngine;
 using Mirror;
 
 public class NetworkController : NetworkBehaviour {
+	[Header("Components Reference")]
+	[SerializeField] private PlayerController _playerController;
+
 	[Header("Network Data")]
 	[SyncVar(hook = nameof(OnHitPercentageChange))] public int hitPercentage = 0;
 	[SyncVar] public int health = 0;
 	[SyncVar] public int playerNumber;
+	[SyncVar(hook = nameof(OnFlipChange))] public bool isFacingLeft = false;
 
 	// TODO: refactor how this is working
 	private void Start() {
@@ -16,25 +20,19 @@ public class NetworkController : NetworkBehaviour {
 			Destroy(transform.GetChild(3).gameObject);
 	}
 
-	public void OnHitPercentageChange(int oldHitPercentage, int newHitPercentage) {
-		UIManager.CanUpdateHitPercentage = true;
-	}
-
 	[Command(requiresAuthority = false)]
 	public void CmdUpdateHitPercentageOnServer(int newHitPercentage) {
 		hitPercentage = newHitPercentage;
+	}
+
+	public void OnHitPercentageChange(int oldHitPercentage, int newHitPercentage) {
+		UIManager.CanUpdateHitPercentage = true;
 	}
 
 	[Command(requiresAuthority = false)]
 	public void CmdAskServerForTakeDamage(NetworkController enemy, int attackDirection, int power) {
 		enemy.TrgtTakeDamage(enemy.gameObject.GetComponent<NetworkIdentity>().connectionToClient,
 			attackDirection, power);
-	}
-
-	[TargetRpc]
-	private void TrgtTakeDamage(NetworkConnection target, int attackDirection, int power) {
-		PlayerController playerController = GetComponent<PlayerController>();
-		playerController.TakeDamage(attackDirection, power);
 	}
 
 	[Command(requiresAuthority = false)]
@@ -45,6 +43,20 @@ public class NetworkController : NetworkBehaviour {
 			CmdModifyDataManagerOutOfLimitsDictionary(dataManager, outOfLimits, playerNumber);
 		else
 			CmdAddToDataManagerOutOfLimitsDictionary(dataManager, outOfLimits, playerNumber);
+	}
+
+	[Command(requiresAuthority = false)]
+	public void CmdUpdateFlipOnServer(bool newState) {
+		isFacingLeft = newState;
+	}
+
+	public void OnFlipChange(bool oldState, bool newState) {
+		_playerController.Notify(AnimatorController.NotificationType.PlayerFlipped, isFacingLeft);
+	}
+
+	[TargetRpc]
+	private void TrgtTakeDamage(NetworkConnection target, int attackDirection, int power) {
+		_playerController.TakeDamage(attackDirection, power);
 	}
 
 	[Command(requiresAuthority = false)]

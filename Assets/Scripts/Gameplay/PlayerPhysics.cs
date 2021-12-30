@@ -37,7 +37,7 @@ public abstract class PlayerPhysics : Transceiver {
 	private int _extraJumps = 1;
 	private bool _isGrounded;
 	private bool _isOutOfCameraLimits;
-	private bool _isFacingRight = true;
+	private bool _isFacingLeft = false;
 	private WorldData _worldData;
 
 	private void FixedUpdate() {
@@ -58,7 +58,7 @@ public abstract class PlayerPhysics : Transceiver {
 			SmoothVelocity(new Vector2(move * runSpeed * Time.fixedDeltaTime * 10f, _rigidbody2D.velocity.y));
 
 			if (move != 0)
-				AssignIsFacingRight(move > 0);
+				ChangeFacingLeft(move < 0);
 		}
 	}
 
@@ -73,12 +73,6 @@ public abstract class PlayerPhysics : Transceiver {
 		}
 	}
 
-	protected void Flip() {
-		_isFacingRight = !_isFacingRight;
-
-		transform.Rotate(0f, 180f, 0f);
-	}
-
 	protected void BeThrown(int attackDirection, int hitPercentage) {
 		// TODO: remove hard coded number
 		_rigidbody2D.AddForce(new Vector2(attackDirection * hitPercentage, hitPercentage / 3.5f), ForceMode2D.Impulse);
@@ -88,16 +82,24 @@ public abstract class PlayerPhysics : Transceiver {
 		Physics2D.IgnoreLayerCollision(3, 8, ignore);
 	}
 
-	private void NotifyJump(bool jumpState) {
-		Notify(AnimatorController.NotificationType.JumpChanged, jumpState);
-	}
-
 	private void SmoothVelocity(Vector2 targetVelocity) {
 		_rigidbody2D.velocity = Vector2.SmoothDamp(_rigidbody2D.velocity, targetVelocity, ref _velocity, _movementSmoothing);
 	}
 
-	private void AssignIsFacingRight(bool isFacingRight) {
-		_isFacingRight = isFacingRight;
+	private void ChangeFacingLeft(bool newState) {
+		if (_isFacingLeft != newState) {
+			_isFacingLeft = newState;
+			Flip();
+		}
+	}
+
+	public void Flip() {
+		Notify(PlayerController.NotificationType.PlayerFlipped, _isFacingLeft);
+		Notify(AttacksController.NotificationType.PlayerFlipped, _isFacingLeft);
+	}
+
+	private void NotifyJump(bool jumpState) {
+		Notify(AnimatorController.NotificationType.JumpChanged, jumpState);
 	}
 
 	private void OnLanding() {
