@@ -36,7 +36,7 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 
 	public override bool OnRoomServerSceneLoadedForPlayer(NetworkConnection conn, GameObject roomPlayer, GameObject gamePlayer) {
 		CreatePlayerStats(gamePlayer);
-		if (gamePlayer.GetComponent<NetworkController>().playerNumber == numPlayers)
+		if (gamePlayer.GetComponent<NetworkController>().playerNumber + 1 == numPlayers)
 			CreateUIManager();
 
 		return true;
