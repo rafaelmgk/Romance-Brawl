@@ -99,7 +99,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -113,8 +113,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 934acad909aac4243af13f6f71e62dbf, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   _eventsManager: {fileID: 5326441206768498813}
   _animator: {fileID: 1093136003961466793}
 --- !u!1 &4559217071842210107
@@ -155,6 +155,8 @@ Transform:
   - {fileID: 7074083855439903602}
   - {fileID: 4437415139942536959}
   - {fileID: 2330527611576801702}
+  - {fileID: 2072583669538194345}
+  - {fileID: 9063479251786653456}
   - {fileID: 2503916839885733488}
   - {fileID: 7087391049525763205}
   m_Father: {fileID: 0}
@@ -170,8 +172,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8575a2b6e6ab9744097c3c9fc109bbe4, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   _eventsManager: {fileID: 5326441206768498813}
   _rigidbody2D: {fileID: 6729560697246243761}
   runSpeed: 20
@@ -206,8 +208,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59bb4889e14ae3a42af72f2e32c483ec, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
   _playerController: {fileID: 4865830200153497327}
@@ -272,8 +274,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   sceneId: 0
   serverOnly: 0
   visible: 0
@@ -289,8 +291,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
   clientAuthority: 1
@@ -318,8 +320,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f6f3bf89aa97405989c802ba270f815, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
   clientAuthority: 1
@@ -334,8 +336,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab2cbc52526ea384ba280d13cd1a57b9, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
   target: {fileID: 6729560697246243761}
@@ -375,7 +377,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1720734485633453343}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5326441206768498813
 MonoBehaviour:
@@ -387,8 +389,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c39ea5abf6b9024f808c6085bf51022, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   _transceivers:
   - {fileID: 4865830200153497327}
   - {fileID: 1117334914639432146}
@@ -435,8 +437,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a40da9e6c92ca564abc8dba46867dc07, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   _eventsManager: {fileID: 5326441206768498813}
 --- !u!1 &6413381658211637287
 GameObject:
@@ -468,7 +470,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1720734485633453343}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3770570055620030539
 MonoBehaviour:
@@ -480,8 +482,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94bcf49289183bc4ebaea9d67bbd9756, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   _eventsManager: {fileID: 5326441206768498813}
 --- !u!114 &5029088602362449485
 MonoBehaviour:
@@ -493,8 +495,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 344e2004adfdafb47bd0bf79ba743cb3, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
@@ -519,7 +521,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument:
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: f2298689-6bb7-477c-8810-8707fb7f9af7
@@ -535,7 +537,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument:
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: c03b3f7b-a2a2-4be4-9adb-8b9b1b54b69c
@@ -551,7 +553,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument:
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: e15d6e2c-5eb5-4a82-bbf6-a034dda99de4
@@ -567,7 +569,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument:
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 308d7464-023e-49e1-8b4a-28d1be36f0a0
@@ -577,22 +579,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &2123212081125546189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4559217071842210107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de6fed0e8435a8e45a9ea20d72e35b14, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  syncMode: 0
-  syncInterval: 0.1
-  character: {fileID: 4559217071842210107}
-  characterposition: {fileID: 1720734485633453343}
 --- !u!1 &9111604492829658178
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,15 +648,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6448752446455580293, guid: 87361cc683a418842adec739077c9164, type: 3}
       propertyPath: image
-      value:
+      value: 
       objectReference: {fileID: 2072583668321228258}
     - target: {fileID: -6448752446455580293, guid: 87361cc683a418842adec739077c9164, type: 3}
       propertyPath: miniCam
-      value:
+      value: 
       objectReference: {fileID: 9063479251786653471}
     - target: {fileID: -6448752446455580293, guid: 87361cc683a418842adec739077c9164, type: 3}
       propertyPath: miniCamPosition
-      value:
+      value: 
       objectReference: {fileID: 1720734485633453343}
     - target: {fileID: 3009070467969878081, guid: 87361cc683a418842adec739077c9164, type: 3}
       propertyPath: m_RootOrder
@@ -722,7 +708,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3009070467969878094, guid: 87361cc683a418842adec739077c9164, type: 3}
       propertyPath: m_TargetTexture
-      value:
+      value: 
       objectReference: {fileID: 8400000, guid: 2156e1b07e659a940a070b78e2d8fe19, type: 2}
     - target: {fileID: 3009070467969878094, guid: 87361cc683a418842adec739077c9164, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
@@ -753,8 +739,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3169657022136740617, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
       propertyPath: player
-      value:
+      value: 
       objectReference: {fileID: 1720734485633453343}
+    - target: {fileID: 4981286642358916881, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4981286642358916883, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
       propertyPath: m_Name
       value: MiniCamUI
@@ -843,7 +833,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3169657022136740617, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
 --- !u!1 &2072583669538196565 stripped
 GameObject:
@@ -855,11 +846,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4981286642358917359, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
   m_PrefabInstance: {fileID: 6476842649342581574}
   m_PrefabAsset: {fileID: 0}
---- !u!223 &2072583669538196566 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 4981286642358916880, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
-  m_PrefabInstance: {fileID: 6476842649342581574}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2072583668321228258 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4981286643290476196, guid: 4a4b080b81d06f948b85acdeffab968e, type: 3}
@@ -869,5 +855,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4976545490637971099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072583669538196565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653e7482b28d7ef4ca2ec9865140ef36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1720734485633453343}
