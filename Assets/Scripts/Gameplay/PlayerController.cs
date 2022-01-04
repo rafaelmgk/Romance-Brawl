@@ -16,6 +16,7 @@ public class PlayerController : PlayerPhysics {
 		PlayerFlipped
 	}
 
+	[Header("Network Settings")]
 	public NetworkController networkController;
 
 	[Header("Attack Settings")]
