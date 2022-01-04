@@ -1,5 +1,5 @@
 # One-Piece-Game
-image
+image/gif
 
 ## Play the game
 link
@@ -42,7 +42,7 @@ This software is not affiliated in any way with One Piece, Bandai Namco or any o
 				<img src="https://avatars.githubusercontent.com/lcscout" width="100px;" alt=""/>
 				<br />
 				<sub>
-					<b>Lucas Coutinho de Oliveira</b>
+					<b>Lucas Coutinho</b>
 				</sub>
 			</a>
 		</td>

@@ -47,5 +47,19 @@ public class UIManager : NetworkBehaviour {
 
 			CanUpdateHitPercentage = false;
 		}
+		CmdOutOfMiniCamLimits();
+	}
+	[Command(requiresAuthority = false)]
+	private void CmdOutOfMiniCamLimits() {
+		foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player")) {
+			if (player.GetComponent<PlayerBehaviour>()._amIOutOfLimit == true) {
+				player.GetComponent<PlayerBehaviour>().miniCam.enabled = true;
+			}
+			if (player.GetComponent<PlayerBehaviour>()._amIOutOfLimit == false) {
+				player.GetComponent<PlayerBehaviour>().miniCam.enabled = false;
+			}
+		}
 	}
 }
+
+
