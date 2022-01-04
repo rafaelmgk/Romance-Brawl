@@ -29,6 +29,7 @@ public abstract class PlayerPhysics : Transceiver {
 
 	[Tooltip("A position marking where to check if the player is grounded")]
 	[SerializeField] private Transform _groundCheck;
+	[SerializeField] private GameObject _miniCam;
 
 	private const float _GROUND_CHECK_RADIUS = .2f;
 
@@ -47,6 +48,7 @@ public abstract class PlayerPhysics : Transceiver {
 
 		CheckWorldBoundaries();
 		CheckCameraLimits();
+		MiniCamCheck();
 	}
 
 	protected void Move(float move, bool crouch) {
@@ -174,6 +176,15 @@ public abstract class PlayerPhysics : Transceiver {
 		if (_isOutOfCameraLimits != newState) {
 			_isOutOfCameraLimits = newState;
 			Notify(PlayerController.NotificationType.OutOfCameraLimits, newState);
+		}
+	}
+	private void MiniCamCheck() {
+		print(_isOutOfCameraLimits);
+		if (_isOutOfCameraLimits == true) {
+			_miniCam.SetActive(true);
+		}
+		if (_isOutOfCameraLimits == false) {
+			_miniCam.SetActive(false);
 		}
 	}
 }

@@ -185,7 +185,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 384
   _groundCheck: {fileID: 7074083855439903602}
+  _miniCam: {fileID: 2072583669538196565}
   networkController: {fileID: -4636072495843866953}
+  attacks: []
   _enemyLayers:
     serializedVersion: 2
     m_Bits: 8
