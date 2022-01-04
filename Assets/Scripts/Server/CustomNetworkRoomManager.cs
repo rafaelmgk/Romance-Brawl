@@ -9,8 +9,7 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 	[SerializeField] private GameObject dataManagerPrefab;
 	[SerializeField] private GameObject uiManagerPrefab;
 
-	private List<UIPlayerStats> stats = new List<UIPlayerStats>();
-
+	private List<UIPlayerStats> _stats = new List<UIPlayerStats>();
 	private int _playerCounter = 1;
 
 	public override void OnStartHost() {
@@ -21,13 +20,16 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 	}
 
 	public override GameObject OnRoomServerCreateGamePlayer(NetworkConnection conn, GameObject roomPlayer) {
-		int index = GameObject.FindGameObjectWithTag("Data").GetComponent<DataManager>().charactersByPlayer[conn.connectionId];
-
 		GameObject _temp = Instantiate(
-			spawnPrefabs[index],
+			playerPrefab,
 			startPositions[conn.connectionId].position,
 			Quaternion.identity
 		);
+
+		int index = DataManager.Instance.charactersByPlayer[conn.connectionId];
+		_temp.GetComponent<PlayerController>().SetAnimator(DataManager.Instance.characters[index].animator);
+		_temp.GetComponent<PlayerController>().attacks = DataManager.Instance.characters[index].attacks;
+
 		_temp.GetComponent<NetworkController>().playerNumber = _playerCounter;
 		_playerCounter++;
 
@@ -46,7 +48,7 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 
 	private void CreateUIManager() {
 		GameObject uiManagerClone = Instantiate(uiManagerPrefab, Vector3.zero, Quaternion.identity);
-		foreach (UIPlayerStats stat in stats)
+		foreach (UIPlayerStats stat in _stats)
 			uiManagerClone.GetComponent<UIManager>().PlayersStats.Add(stat);
 		NetworkServer.Spawn(uiManagerClone);
 	}
@@ -60,6 +62,6 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 			networkController.health
 		);
 
-		stats.Add(newPlayerStats);
+		_stats.Add(newPlayerStats);
 	}
 }

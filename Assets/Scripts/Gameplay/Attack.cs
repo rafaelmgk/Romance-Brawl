@@ -15,8 +15,8 @@ public class Attack {
 		}
 	}
 
-	[Tooltip("The base position where the range attack will be calculated from")]
-	public Transform attackPoint;
+	[Tooltip("Index from which base position the range attack will be calculated")]
+	public int attackPointIndex;
 
 	[Tooltip("The range/hitbox of attack")]
 	public Vector2 attackRange;
@@ -27,4 +27,7 @@ public class Attack {
 	[Tooltip("Name of the animation attack")]
 	public string attackAnimation;
 
+	public Vector3 GetAttackPoint(int index) {
+		return GameObject.FindGameObjectsWithTag("Attack Point")[index].transform.position;
+	}
 }

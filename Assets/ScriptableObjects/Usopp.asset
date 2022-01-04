@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1e62dbae3072cb45b70608f0a7c8ea1, type: 3}
-  m_Name: Luffy
+  m_Name: Usopp
   m_EditorClassIdentifier: 
-  characterName: Mihawk
-  animator: {fileID: 22100000, guid: 6477fe952170145479d09b1bcf28ebc0, type: 2}
+  characterName: Usopp
+  animator: {fileID: 22100000, guid: 6f092d486e9290043a0730739e839fd6, type: 2}
   attacks:
   - attackPointIndex: 0
     attackRange: {x: 0.59, y: 0.69}

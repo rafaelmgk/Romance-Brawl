@@ -8,7 +8,8 @@ public class AnimatorController : Transceiver {
 		SpeedChanged,
 		PlayerAttacked,
 		PlayerTookDamage,
-		PlayerFlipped
+		PlayerFlipped,
+		SetAnimator
 	}
 
 	[SerializeField] private Animator _animator;
@@ -37,6 +38,10 @@ public class AnimatorController : Transceiver {
 		RegisterAction(
 			NotificationType.PlayerFlipped,
 			(flipState) => OnPlayerFlipped((bool)flipState)
+		);
+		RegisterAction(
+			NotificationType.SetAnimator,
+			(animatorControl) => _animator.runtimeAnimatorController = (AnimatorOverrideController)animatorControl
 		);
 	}
 

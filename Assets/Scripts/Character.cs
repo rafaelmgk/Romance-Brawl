@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Character")]
-public class Character : ScriptableObject
-{
+public class Character : ScriptableObject {
+	[Tooltip("The character name")]
+	public string characterName = "";
 
-  public string characterName = "Default";
+	[Tooltip("The character animator")]
+	public AnimatorOverrideController animator;
 
-  public GameObject characterObject;
-  public Rigidbody2D hitBoX;
-  public int health = 0;
-  //test
+	[Tooltip("The character attacks")]
+	public List<Attack> attacks = new List<Attack>();
 }

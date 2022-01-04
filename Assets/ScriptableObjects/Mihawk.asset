@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1e62dbae3072cb45b70608f0a7c8ea1, type: 3}
-  m_Name: Luffy
+  m_Name: Mihawk
   m_EditorClassIdentifier: 
   characterName: Mihawk
   animator: {fileID: 22100000, guid: 6477fe952170145479d09b1bcf28ebc0, type: 2}

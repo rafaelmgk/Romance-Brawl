@@ -1,25 +1,24 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Collections.Generic;
 using Mirror;
 using TMPro;
 
 public class NetworkRoomPlayerExt : NetworkRoomPlayer {
-	public GameObject characterSelection;
-
-	public GameObject[] characters;
-	public TMP_Text choosenChar;
+	[SerializeField] private GameObject _characterSelection;
+	[SerializeField] private TMP_Text _choosenChar;
 
 	public override void OnStartClient() {
 		//Debug.Log($"OnStartClient {gameObject}");
 	}
 
 	public void HandleSelectionPanelVisibility(bool visibility) {
-		characterSelection.SetActive(visibility);
+		_characterSelection.SetActive(visibility);
 	}
 
 	private void SendIndex() {
-		characterSelection.SetActive(true);
+		_characterSelection.SetActive(true);
 		CmdSendIndex(index);
 	}
 
@@ -38,7 +37,7 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer {
 
 	public void ChooseCharacter(int characterChoice) {
 		CmdChooseCharacter(characterChoice);
-		choosenChar.text = characters[characterChoice].name;
+		_choosenChar.text = DataManager.Instance.characters[characterChoice].name;
 	}
 
 	[Command]
@@ -50,6 +49,7 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer {
 
 	public override void OnClientEnterRoom() {
 		//Debug.Log($"OnClientEnterRoom {SceneManager.GetActiveScene().path}");
+		if (isLocalPlayer) HandleSelectionPanelVisibility(true);
 	}
 
 	public override void OnClientExitRoom() {

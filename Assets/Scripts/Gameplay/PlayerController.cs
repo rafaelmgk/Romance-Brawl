@@ -20,11 +20,11 @@ public class PlayerController : PlayerPhysics {
 	public NetworkController networkController;
 
 	[Header("Attack Settings")]
-	[Tooltip("The mask layer to determine whom the attack will collide")]
-	[SerializeField] private LayerMask _enemyLayers; // TODO: change 'enemy' to 'player'
+	[Tooltip("The list of attack to be populated by the scriptable object")]
+	public List<Attack> attacks = new List<Attack>();
 
 	[Tooltip("The mask layer to determine whom the attack will collide")]
-	[SerializeField] private List<Attack> _attacks = new List<Attack>();
+	[SerializeField] private LayerMask _enemyLayers; // TODO: change 'enemy' to 'player'
 
 	private Vector2 _movementVector;
 	private float _stunTime = 0f;
@@ -87,6 +87,10 @@ public class PlayerController : PlayerPhysics {
 
 		// TODO: remove hard coded number
 		_stunTime = 1f;
+	}
+
+	public void SetAnimator(AnimatorOverrideController animatorController) {
+		Notify(AnimatorController.NotificationType.SetAnimator, animatorController);
 	}
 
 	private void HandleStun() {
@@ -155,7 +159,7 @@ public class PlayerController : PlayerPhysics {
 
 	private void OnPlayerAttacked(Attack.AttackInput atkInput) {
 		if (atkInput.context.started && _canAttack && !_crouch) {
-			Attack(_attacks[atkInput.attackIndex]);
+			Attack(attacks[atkInput.attackIndex]);
 			StartCoroutine(WaitForAttackAgain());
 		}
 	}
@@ -166,7 +170,7 @@ public class PlayerController : PlayerPhysics {
 
 		Notify(AnimatorController.NotificationType.PlayerAttacked, atk.attackAnimation);
 
-		Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(atk.attackPoint.position, atk.attackRange, 0, _enemyLayers);
+		Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(atk.GetAttackPoint(atk.attackPointIndex), atk.attackRange, 0, _enemyLayers);
 		foreach (Collider2D enemy in hitEnemies) {
 			if (enemy != GetComponent<Collider2D>())
 				AskServerForTakeDamage(enemy.gameObject.GetComponent<NetworkController>(), _attackDirection, atk.attackPower);
@@ -201,7 +205,7 @@ public class PlayerController : PlayerPhysics {
 	}
 
 	private void OnDrawGizmosSelected() {
-		foreach (Attack atk in _attacks)
-			Gizmos.DrawWireCube(atk.attackPoint.position, atk.attackRange);
+		foreach (Attack atk in attacks)
+			Gizmos.DrawWireCube(atk.GetAttackPoint(atk.attackPointIndex), atk.attackRange);
 	}
 }

@@ -10,6 +10,7 @@ TagManager:
   - UI Manager
   - MiniCam
   - MiniCamUI
+  - Attack Point
   layers:
   - Default
   - TransparentFX

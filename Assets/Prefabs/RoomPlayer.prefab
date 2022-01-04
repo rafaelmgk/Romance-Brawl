@@ -67,33 +67,10 @@ MonoBehaviour:
   showRoomGUI: 1
   readyToBegin: 0
   index: 0
-  characterSelection: {fileID: 7492432067657919543}
-  characters:
-  - {fileID: 4559217071842210107, guid: 116454a8d85e8b442b758bd7e0db60a6, type: 3}
-  - {fileID: 4559217071842210107, guid: d221c48e2810a5940a4e2afa3198a22c, type: 3}
-  - {fileID: 4559217071842210107, guid: 0cf5b4560b368fe418bdd7c27845d2fa, type: 3}
-  - {fileID: 4559217071842210107, guid: 4c697e1548faba74dbb382a64b991551, type: 3}
-  - {fileID: 4559217071842210107, guid: 1deba61cb50e2754aa527bea9615bcb4, type: 3}
-  - {fileID: 4559217071842210107, guid: 3a01c22d2fb9bad48b360e8c1ac7f74d, type: 3}
-  - {fileID: 4559217071842210107, guid: 9e439be139d66d447b7af856e828ad5d, type: 3}
-  - {fileID: 4559217071842210107, guid: b57c985a9ce63274ea0aaadd2a72a79f, type: 3}
-  - {fileID: 4559217071842210107, guid: 83c85609f0d1f2c448248f552f38068b, type: 3}
-  - {fileID: 4559217071842210107, guid: abe7388036dea56489c0f93e7380fb9c, type: 3}
-  - {fileID: 4559217071842210107, guid: 642efb020365f1242976b828eaf812b7, type: 3}
-  - {fileID: 4559217071842210107, guid: 82a520231954eee4c95ca4fa527a1d14, type: 3}
-  - {fileID: 4559217071842210107, guid: 11d7f7268e955664aab74b7389eb0ee9, type: 3}
-  - {fileID: 4559217071842210107, guid: 01794fa5764f16743a45f23d8d9f96b2, type: 3}
-  - {fileID: 4559217071842210107, guid: 492c8d3f2d15e9542ab4478b8200eff7, type: 3}
-  - {fileID: 4559217071842210107, guid: c06a034a7de85904e89d4b6ec5851eda, type: 3}
-  - {fileID: 4559217071842210107, guid: 19e102b0a8269e740905d545e046ccfc, type: 3}
-  - {fileID: 4559217071842210107, guid: 786b1ba1f208c0e4d8e7233a458090b5, type: 3}
-  - {fileID: 4559217071842210107, guid: 5726c04982c6ef140b90119ebe033ae1, type: 3}
-  - {fileID: 4559217071842210107, guid: 76df1a9a90927a640a26839998786a6c, type: 3}
-  - {fileID: 4559217071842210107, guid: 12031e1c878509a4788fca9dec4aae39, type: 3}
-  - {fileID: 4559217071842210107, guid: 1f0fbdfd89567794897ab1bad54bdc1f, type: 3}
-  - {fileID: 4559217071842210107, guid: 8b0828d3c24c09d49bc5ef600e3fd9eb, type: 3}
-  - {fileID: 4559217071842210107, guid: 579b6af997213ae4a961626e326696d9, type: 3}
-  choosenChar: {fileID: 8950864716825671418}
+  _characterSelection: {fileID: 7492432067657919543}
+  _choosenChar: {fileID: 8950864716825671418}
+  _characters:
+  - {fileID: 11400000, guid: 83d12bba47a9a984b86a5c3ab2c37635, type: 2}
 --- !u!1001 &2837209465831080043
 PrefabInstance:
   m_ObjectHideFlags: 0
