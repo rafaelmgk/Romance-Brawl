@@ -200,7 +200,7 @@ public class PlayerController : PlayerPhysics {
 	}
 
 	private void OnDrawGizmosSelected() {
-		Gizmos.DrawWireCube(_attacks[0].attackPoint.position, _attacks[0].attackRange);
-		Gizmos.DrawWireCube(_attacks[1].attackPoint.position, _attacks[0].attackRange);
+		foreach (Attack atk in _attacks)
+			Gizmos.DrawWireCube(atk.attackPoint.position, atk.attackRange);
 	}
 }

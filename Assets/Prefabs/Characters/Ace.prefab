@@ -191,11 +191,11 @@ MonoBehaviour:
     m_Bits: 8
   _attacks:
   - attackPoint: {fileID: 8304542415087038332}
-    attackRange: {x: 0.48, y: 0.36}
+    attackRange: {x: 0.54, y: 0.36}
     attackPower: 3
     attackAnimation: Attack
   - attackPoint: {fileID: 8304542415087038332}
-    attackRange: {x: 1.06, y: 1.02}
+    attackRange: {x: 0.74, y: 0.71}
     attackPower: 6
     attackAnimation: Attack2
 --- !u!114 &-4636072495843866953
