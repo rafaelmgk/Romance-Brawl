@@ -94,7 +94,6 @@ public class PlayerController : PlayerPhysics {
 	}
 
 	public void SetAnimator(AnimatorOverrideController animatorController) {
-		print("teste");
 		Notify(AnimatorController.NotificationType.SetAnimator, animatorController);
 	}
 
