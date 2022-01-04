@@ -179,7 +179,6 @@ public abstract class PlayerPhysics : Transceiver {
 		}
 	}
 	private void MiniCamCheck() {
-		print(_isOutOfCameraLimits);
 		if (_isOutOfCameraLimits == true) {
 			_miniCam.SetActive(true);
 		}

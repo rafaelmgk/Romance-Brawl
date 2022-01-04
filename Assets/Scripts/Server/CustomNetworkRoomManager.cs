@@ -10,7 +10,7 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 	[SerializeField] private GameObject uiManagerPrefab;
 
 	private List<UIPlayerStats> _stats = new List<UIPlayerStats>();
-	private int _playerCounter = 1;
+	private int _playerCounter = 0;
 
 	public override void OnStartHost() {
 		base.OnStartHost();
@@ -25,10 +25,6 @@ public class CustomNetworkRoomManager : NetworkRoomManager {
 			startPositions[conn.connectionId].position,
 			Quaternion.identity
 		);
-
-		int index = DataManager.Instance.charactersByPlayer[conn.connectionId];
-		_temp.GetComponent<PlayerController>().SetAnimator(DataManager.Instance.characters[index].animator);
-		_temp.GetComponent<PlayerController>().attacks = DataManager.Instance.characters[index].attacks;
 
 		_temp.GetComponent<NetworkController>().playerNumber = _playerCounter;
 		_playerCounter++;

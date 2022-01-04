@@ -62,6 +62,10 @@ public class PlayerController : PlayerPhysics {
 		);
 	}
 
+	private void Start() {
+		AssignScriptableObjectData();
+	}
+
 	private void Update() {
 		if (_canMove)
 			Move(_movementVector.x, _crouch);
@@ -90,7 +94,14 @@ public class PlayerController : PlayerPhysics {
 	}
 
 	public void SetAnimator(AnimatorOverrideController animatorController) {
+		print("teste");
 		Notify(AnimatorController.NotificationType.SetAnimator, animatorController);
+	}
+
+	private void AssignScriptableObjectData() {
+		int index = DataManager.Instance.charactersByPlayer[networkController.playerNumber];
+		SetAnimator(DataManager.Instance.characters[index].animator);
+		attacks = DataManager.Instance.characters[index].attacks;
 	}
 
 	private void HandleStun() {

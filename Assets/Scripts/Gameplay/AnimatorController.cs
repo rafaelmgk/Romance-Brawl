@@ -37,7 +37,7 @@ public class AnimatorController : Transceiver {
 		);
 		RegisterAction(
 			NotificationType.PlayerFlipped,
-			(flipState) => OnPlayerFlipped((bool)flipState)
+			(flipState) => GetComponent<SpriteRenderer>().flipX = (bool)flipState
 		);
 		RegisterAction(
 			NotificationType.SetAnimator,
@@ -50,9 +50,5 @@ public class AnimatorController : Transceiver {
 			return true;
 
 		return false;
-	}
-
-	private void OnPlayerFlipped(bool flipState) {
-		GetComponent<SpriteRenderer>().flipX = flipState;
 	}
 }
