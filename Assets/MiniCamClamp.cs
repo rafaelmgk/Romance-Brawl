@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MiniCamClamp : MonoBehaviour {
-	float xMin = -4f;
-	float xMax = 4f;
-	float yMin = -4.5f;
-	float yMax = 0f;
+	float xMin = -4.5f;//TODO do it automatically and relative
+	float xMax = 3.5f;//TODO do it automatically and relative
+	float yMin = -4.5f;//TODO do it automatically and relative
+	float yMax = 0f;//TODO do it automatically and relative
 
 	public Transform player;
 	private Quaternion my_rotation;
