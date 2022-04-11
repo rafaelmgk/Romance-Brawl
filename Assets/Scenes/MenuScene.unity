@@ -1495,7 +1495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clientToServerTransport: {fileID: 1524709662}
-  serverIP: 3.93.146.70
+  serverIP: 18.228.189.212
   serverPort: 7777
   endpointServerPort: 8080
   heartBeatInterval: 3
