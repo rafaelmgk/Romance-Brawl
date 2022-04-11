@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WhiskeyPeakMap.unity
     guid: 81879540ebf991f4293fbfd694f1cf64
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScene.unity
     guid: d6ce0100284639b4d9f0a414b900855e
   m_configObjects:
