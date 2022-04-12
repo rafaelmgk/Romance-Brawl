@@ -1511,7 +1511,7 @@ MonoBehaviour:
   NATPunchtroughPort: 1
   useLoadBalancer: 1
   loadBalancerPort: 7070
-  loadBalancerAddress: 54.94.54.102
+  loadBalancerAddress: 18.231.95.221
   serverName: My awesome server!
   extraServerData: Map 1
   maxServerPlayers: 10
