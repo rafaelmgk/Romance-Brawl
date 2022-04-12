@@ -1235,8 +1235,8 @@ MonoBehaviour:
   clientMaxMessagesPerTick: 1000
   batchSend: 1
   waitBeforeSend: 0
-  clientUseWss: 0
-  sslEnabled: 0
+  clientUseWss: 1
+  sslEnabled: 1
   sslCertJson: ./cert.json
   sslProtocols: 3072
   _logLevels: 0
@@ -1509,7 +1509,7 @@ MonoBehaviour:
       m_Calls: []
   useNATPunch: 1
   NATPunchtroughPort: 1
-  useLoadBalancer: 1
+  useLoadBalancer: 0
   loadBalancerPort: 7070
   loadBalancerAddress: 18.231.95.221
   serverName: My awesome server!
