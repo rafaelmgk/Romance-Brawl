@@ -19,7 +19,7 @@ namespace LightReflectiveMirror
 
         IEnumerator RelayConnect()
         {
-            string url = $"http://{loadBalancerAddress}:{loadBalancerPort}/api/join/";
+            string url = $"https://{loadBalancerAddress}:{loadBalancerPort}/api/join/";
             serverStatus = "Waiting for LLB...";
             using (UnityWebRequest webRequest = UnityWebRequest.Get(url))
             {
@@ -32,7 +32,7 @@ namespace LightReflectiveMirror
 
                 yield return webRequest.SendWebRequest();
                 var result = webRequest.downloadHandler.text;
-                
+
 #if UNITY_2020_1_OR_NEWER
                 switch (webRequest.result)
                 {
@@ -126,7 +126,7 @@ namespace LightReflectiveMirror
         {
             if (!useLoadBalancer)
             {
-                string uri = $"http://{serverIP}:{endpointServerPort}/api/compressed/servers";
+                string uri = $"https://{serverIP}:{endpointServerPort}/api/compressed/servers";
 
                 using (UnityWebRequest webRequest = UnityWebRequest.Get(uri))
                 {
@@ -183,7 +183,7 @@ namespace LightReflectiveMirror
         /// <returns></returns>
         IEnumerator RetrieveMasterServerListFromLoadBalancer(LRMRegions region)
         {
-            string uri = $"http://{loadBalancerAddress}:{loadBalancerPort}/api/masterlist/";
+            string uri = $"https://{loadBalancerAddress}:{loadBalancerPort}/api/masterlist/";
 
             using (UnityWebRequest webRequest = UnityWebRequest.Get(uri))
             {
