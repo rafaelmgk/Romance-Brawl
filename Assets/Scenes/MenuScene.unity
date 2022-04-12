@@ -1507,11 +1507,11 @@ MonoBehaviour:
   connectedToRelay:
     m_PersistentCalls:
       m_Calls: []
-  useNATPunch: 0
+  useNATPunch: 1
   NATPunchtroughPort: 1
-  useLoadBalancer: 0
+  useLoadBalancer: 1
   loadBalancerPort: 7070
-  loadBalancerAddress: 127.0.0.1
+  loadBalancerAddress: 54.94.54.102
   serverName: My awesome server!
   extraServerData: Map 1
   maxServerPlayers: 10
@@ -1533,7 +1533,7 @@ MonoBehaviour:
         m_CallState: 2
   serverStatus: Not Started.
   serverId: 
-  region: 1
+  region: 2
 --- !u!114 &1899011973
 MonoBehaviour:
   m_ObjectHideFlags: 0
