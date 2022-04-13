@@ -1496,7 +1496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clientToServerTransport: {fileID: 1524709662}
   serverIP: aws.coutinho.codes
-  serverPort: 443
+  serverPort: 7777
   endpointServerPort: 8080
   heartBeatInterval: 3
   connectOnAwake: 1
