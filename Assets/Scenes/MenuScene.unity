@@ -1497,7 +1497,7 @@ MonoBehaviour:
   clientToServerTransport: {fileID: 1524709662}
   serverIP: aws.coutinho.codes
   serverPort: 7777
-  endpointServerPort: 0
+  endpointServerPort: 443
   heartBeatInterval: 3
   connectOnAwake: 1
   authenticationKey: Secret Auth Key
